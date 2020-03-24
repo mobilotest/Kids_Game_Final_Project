@@ -61,7 +61,8 @@
                 android:gravity="center"
                 android:textColor="@color/two"
                 android:textSize="40sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="two"/>
 
             <Button
                 android:id="@+id/button3"
@@ -72,7 +73,8 @@
                 android:gravity="center"
                 android:textColor="@color/three"
                 android:textSize="40sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="three"/>
 
             <Button
                 android:id="@+id/button4"
@@ -83,7 +85,8 @@
                 android:gravity="center"
                 android:textColor="@color/four"
                 android:textSize="40sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="four"/>
         </LinearLayout>
 
         <LinearLayout
@@ -100,7 +103,8 @@
                 android:gravity="center"
                 android:textColor="@color/five"
                 android:textSize="40sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="five"/>
 
             <Button
                 android:id="@+id/button6"
@@ -111,7 +115,8 @@
                 android:gravity="center"
                 android:textColor="@color/six"
                 android:textSize="40sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="six"/>
 
             <Button
                 android:id="@+id/button7"
@@ -122,7 +127,8 @@
                 android:gravity="center"
                 android:textColor="@color/seven"
                 android:textSize="40sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="seven"/>
 
             <Button
                 android:id="@+id/button8"
@@ -133,7 +139,8 @@
                 android:gravity="center"
                 android:textColor="@color/eight"
                 android:textSize="40sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="eight"/>
         </LinearLayout>
 
         <LinearLayout
@@ -142,14 +149,15 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/next"
+                android:id="@+id/help"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"
                 android:layout_weight="1"
                 android:gravity="center"
                 android:text="@string/help"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="next"/>
 
             <Button
                 android:id="@+id/clear"
@@ -163,17 +171,7 @@
                 android:onClick="clear"/>
 
             <Button
-                android:id="@+id/help"
-                android:layout_width="120dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:layout_weight="1"
-                android:gravity="center"
-                android:text="@string/next"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/check"
+                android:id="@+id/done"
                 android:layout_width="120dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="8dp"

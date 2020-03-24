@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
     /**
     * This method is for CAT quiz
-    * */
+    **/
     public void catQuiz(){
         ImageView main_image = (ImageView) findViewById(R.id.image_main);
         main_image.setImageResource(R.drawable.cat);
@@ -53,12 +53,101 @@ public class MainActivity extends AppCompatActivity {
         eightButton.setText(R.string.twelve);
     }
 
+    /**
+     * This method put part of the word to the edit field from button 1
+     **/
     public void one(View target) {
         EditText result = (EditText) findViewById(R.id.result);
         String temp = result.getText().toString();
         result.setText(temp + "" + R.string.twelve);
     }
 
+    /**
+     * This method put part of the word to the edit field from button 2
+     **/
+    public void two(View target) {
+        EditText result = (EditText) findViewById(R.id.result);
+        String temp = result.getText().toString();
+        result.setText(temp + "" + R.string.twelve);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 3
+     **/
+    public void three(View target) {
+        EditText result = (EditText) findViewById(R.id.result);
+        String temp = result.getText().toString();
+        result.setText(temp + "" + R.string.twelve);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 4
+     **/
+    public void four(View target) {
+        EditText result = (EditText) findViewById(R.id.result);
+        String temp = result.getText().toString();
+        result.setText(temp + "" + R.string.twelve);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 5
+     **/
+    public void five(View target) {
+        EditText result = (EditText) findViewById(R.id.result);
+        String temp = result.getText().toString();
+        result.setText(temp + "" + R.string.twelve);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 6
+     **/
+    public void six(View target) {
+        EditText result = (EditText) findViewById(R.id.result);
+        String temp = result.getText().toString();
+        result.setText(temp + "" + R.string.twelve);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 7
+     **/
+    public void seven(View target) {
+        EditText result = (EditText) findViewById(R.id.result);
+        String temp = result.getText().toString();
+        result.setText(temp + "" + R.string.twelve);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 8
+     **/
+    public void eight(View target) {
+        EditText result = (EditText) findViewById(R.id.result);
+        String temp = result.getText().toString();
+        result.setText(temp + "" + R.string.twelve);
+    }
+
+    /**
+     * This method TODO
+     **/
+    public void next(View target) {
+        EditText result = (EditText) findViewById(R.id.result);
+        String temp = result.getText().toString();
+        result.setText(temp + "" + R.string.twelve);
+    }
+
+    /**
+     * This method TODO
+     **/
+    public void clear(View view) {
+        EditText result = (EditText) findViewById(R.id.result);
+        result.setText("");
+    }
+
+    /**
+     * This method TODO
+     **/
+    public void done(View view) {
+        Toast.makeText(this, getText(R.string.great), Toast.LENGTH_LONG).show();
+    }
 
     public void dogQuiz() {
         Button oneButton = (Button) findViewById(R.id.button1);
@@ -77,15 +166,6 @@ public class MainActivity extends AppCompatActivity {
         sevenButton.setText(R.string.thirteen);
         TextView eightButton = (TextView) findViewById(R.id.button8);
         eightButton.setText(R.string.twelve);
-    }
-
-    public void clear(View view) {
-        EditText result = (EditText) findViewById(R.id.result);
-        result.setText("");
-    }
-
-    public void done(View view) {
-        Toast.makeText(this, getText(R.string.great), Toast.LENGTH_LONG).show();
     }
 
 }
