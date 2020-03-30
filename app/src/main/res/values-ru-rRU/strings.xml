@@ -60,4 +60,7 @@
     <string name="snake">ЗМЕЯ</string>
     <string name="zebra">ЗЕБРА</string>
     <string name="clear">СБРОС</string>
+    <string name="great">МОЛОДЕЦ!</string>
+    <string name="dots">...</string>
+    <string name="fail">ПОПРОБУЙ ЕЩЕ!</string>
 </resources>
