@@ -3,25 +3,28 @@ package com.example.quizapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
-import android.content.res.Resources;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.os.Bundle;
 import android.text.Editable;
-import android.text.Html;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import static java.lang.String.valueOf;
 
 public class MainActivity extends AppCompatActivity {
 
-    Resources res = getResources();
-    String[] animals = res.getStringArray(R.array.animals);
+    ListView list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,15 +34,37 @@ public class MainActivity extends AppCompatActivity {
         EditText result = (EditText) findViewById(R.id.result);
         result.setText("");
 
-        quiz();
+//        list = (ListView) findViewById(R.string.);
+//        ArrayAdapter<String> adapter =
+//                new ArrayAdapter<String>(MainActivity.this,
+//                        android.R.layout.simple_list_item_1,
+//                        android.R.id.text1);
+//
+//        for (String temp_result : result)
+//        {
+//            adapter.add(temp_result);
+//        }
+
+// Assign adapter to ListView
+//        list.setAdapter(adapter);
+//
+//        for(int i=0; i.animals)
+//        Cat(R.drawable.cat, R.string.cat, R.string.thirtyfour, R.string.two, R.string.eight, R.string.twenty, R.string.seven, R.string.fiftythree, R.string.thirteen, R.string.twelve);
+        Ant(R.drawable.ant, R.string.ant, R.string.thirtyfour, R.string.three, R.string.eight, R.string.twentynine, R.string.thirtyone, R.string.fiftythree, R.string.fourteen, R.string.twelve);
+
+        // HOW TO SWITCH
+
     }
 
 
     /**
-     * This method is for CAT quiz
+     * This method for cat only so far
      **/
-    public void quiz() {
+    public void Cat(int img_resource, int str_animal, int btn1_resource_text, int btn2_resource_text, int btn3_resource_text, int btn4_resource_text, int btn5_resource_text, int btn6_resource_text, int btn7_resource_text, int btn8_resource_text) {
+
         ImageView main_image = (ImageView) findViewById(R.id.image_main);
+        EditText result = (EditText) findViewById(R.id.result);
+
         Button oneButton = (Button) findViewById(R.id.button1);
         Button twoButton = (Button) findViewById(R.id.button2);
         Button threeButton = (Button) findViewById(R.id.button3);
@@ -47,170 +72,80 @@ public class MainActivity extends AppCompatActivity {
         Button fiveButton = (Button) findViewById(R.id.button5);
         Button sixButton = (Button) findViewById(R.id.button6);
         Button sevenButton = (Button) findViewById(R.id.button7);
-        TextView eightButton = (TextView) findViewById(R.id.button8);
+        Button eightButton = (Button) findViewById(R.id.button8);
 
-        for (int i = 0; i < animals.length; i++) {
-            switch (i) {
-                case 0:
-                    main_image.setImageResource(R.drawable.cat);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 1:
-                    main_image.setImageResource(R.drawable.ant);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.twentynine);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twentyeight);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirtyone);
-                    eightButton.setText(R.string.fortythree);
-                    break;
-                case 2:
-                    main_image.setImageResource(R.drawable.butterfly);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 3:
-                    main_image.setImageResource(R.drawable.cow);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 4:
-                    main_image.setImageResource(R.drawable.crocodile);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 5:
-                    main_image.setImageResource(R.drawable.dog);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 6:
-                    main_image.setImageResource(R.drawable.grasshopper);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 7:
-                    main_image.setImageResource(R.drawable.horse);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 8:
-                    main_image.setImageResource(R.drawable.fish);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 9:
-                    main_image.setImageResource(R.drawable.owl);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 10:
-                    main_image.setImageResource(R.drawable.peacock);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 11:
-                    main_image.setImageResource(R.drawable.rabbit);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 12:
-                    main_image.setImageResource(R.drawable.snake);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                case 13:
-                    main_image.setImageResource(R.drawable.zebra);
-                    oneButton.setText(R.string.thirtyfour);
-                    twoButton.setText(R.string.two);
-                    threeButton.setText(R.string.eight);
-                    fourButton.setText(R.string.twenty);
-                    fiveButton.setText(R.string.seven);
-                    sixButton.setText(R.string.fiftythree);
-                    sevenButton.setText(R.string.thirteen);
-                    eightButton.setText(R.string.twelve);
-                    break;
-                default:
-                    // code block
-            }
-        }
+        main_image.setImageResource(img_resource);
+        result.getText().toString().equals(str_animal);
+
+        oneButton.setText(btn1_resource_text);
+        twoButton.setText(btn2_resource_text);
+        threeButton.setText(btn3_resource_text);
+        fourButton.setText(btn4_resource_text);
+        fiveButton.setText(btn5_resource_text);
+        sixButton.setText(btn6_resource_text);
+        sevenButton.setText(btn7_resource_text);
+        eightButton.setText(btn8_resource_text);
     }
 
+    /**
+     * This method is just for ant
+     **/
+    public void Ant(int img_resource, int str_animal, int btn1_resource_text, int btn2_resource_text, int btn3_resource_text, int btn4_resource_text, int btn5_resource_text, int btn6_resource_text, int btn7_resource_text, int btn8_resource_text) {
+
+        ImageView main_image = (ImageView) findViewById(R.id.image_main);
+        EditText result = (EditText) findViewById(R.id.result);
+
+        Button oneButton = (Button) findViewById(R.id.button1);
+        Button twoButton = (Button) findViewById(R.id.button2);
+        Button threeButton = (Button) findViewById(R.id.button3);
+        Button fourButton = (Button) findViewById(R.id.button4);
+        Button fiveButton = (Button) findViewById(R.id.button5);
+        Button sixButton = (Button) findViewById(R.id.button6);
+        Button sevenButton = (Button) findViewById(R.id.button7);
+        Button eightButton = (Button) findViewById(R.id.button8);
+
+        main_image.setImageResource(img_resource);
+        result.getText().toString().equals(str_animal);
+
+        oneButton.setText(btn1_resource_text);
+        twoButton.setText(btn2_resource_text);
+        threeButton.setText(btn3_resource_text);
+        fourButton.setText(btn4_resource_text);
+        fiveButton.setText(btn5_resource_text);
+        sixButton.setText(btn6_resource_text);
+        sevenButton.setText(btn7_resource_text);
+        eightButton.setText(btn8_resource_text);
+
+
+    }
+
+    /**
+     * This method will switch to the new question if answer is correct
+     **/
+    public void next(View v) {
+
+    }
+
+    /**
+     * This method should clean the EditText box with the answer
+     **/
+    public void clear(View view) {
+        EditText result = (EditText) findViewById(R.id.result);
+        result.setText("");
+    }
+
+    /**
+     * This method will check if answer is correct or not and throw a toast message accordingly
+     **/
+    public void done(View view) {
+        EditText edit_text = (EditText) findViewById(R.id.result);
+
+        if (edit_text.getText().toString().equalsIgnoreCase("ANT")) { // HOW TO COMPARE?
+            toastMessage(R.string.great);
+        } else {
+            toastMessage(R.string.fail);
+        }
+    }
 
     /**
      * This method put part of the word to the edit field from button 1
@@ -299,36 +234,6 @@ public class MainActivity extends AppCompatActivity {
         EditText result = (EditText) findViewById(R.id.result);
         Editable temp = result.getText();
         result.setText(temp + "" + buttonText);
-    }
-
-    /**
-     * This method will switch to the new question if answer is correct
-     **/
-    public void next(View v) {
-
-    }
-
-    /**
-     * This method should clean the EditText box with the answer
-     **/
-    public void clear(View view) {
-        EditText result = (EditText) findViewById(R.id.result);
-        result.setText("");
-    }
-
-    /**
-     * This method will check if answer is correct or not and throw a toast message accordingly
-     **/
-    public void done(View view) {
-        EditText result = (EditText) findViewById(R.id.result);
-        ImageView img = (ImageView) findViewById(R.id.image_main);
-        String c = img.getContext().toString();
-
-        if (result.getText().toString().equals("CAT")) {
-            toastMessage(R.string.great);
-        } else {
-            toastMessage(R.string.fail);
-        }
     }
 
     public void toastMessage(int resource) {

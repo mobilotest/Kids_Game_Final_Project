@@ -67,6 +67,21 @@
         <item name="rabbit">RABBIT</item>
         <item name="snake">SNAKE</item>
         <item name="zebra">ZEBRA</item>
+
     </string-array>
+    <string name="ant">ANT</string>
+    <string name="butterfly">BUTTERFLY</string>
+    <string name="cat">CAT</string>
+    <string name="cow">COW</string>
+    <string name="crocodile">CROCODILE</string>
+    <string name="dog">DOG</string>
+    <string name="fish">FISH</string>
+    <string name="grasshopper">GRASSHOPPER</string>
+    <string name="horse">HORSE</string>
+    <string name="owl">OWL</string>
+    <string name="peacock">PEACOCK</string>
+    <string name="rabbit">RABBIT</string>
+    <string name="snake">SNAKE</string>
+    <string name="zebra">ZEBRA</string>
 
 </resources>
