@@ -6,3 +6,6 @@ The Quiz App project is a chance for you to combine and practice everything you 
 
 ### Task:
 The goal is to create an educational app that quizzes a user about a certain topic of your choice. We want you to be creative about how you accomplish this. It’s up to you what the quiz questions will be about and how you want to present them to your user.
+
+### Quiz_App's Screenshots:
+<img src="https://github.com/mobilotest/Quiz_App_Project/blob/master/images/one.png" width = 200> -> <img src="https://github.com/mobilotest/Quiz_App_Project/blob/master/images/two.png" width = 200> -> <img src="https://github.com/mobilotest/Quiz_App_Project/blob/master/images/three.png" width = 200> -> <img src="https://github.com/mobilotest/Quiz_App_Project/blob/master/images/four.png" width = 200> -> <img src="https://github.com/mobilotest/Quiz_App_Project/blob/master/images/five.png" width = 200>
