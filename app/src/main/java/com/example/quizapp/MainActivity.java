@@ -49,8 +49,9 @@ public class MainActivity extends AppCompatActivity {
 //        list.setAdapter(adapter);
 //
 //        for(int i=0; i.animals)
-//        Cat(R.drawable.cat, R.string.cat, R.string.thirtyfour, R.string.two, R.string.eight, R.string.twenty, R.string.seven, R.string.fiftythree, R.string.thirteen, R.string.twelve);
+//        Cat(R.drawable.cat, R.string.cat, R.string.thirtyfour, R.string.thirtyfive, R.string.eight, R.string.twenty, R.string.seven, R.string.fiftythree, R.string.thirteen, R.string.twelve);
         Ant(R.drawable.ant, R.string.ant, R.string.thirtyfour, R.string.three, R.string.eight, R.string.twentynine, R.string.thirtyone, R.string.fiftythree, R.string.fourteen, R.string.twelve);
+//        Cow(R.drawable.ant, R.string.cow, R.string.fifteen, R.string.four, R.string.five, R.string.twentynine, R.string.thirtyone, R.string.seven, R.string.twenty, R.string.six);
 
         // HOW TO SWITCH
 
@@ -115,8 +116,33 @@ public class MainActivity extends AppCompatActivity {
         sixButton.setText(btn6_resource_text);
         sevenButton.setText(btn7_resource_text);
         eightButton.setText(btn8_resource_text);
+    }
 
+    public void Cow(int img_resource, int str_animal, int btn1_resource_text, int btn2_resource_text, int btn3_resource_text, int btn4_resource_text, int btn5_resource_text, int btn6_resource_text, int btn7_resource_text, int btn8_resource_text) {
 
+        ImageView main_image = (ImageView) findViewById(R.id.image_main);
+        EditText result = (EditText) findViewById(R.id.result);
+
+        Button oneButton = (Button) findViewById(R.id.button1);
+        Button twoButton = (Button) findViewById(R.id.button2);
+        Button threeButton = (Button) findViewById(R.id.button3);
+        Button fourButton = (Button) findViewById(R.id.button4);
+        Button fiveButton = (Button) findViewById(R.id.button5);
+        Button sixButton = (Button) findViewById(R.id.button6);
+        Button sevenButton = (Button) findViewById(R.id.button7);
+        Button eightButton = (Button) findViewById(R.id.button8);
+
+        main_image.setImageResource(img_resource);
+        result.getText().toString().equals(str_animal);
+
+        oneButton.setText(btn1_resource_text);
+        twoButton.setText(btn2_resource_text);
+        threeButton.setText(btn3_resource_text);
+        fourButton.setText(btn4_resource_text);
+        fiveButton.setText(btn5_resource_text);
+        sixButton.setText(btn6_resource_text);
+        sevenButton.setText(btn7_resource_text);
+        eightButton.setText(btn8_resource_text);
     }
 
     /**
