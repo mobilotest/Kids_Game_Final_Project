@@ -1,11 +1,28 @@
-# Quiz_App_Project TBD
-Quiz App Project for NanoDegree #UdacityLevelUp
+# Kids Game - Final Project for UCSC Extension
+My project will be a Game. The game will help 3 - 4 years old kids (actually my son) to learn how to
+read and pronouns words in Russian and English by syllables. 
 
 ### Project Overview:
-The Quiz App project is a chance for you to combine and practice everything you learned in this section of the Nanodegree program. You will be making your own Android app - taking it from the idea stage to building out the full app. You can share your app with family and friends, as well as with other students in this course.
+1. The application will be available on the Play Store for download and install on Android
+smartphones.
+2. Pull image and syllables data from a JSON file AND/OR from the web storage.
+3. Users can select the preferred language: Russian OR English.
+4. Users can select different topics: Animals, Transport, etc.
+5. User will select by clicking on buttons with random different syllables to create the whole word
+of the displayed image.
+6. Users can select the option: Click the button with sound or without. It will read a corresponding
+*.mp3 file of the syllable or letter on the button.
+7. Allow users to see the hint (help) in case if stuck with the answer.
+8. App UI contains a manual in the Settings-> Help, which will locate on the online web-page. 
 
 ### Task:
-The goal is to create an educational app that quizzes a user about a certain topic of your choice. We want you to be creative about how you accomplish this. It’s up to you what the quiz questions will be about and how you want to present them to your user.
+Create a UML diagramm
+Download images
+Record .mp3 files
+Create a UI
+Learn and somehow connect a JSON file
+TBD
+
 
 ### Quiz_App's Screenshots:
-<img src="https://github.com/mobilotest/Quiz_App_Project/blob/master/images/one.png" width = 200> -> <img src="https://github.com/mobilotest/Quiz_App_Project/blob/master/images/two.png" width = 200> -> <img src="https://github.com/mobilotest/Quiz_App_Project/blob/master/images/three.png" width = 200> -> <img src="https://github.com/mobilotest/Quiz_App_Project/blob/master/images/four.png" width = 200> -> <img src="https://github.com/mobilotest/Quiz_App_Project/blob/master/images/five.png" width = 200>
+<img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/one.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/two.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/three.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/four.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/five.png" width = 200>
