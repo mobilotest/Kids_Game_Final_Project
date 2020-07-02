@@ -16,12 +16,12 @@ of the displayed image.
 8. App UI contains a manual in the Settings-> Help, which will locate on the online web-page. 
 
 ### Task:
-Create a UML diagramm
-Download images
-Record .mp3 files
-Create a UI
-Learn and somehow connect a JSON file
-TBD
+1. Create a UML diagramm
+2. Download images
+3. Record .mp3 files
+4. Create a UI
+5. Learn and somehow connect a JSON file with all related data
+6. TBD
 
 
 ### Quiz_App's Screenshots:
