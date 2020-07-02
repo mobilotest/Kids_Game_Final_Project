@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.kidsgame;
 
 import android.os.Bundle;
 import android.widget.Button;
@@ -7,7 +7,7 @@ import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class Owl extends AppCompatActivity {
+public class Crocodile extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +34,7 @@ public class Owl extends AppCompatActivity {
     /**
      * This method is general for quiz
      **/
-    public Owl(int img_resource, int str_animal, int btn1_resource_text, int btn2_resource_text, int btn3_resource_text, int btn4_resource_text, int btn5_resource_text, int btn6_resource_text, int btn7_resource_text, int btn8_resource_text) {
+    public Crocodile(int img_resource, int str_animal, int btn1_resource_text, int btn2_resource_text, int btn3_resource_text, int btn4_resource_text, int btn5_resource_text, int btn6_resource_text, int btn7_resource_text, int btn8_resource_text) {
 
         main_image.setImageResource(img_resource);
         result.getText().toString().equals(str_animal);

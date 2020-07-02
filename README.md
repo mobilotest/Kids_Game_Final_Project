@@ -24,5 +24,5 @@ of the displayed image.
 6. TBD
 
 
-### Quiz_App's Screenshots:
+### Kids Game's Screenshots:
 <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/one.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/two.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/three.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/four.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/five.png" width = 200>

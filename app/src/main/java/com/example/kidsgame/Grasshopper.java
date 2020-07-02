@@ -1,4 +1,4 @@
-package com.example.quizapp;
+package com.example.kidsgame;
 
 import android.os.Bundle;
 import android.widget.Button;
