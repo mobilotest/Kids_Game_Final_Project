@@ -1,0 +1,50 @@
+{
+  "screens": [
+    {
+      "animals": [
+        "ant"
+        :
+        [
+          {
+            "image": "ant.png",
+            "answer": "ANT",
+            "bottons": [
+              {
+                "button_1": "DA",
+                "button_2": "RE",
+                "button_3": "A",
+                "button_4": "NO",
+                "button_5": "T",
+                "button_6": "BR",
+                "button_7": "N",
+                "button_8": "U"
+              }
+            ]
+          }
+        ]
+      ],
+      "transport": [
+        "ant"
+        :
+        [
+          {
+            "image": "ant.png",
+            "answer": "ANT",
+            "bottons": [
+              {
+                "button_1": "DA",
+                "button_2": "RE",
+                "button_3": "A",
+                "button_4": "NO",
+                "button_5": "T",
+                "button_6": "BR",
+                "button_7": "N",
+                "button_8": "U"
+              }
+            ]
+          }
+        ]
+      ]
+    }
+  ]
+}
