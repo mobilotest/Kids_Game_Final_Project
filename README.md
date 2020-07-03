@@ -21,7 +21,8 @@ of the displayed image.
 3. Record .mp3 files
 4. Create a UI
 5. Learn and somehow connect a JSON file with all related data
-6. TBD
+6. In future will implement Dimentions for all text fields (https://developer.android.com/guide/topics/resources/more-resources.html#Dimension)
+7. TBD
 
 
 ### Kids Game's Screenshots:
