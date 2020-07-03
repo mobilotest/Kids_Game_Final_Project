@@ -1,14 +1,12 @@
 {
-  "screens": [
-    {
-      "animals": [
-        "ant"
-        :
-        [
+  "screens": {
+    "animals": [
+      {
+        "ant": [
           {
             "image": "ant.png",
             "answer": "ANT",
-            "bottons": [
+            "buttons": [
               {
                 "button_1": "DA",
                 "button_2": "RE",
@@ -22,29 +20,89 @@
             ]
           }
         ]
-      ],
-      "transport": [
-        "ant"
-        :
-        [
+      },
+      {
+        "cow": [
           {
-            "image": "ant.png",
-            "answer": "ANT",
-            "bottons": [
+            "image": "cow.png",
+            "answer": "COW",
+            "buttons": [
               {
                 "button_1": "DA",
-                "button_2": "RE",
+                "button_2": "C",
                 "button_3": "A",
-                "button_4": "NO",
+                "button_4": "NY",
                 "button_5": "T",
-                "button_6": "BR",
-                "button_7": "N",
-                "button_8": "U"
+                "button_6": "O",
+                "button_7": "SE",
+                "button_8": "V"
               }
             ]
           }
         ]
-      ]
-    }
-  ]
+      },
+      {
+        "camel": [
+          {
+            "image": "camel.png",
+            "answer": "CAMEL",
+            "buttons": [
+              {
+                "button_1": "FA",
+                "button_2": "CA",
+                "button_3": "A",
+                "button_4": "ME",
+                "button_5": "T",
+                "button_6": "L",
+                "button_7": "N",
+                "button_8": "V"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "transport": [
+      {
+        "tractor": [
+          {
+            "image": "tractor.png",
+            "answer": "TRACTOR",
+            "buttons": [
+              {
+                "button_1": "R",
+                "button_2": "RE",
+                "button_3": "A",
+                "button_4": "TRA",
+                "button_5": "C",
+                "button_6": "BR",
+                "button_7": "N",
+                "button_8": "TO"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "plane": [
+          {
+            "image": "plane.png",
+            "answer": "PLANE",
+            "buttons": [
+              {
+                "button_1": "X",
+                "button_2": "RE",
+                "button_3": "P",
+                "button_4": "LA",
+                "button_5": "C",
+                "button_6": "BR",
+                "button_7": "NE",
+                "button_8": "QU"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
 }
