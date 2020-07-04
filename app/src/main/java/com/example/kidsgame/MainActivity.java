@@ -7,12 +7,29 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import org.json.JSONException;
+
+import java.io.IOException;
+
 public class MainActivity extends AppCompatActivity {
+
+    ImageView main_image = (ImageView) findViewById(R.id.image_main);
+    EditText result = (EditText) findViewById(R.id.result);
+
+    Button oneButton = (Button) findViewById(R.id.button1);
+    Button twoButton = (Button) findViewById(R.id.button2);
+    Button threeButton = (Button) findViewById(R.id.button3);
+    Button fourButton = (Button) findViewById(R.id.button4);
+    Button fiveButton = (Button) findViewById(R.id.button5);
+    Button sixButton = (Button) findViewById(R.id.button6);
+    Button sevenButton = (Button) findViewById(R.id.button7);
+    Button eightButton = (Button) findViewById(R.id.button8);
 
     private String category;
     private String answer;
@@ -35,9 +52,13 @@ public class MainActivity extends AppCompatActivity {
         return transportName;
     }
 
-    public String getImage() { return image; }
+    public String getImage() {
+        return image;
+    }
 
-    public String getAnswer() { return answer; }
+    public String getAnswer() {
+        return answer;
+    }
 
     public String[] getButtonsSyllables() {
         return buttonsSyllables;
@@ -48,9 +69,13 @@ public class MainActivity extends AppCompatActivity {
         this.category = category;
     }
 
-    public void setAnswer(String answer) { this.answer = answer; }
+    public void setAnswer(String answer) {
+        this.answer = answer;
+    }
 
-    public void setImage(String image) { this.image = image; }
+    public void setImage(String image) {
+        this.image = image;
+    }
 
     public void setAnimalName(String animalName) {
         this.animalName = animalName;
@@ -91,7 +116,29 @@ public class MainActivity extends AppCompatActivity {
         result.setText("");
     }
 
-    /**
+    public void runJson(View view) {
+
+        try {
+            MainActivity screen = ReadJSON.readJSONFile(this);
+
+            main_image.setImageResource(img_resource);
+            result.getText().toString().equals(str_animal);
+
+            oneButton.setText(btn1_resource_text);
+            twoButton.setText(btn2_resource_text);
+            threeButton.setText(btn3_resource_text);
+            fourButton.setText(btn4_resource_text);
+            fiveButton.setText(btn5_resource_text);
+            sixButton.setText(btn6_resource_text);
+            sevenButton.setText(btn7_resource_text);
+            eightButton.setText(btn8_resource_text);
+    } catch (JSONException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /**
      * This method will switch to the new question if answer is correct
      **/
     public void next(View v) {
@@ -112,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
     public void done(View view) {
         EditText edit_text = (EditText) findViewById(R.id.result);
 
-        if (edit_text.getText().toString().equalsIgnoreCase("ANT")) { // HOW TO COMPARE?
+        if (edit_text.getText().toString().equalsIgnoreCase(answer)) { // HOW TO COMPARE?
             toastMessage(R.string.great);
         } else {
             toastMessage(R.string.fail);
