@@ -19,21 +19,12 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    ImageView main_image = (ImageView) findViewById(R.id.image_main);
-    EditText result = (EditText) findViewById(R.id.result);
-
-    Button oneButton = (Button) findViewById(R.id.button1);
-    Button twoButton = (Button) findViewById(R.id.button2);
-    Button threeButton = (Button) findViewById(R.id.button3);
-    Button fourButton = (Button) findViewById(R.id.button4);
-    Button fiveButton = (Button) findViewById(R.id.button5);
-    Button sixButton = (Button) findViewById(R.id.button6);
-    Button sevenButton = (Button) findViewById(R.id.button7);
-    Button eightButton = (Button) findViewById(R.id.button8);
+    ArrayList<String> myList = new ArrayList<>();
 
     private String category;
     private String answer;
@@ -111,25 +102,34 @@ public class MainActivity extends AppCompatActivity {
         return sb.toString();
     }
 
-    ArrayList<String> myList = new ArrayList<>();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getJson();
 
+        ImageView main_image = (ImageView) findViewById(R.id.image_main);
         EditText result = (EditText) findViewById(R.id.result);
+        Button oneButton = (Button) findViewById(R.id.button1);
+        Button twoButton = (Button) findViewById(R.id.button2);
+        Button threeButton = (Button) findViewById(R.id.button3);
+        Button fourButton = (Button) findViewById(R.id.button4);
+        Button fiveButton = (Button) findViewById(R.id.button5);
+        Button sixButton = (Button) findViewById(R.id.button6);
+        Button sevenButton = (Button) findViewById(R.id.button7);
+        Button eightButton = (Button) findViewById(R.id.button8);
+
         result.setText("");
+
+        getJson();
     }
 
     public void getJson() {
         String json;
         try {
-            InputStream is = getAssets().open(String.valueOf(R.raw.screens));
+            InputStream is = getAssets().open("screens.json");
             int size = is.available();
             byte[] buffer = new byte[size];
-            is.read();
+            is.read(buffer);
             is.close();
 
             json = new String(buffer, "UTF-8");
@@ -138,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
             for (int i = 0; i < jsonArray.length(); i++) {
                 JSONObject obj = jsonArray.getJSONObject(i);
                 if (obj.getString("answer").equals("ANT")) {
+                    myList.add(obj.getString("answer"));
                     myList.add(obj.getString("image"));
                     myList.add(obj.getString("button_1"));
                     myList.add(obj.getString("button_2"));
@@ -150,153 +151,145 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
-            main_image.setImageResource(Integer.parseInt(myList.toString()));
-            result.getText().toString().equals(str_animal);
+            Toast.makeText(getApplicationContext(), myList.toString(), Toast.LENGTH_LONG).show();
 
-            oneButton.setText(btn1_resource_text);
-            twoButton.setText(btn2_resource_text);
-            threeButton.setText(btn3_resource_text);
-            fourButton.setText(btn4_resource_text);
-            fiveButton.setText(btn5_resource_text);
-            sixButton.setText(btn6_resource_text);
-            sevenButton.setText(btn7_resource_text);
-            eightButton.setText(btn8_resource_text);
-
-
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (JSONException e) {
             e.printStackTrace();
         }
+    }
 
-        /**
-         * This method will switch to the new question if answer is correct
-         **/
-        public void next (View v){
+    /**
+     * This method will switch to the new question if answer is correct
+     **/
+    public void next(View v) {
 
-        }
+    }
 
-        /**
-         * This method should clean the EditText box with the answer
-         **/
-        public void clear (View view){
-            EditText result = (EditText) findViewById(R.id.result);
-            result.setText("");
-        }
+    /**
+     * This method should clean the EditText box with the answer
+     **/
+    public void clear(View view) {
+        EditText result = (EditText) findViewById(R.id.result);
+        result.setText("");
+    }
 
-        /**
-         * This method will check if answer is correct or not and throw a toast message accordingly
-         **/
-        public void done (View view){
-            EditText edit_text = (EditText) findViewById(R.id.result);
+    /**
+     * This method will check if answer is correct or not and throw a toast message accordingly
+     **/
+    public void done(View view) {
+        EditText edit_text = (EditText) findViewById(R.id.result);
 
-            if (edit_text.getText().toString().equalsIgnoreCase(answer)) { // HOW TO COMPARE?
-                toastMessage(R.string.great);
-            } else {
-                toastMessage(R.string.fail);
-            }
-        }
-
-        /**
-         * This method put part of the word to the edit field from button 1
-         **/
-        public void one (View v){
-            Button b = (Button) v;
-            String buttonText = b.getText().toString();
-            EditText result = (EditText) findViewById(R.id.result);
-            Editable temp = result.getText();
-            result.setText(temp + "" + buttonText);
-        }
-
-
-        /**
-         * This method put part of the word to the edit field from button 2
-         **/
-        public void two (View v){
-            Button b = (Button) v;
-            String buttonText = b.getText().toString();
-            EditText result = (EditText) findViewById(R.id.result);
-            Editable temp = result.getText();
-            result.setText(temp + "" + buttonText);
-        }
-
-        /**
-         * This method put part of the word to the edit field from button 3
-         **/
-        public void three (View v){
-            Button b = (Button) v;
-            String buttonText = b.getText().toString();
-            EditText result = (EditText) findViewById(R.id.result);
-            Editable temp = result.getText();
-            result.setText(temp + "" + buttonText);
-        }
-
-        /**
-         * This method put part of the word to the edit field from button 4
-         **/
-        public void four (View v){
-            Button b = (Button) v;
-            String buttonText = b.getText().toString();
-            EditText result = (EditText) findViewById(R.id.result);
-            Editable temp = result.getText();
-            result.setText(temp + "" + buttonText);
-        }
-
-        /**
-         * This method put part of the word to the edit field from button 5
-         **/
-        public void five (View v){
-            Button b = (Button) v;
-            String buttonText = b.getText().toString();
-            EditText result = (EditText) findViewById(R.id.result);
-            Editable temp = result.getText();
-            result.setText(temp + "" + buttonText);
-        }
-
-        /**
-         * This method put part of the word to the edit field from button 6
-         **/
-        public void six (View v){
-            Button b = (Button) v;
-            String buttonText = b.getText().toString();
-            EditText result = (EditText) findViewById(R.id.result);
-            Editable temp = result.getText();
-            result.setText(temp + "" + buttonText);
-        }
-
-        /**
-         * This method put part of the word to the edit field from button 7
-         **/
-        public void seven (View v){
-            Button b = (Button) v;
-            String buttonText = b.getText().toString();
-            EditText result = (EditText) findViewById(R.id.result);
-            Editable temp = result.getText();
-            result.setText(temp + "" + buttonText);
-        }
-
-        /**
-         * This method put part of the word to the edit field from button 8
-         **/
-        public void eight (View v){
-            Button b = (Button) v;
-            String buttonText = b.getText().toString();
-            EditText result = (EditText) findViewById(R.id.result);
-            Editable temp = result.getText();
-            result.setText(temp + "" + buttonText);
-        }
-
-        public void toastMessage ( int resource){
-            Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
-            TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
-            toastMessage.setTextColor(Color.RED);
-            toastMessage.setTextSize(45);
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show();
+        if (edit_text.getText().toString().equalsIgnoreCase("ANT")) { // HOW TO COMPARE?
+            toastMessage(R.string.great);
+        } else {
+            toastMessage(R.string.fail);
         }
     }
 
+    /**
+     * This method put part of the word to the edit field from button 1
+     **/
+    public void one(View v) {
+        Button b = (Button) v;
+        String buttonText = b.getText().toString();
+        EditText result = (EditText) findViewById(R.id.result);
+        Editable temp = result.getText();
+        result.setText(temp + "" + buttonText);
+    }
+
+
+    /**
+     * This method put part of the word to the edit field from button 2
+     **/
+    public void two(View v) {
+        Button b = (Button) v;
+        String buttonText = b.getText().toString();
+        EditText result = (EditText) findViewById(R.id.result);
+        Editable temp = result.getText();
+        result.setText(temp + "" + buttonText);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 3
+     **/
+    public void three(View v) {
+        Button b = (Button) v;
+        String buttonText = b.getText().toString();
+        EditText result = (EditText) findViewById(R.id.result);
+        Editable temp = result.getText();
+        result.setText(temp + "" + buttonText);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 4
+     **/
+    public void four(View v) {
+        Button b = (Button) v;
+        String buttonText = b.getText().toString();
+        EditText result = (EditText) findViewById(R.id.result);
+        Editable temp = result.getText();
+        result.setText(temp + "" + buttonText);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 5
+     **/
+    public void five(View v) {
+        Button b = (Button) v;
+        String buttonText = b.getText().toString();
+        EditText result = (EditText) findViewById(R.id.result);
+        Editable temp = result.getText();
+        result.setText(temp + "" + buttonText);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 6
+     **/
+    public void six(View v) {
+        Button b = (Button) v;
+        String buttonText = b.getText().toString();
+        EditText result = (EditText) findViewById(R.id.result);
+        Editable temp = result.getText();
+        result.setText(temp + "" + buttonText);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 7
+     **/
+    public void seven(View v) {
+        Button b = (Button) v;
+        String buttonText = b.getText().toString();
+        EditText result = (EditText) findViewById(R.id.result);
+        Editable temp = result.getText();
+        result.setText(temp + "" + buttonText);
+    }
+
+    /**
+     * This method put part of the word to the edit field from button 8
+     **/
+    public void eight(View v) {
+        Button b = (Button) v;
+        String buttonText = b.getText().toString();
+        EditText result = (EditText) findViewById(R.id.result);
+        Editable temp = result.getText();
+        result.setText(temp + "" + buttonText);
+    }
+
+    public void toastMessage(int resource) {
+        Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
+        TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+        toastMessage.setTextColor(Color.RED);
+        toastMessage.setTextSize(45);
+        toast.setGravity(Gravity.CENTER, 0, 0);
+        toast.show();
+    }
 }
+
+
 //        list = (ListView) findViewById(R.string.);
 //        ArrayAdapter<String> adapter =
 //                new ArrayAdapter<String>(MainActivity.this,
@@ -318,7 +311,10 @@ public class MainActivity extends AppCompatActivity {
 
 // HOW TO SWITCH
 
-
+/**
+ * //     * This method for cat only so far
+ * //
+ **/
 //    public void Cat(int img_resource, int str_animal, int btn1_resource_text, int btn2_resource_text, int btn3_resource_text, int btn4_resource_text, int btn5_resource_text, int btn6_resource_text, int btn7_resource_text, int btn8_resource_text) {
 //
 //        ImageView main_image = (ImageView) findViewById(R.id.image_main);
