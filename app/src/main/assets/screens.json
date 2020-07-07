@@ -1,103 +1,80 @@
-{
-  "ant": {
+[
+  {
     "category": "animals",
     "image": "ant.png",
-    "buttons": [
-      {
-        "button_1": "DA",
-        "button_2": "RE",
-        "button_3": "A",
-        "button_4": "NO",
-        "button_5": "T",
-        "button_6": "BR",
-        "button_7": "N",
-        "button_8": "U"
-      }
-    ]
+    "answer": "ANT",
+    "button_1": "DA",
+    "button_2": "RE",
+    "button_3": "A",
+    "button_4": "NO",
+    "button_5": "T",
+    "button_6": "BR",
+    "button_7": "N",
+    "button_8": "U"
   },
-  "cow": {
+  {
     "category": "animals",
     "image": "cow.png",
     "answer": "COW",
-    "buttons": [
-      {
-        "button_1": "DA",
-        "button_2": "C",
-        "button_3": "A",
-        "button_4": "NY",
-        "button_5": "T",
-        "button_6": "O",
-        "button_7": "SE",
-        "button_8": "V"
-      }
-    ]
+    "button_1": "DA",
+    "button_2": "C",
+    "button_3": "A",
+    "button_4": "NY",
+    "button_5": "T",
+    "button_6": "O",
+    "button_7": "SE",
+    "button_8": "V"
   },
-  "butterfly": {
+  {
     "category": "animals",
     "image": "butterfly.png",
     "answer": "BUTTERFLY",
-    "buttons": [
-      {
-        "button_1": "ER",
-        "button_2": "CA",
-        "button_3": "BA",
-        "button_4": "ME",
-        "button_5": "TT",
-        "button_6": "LY",
-        "button_7": "N",
-        "button_8": "F"
-      }
-    ]
+    "button_1": "ER",
+    "button_2": "CA",
+    "button_3": "BA",
+    "button_4": "ME",
+    "button_5": "TT",
+    "button_6": "LY",
+    "button_7": "N",
+    "button_8": "F"
   },
-  "cat": {
+  {
     "category": "animals",
     "image": "cat.png",
     "answer": "CAT",
-    "buttons": [
-      {
-        "button_1": "ER",
-        "button_2": "A",
-        "button_3": "BA",
-        "button_4": "ME",
-        "button_5": "C",
-        "button_6": "T",
-        "button_7": "N",
-        "button_8": "F"
-      }
-    ]
+    "button_1": "ER",
+    "button_2": "A",
+    "button_3": "BA",
+    "button_4": "ME",
+    "button_5": "C",
+    "button_6": "T",
+    "button_7": "N",
+    "button_8": "F"
   },
-  "tractor": {
+  {
     "category": "transport",
     "image": "tractor.png",
     "answer": "TRACTOR",
-    "buttons": [
-      {
-        "button_1": "R",
-        "button_2": "RE",
-        "button_3": "A",
-        "button_4": "TRA",
-        "button_5": "C",
-        "button_6": "BR",
-        "button_7": "N",
-        "button_8": "TO"
-      }
-    ]
+    "button_1": "R",
+    "button_2": "RE",
+    "button_3": "A",
+    "button_4": "TRA",
+    "button_5": "C",
+    "button_6": "BR",
+    "button_7": "N",
+    "button_8": "TO"
   },
-  "plane": {
+  {
     "category": "transport",
     "image": "plane.png",
     "answer": "PLANE",
-    "buttons": [
-      {
-        "button_1": "X",
-        "button_2": "RE",
-        "button_3": "P",
-        "button_4": "LA",
-        "button_5": "C",
-        "button_6": "BR",
-        "button_7": "NE",
-        "button_8": "QU"
-      }
-    ]
+    "button_1": "X",
+    "button_2": "RE",
+    "button_3": "P",
+    "button_4": "LA",
+    "button_5": "C",
+    "button_6": "BR",
+    "button_7": "NE",
+    "button_8": "QU"
   }
-}
+]
