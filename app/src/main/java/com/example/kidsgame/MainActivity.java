@@ -21,13 +21,22 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpRetryException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.InputMismatchException;
+
+import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -127,36 +136,74 @@ public class MainActivity extends AppCompatActivity {
 
         result.setText("");
 
-        getJson();
+        HttpsURLConnection connection = null;
+        BufferedReader reader = null;
+
+        try {
+            URL url = new URL("https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/assets/screens.json");
+            connection = (HttpsURLConnection) url.openConnection();
+            connection.connect();
+
+            InputStream stream = connection.getInputStream();
+
+            reader = new BufferedReader(new InputStreamReader(stream));
+
+            StringBuffer buffer = new StringBuffer();
+
+            String line = "";
+            while ((line = reader.readLine()) != null){
+                buffer.append(line);
+            }
+
+            Toast.makeText(getApplicationContext(), buffer.toString(), Toast.LENGTH_LONG).show();
+
+        } catch (MalformedURLException e) {https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/assets/screens.json
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (connection != null) {
+                connection.disconnect();
+            }
+            try {
+                if(reader != null) {
+                    reader.close();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+
+//        getJson();
     }
 
-    public void getJson() {
-        String json;
-        try {
-            InputStream is = getAssets().open("screens.json");
-            int size = is.available();
-            byte[] buffer = new byte[size];
-            is.read(buffer);
-            is.close();
-
-            json = new String(buffer, "UTF-8");
-            JSONArray jsonArray = new JSONArray(json);
-
-            for (int i = 0; i < jsonArray.length(); i++) {
-                JSONObject obj = jsonArray.getJSONObject(i);
-                if (obj.getString("answer").equals("ANT")) {
-                    myList.add(obj.getString("answer"));
-                    myList.add(obj.getString("image"));
-                    myList.add(obj.getString("button_1"));
-                    myList.add(obj.getString("button_2"));
-                    myList.add(obj.getString("button_3"));
-                    myList.add(obj.getString("button_4"));
-                    myList.add(obj.getString("button_5"));
-                    myList.add(obj.getString("button_6"));
-                    myList.add(obj.getString("button_7"));
-                    myList.add(obj.getString("button_8"));
-                }
-            }
+//    public void getJson() {
+//        String json;
+//        try {
+//            InputStream is = getAssets().open("screens.json");
+//            int size = is.available();
+//            byte[] buffer = new byte[size];
+//            is.read(buffer);
+//            is.close();
+//
+//            json = new String(buffer, "UTF-8");
+//            JSONArray jsonArray = new JSONArray(json);
+//
+//            for (int i = 0; i < jsonArray.length(); i++) {
+//                JSONObject obj = jsonArray.getJSONObject(i);
+//                if (obj.getString("answer").equals("ANT")) {
+//                    myList.add(obj.getString("answer"));
+//                    myList.add(obj.getString("image"));
+//                    myList.add(obj.getString("button_1"));
+//                    myList.add(obj.getString("button_2"));
+//                    myList.add(obj.getString("button_3"));
+//                    myList.add(obj.getString("button_4"));
+//                    myList.add(obj.getString("button_5"));
+//                    myList.add(obj.getString("button_6"));
+//                    myList.add(obj.getString("button_7"));
+//                    myList.add(obj.getString("button_8"));
+//                }
+//            }
 
 //            main_image.setImageResource(myList.get(0));
 //            result.getText().toString().equals(str_animal);
@@ -169,17 +216,17 @@ public class MainActivity extends AppCompatActivity {
 //            sixButton.setText(btn6_resource_text);
 //            sevenButton.setText(btn7_resource_text);
 //            eightButton.setText(btn8_resource_text);
-
-        } catch (UnsupportedEncodingException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-
-        Toast.makeText(getApplicationContext(), myList.toString(), Toast.LENGTH_LONG).show();
-    }
+//
+//        } catch (UnsupportedEncodingException e) {
+//            e.printStackTrace();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        } catch (JSONException e) {
+//            e.printStackTrace();
+//        }
+//
+//        Toast.makeText(getApplicationContext(), myList.toString(), Toast.LENGTH_LONG).show();
+//    }
 
 
     /*
