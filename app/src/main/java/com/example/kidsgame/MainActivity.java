@@ -1,6 +1,7 @@
 package com.example.kidsgame;
 
 import android.graphics.Color;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.view.Gravity;
@@ -135,46 +136,61 @@ public class MainActivity extends AppCompatActivity {
         Button eightButton = (Button) findViewById(R.id.button8);
 
         result.setText("");
+//        getJson();
+        new JSONTask().execute("https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/assets/screens.json");
+    }
 
-        HttpsURLConnection connection = null;
-        BufferedReader reader = null;
+    public class JSONTask extends AsyncTask<String, String, String> {
 
-        try {
-            URL url = new URL("https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/assets/screens.json");
-            connection = (HttpsURLConnection) url.openConnection();
-            connection.connect();
+        @Override
+        protected String doInBackground(String... params) {
+            HttpsURLConnection connection = null;
+            BufferedReader reader = null;
 
-            InputStream stream = connection.getInputStream();
-
-            reader = new BufferedReader(new InputStreamReader(stream));
-
-            StringBuffer buffer = new StringBuffer();
-
-            String line = "";
-            while ((line = reader.readLine()) != null){
-                buffer.append(line);
-            }
-
-            Toast.makeText(getApplicationContext(), buffer.toString(), Toast.LENGTH_LONG).show();
-
-        } catch (MalformedURLException e) {https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/assets/screens.json
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            if (connection != null) {
-                connection.disconnect();
-            }
             try {
-                if(reader != null) {
-                    reader.close();
+                URL url = new URL(params[0]);
+                connection = (HttpsURLConnection) url.openConnection();
+                connection.connect();
+
+                InputStream stream = connection.getInputStream();
+
+                reader = new BufferedReader(new InputStreamReader(stream));
+
+                StringBuffer buffer = new StringBuffer();
+
+                String line = "";
+                while ((line = reader.readLine()) != null) {
+                    buffer.append(line);
                 }
+
+                return buffer.toString();
+
+            } catch (MalformedURLException e) {
+                https:
+//github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/assets/screens.json
+                e.printStackTrace();
             } catch (IOException e) {
                 e.printStackTrace();
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
+                try {
+                    if (reader != null) {
+                        reader.close();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
+            return null;
         }
 
-//        getJson();
+        @Override
+        protected void onPostExecute(String result) {
+            super.onPostExecute(result);
+            Toast.makeText(getApplicationContext(), result, Toast.LENGTH_LONG).show();
+        }
     }
 
 //    public void getJson() {
