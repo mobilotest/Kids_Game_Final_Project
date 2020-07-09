@@ -18,101 +18,16 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.kidsgame.models.ScreenModel;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.List;
-
-import javax.net.ssl.HttpsURLConnection;
 
 public class MainActivity extends AppCompatActivity {
-
-    ArrayList<String> myList = new ArrayList<>();
-
-    private String category;
-    private String answer;
-    private String animalName;
-    private String transportName;
-
-    private String image;
-    private String[] buttonsSyllables;
-
-    // Getters
-    public String getCategory() {
-        return category;
-    }
-
-    public String getAnimalName() {
-        return animalName;
-    }
-
-    public String getTransportName() {
-        return transportName;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public String getAnswer() {
-        return answer;
-    }
-
-    public String[] getButtonsSyllables() {
-        return buttonsSyllables;
-    }
-
-    // Setters
-    public void setCategory(String category) {
-        this.category = category;
-    }
-
-    public void setAnswer(String answer) {
-        this.answer = answer;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public void setAnimalName(String animalName) {
-        this.animalName = animalName;
-    }
-
-    public void setTransportName(String transportName) {
-        this.transportName = transportName;
-    }
-
-    public void setButtonsSyllables(String[] buttonsSyllables) {
-
-        this.buttonsSyllables = buttonsSyllables;
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageView main_image = (ImageView) findViewById(R.id.image_main);
         EditText result = (EditText) findViewById(R.id.result);
-        Button oneButton = (Button) findViewById(R.id.button1);
-        Button twoButton = (Button) findViewById(R.id.button2);
-        Button threeButton = (Button) findViewById(R.id.button3);
-        Button fourButton = (Button) findViewById(R.id.button4);
-        Button fiveButton = (Button) findViewById(R.id.button5);
-        Button sixButton = (Button) findViewById(R.id.button6);
-        Button sevenButton = (Button) findViewById(R.id.button7);
-        Button eightButton = (Button) findViewById(R.id.button8);
 
         result.setText("");
         new JSONTask().execute("https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/assets/screens.json");
