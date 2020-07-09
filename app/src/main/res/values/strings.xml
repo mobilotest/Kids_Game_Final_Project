@@ -83,5 +83,7 @@
     <string name="rabbit">RABBIT</string>
     <string name="snake">SNAKE</string>
     <string name="zebra">ZEBRA</string>
+    <string name="settings_about">About</string>
+    <string name="settings_help">Help</string>
 
 </resources>

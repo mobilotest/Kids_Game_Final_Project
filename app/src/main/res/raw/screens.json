@@ -3,7 +3,7 @@
     "ant": [
       {
         "category": "animals",
-        "image": "ant.png",
+        "image": "http://pngimg.com/uploads/ant/ant_PNG19368.png",
         "answer": "ANT",
         "buttons": [
           {
@@ -22,7 +22,7 @@
     "cow": [
       {
         "category": "animals",
-        "image": "cow.png",
+        "image": "http://pngimg.com/uploads/cow/cow_PNG50553.png",
         "answer": "COW",
         "buttons": [
           {
@@ -41,7 +41,7 @@
     "butterfly": [
       {
         "category": "animals",
-        "image": "butterfly.png",
+        "image": "http://pngimg.com/uploads/butterfly/butterfly_PNG1056.png",
         "answer": "BUTTERFLY",
         "buttons": [
           {
@@ -60,7 +60,7 @@
     "cat": [
       {
         "category": "animals",
-        "image": "cat.png",
+        "image": "http://pngimg.com/uploads/cat/cat_PNG50430.png",
         "answer": "CAT",
         "buttons": [
           {
@@ -79,7 +79,7 @@
     "tractor": [
       {
         "category": "transport",
-        "image": "tractor.png",
+        "image": "http://pngimg.com/uploads/tractor/tractor_PNG16116.png",
         "answer": "TRACTOR",
         "buttons": [
           {
@@ -98,7 +98,7 @@
     "plane": [
       {
         "category": "transport",
-        "image": "plane.png",
+        "image": "http://pngimg.com/uploads/plane/plane_PNG5238.png",
         "answer": "PLANE",
         "buttons": [
           {

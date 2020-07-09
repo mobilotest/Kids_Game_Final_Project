@@ -63,4 +63,6 @@
     <string name="great">МОЛОДЕЦ!</string>
     <string name="dots">...</string>
     <string name="fail">ПОПРОБУЙ ЕЩЕ!</string>
+    <string name="settings_about">About</string>
+    <string name="settings_help">Help</string>
 </resources>
