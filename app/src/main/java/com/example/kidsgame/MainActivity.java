@@ -29,6 +29,7 @@ import com.nostra13.universalimageloader.core.ImageLoader;
 import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
 import com.nostra13.universalimageloader.core.assist.FailReason;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
+import com.squareup.picasso.Picasso;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -40,7 +41,10 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.net.ssl.HttpsURLConnection;
@@ -382,3 +386,73 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
+// tutorial: https://github.com/hishamMuneer/JsonParsingDemo/blob/master/app/src/main/java/com/hisham/jsonparsingdemo/MainActivity.java
+
+
+/*
+@Override
+public View getView(int position, View convertView, ViewGroup parent) {
+    // Check if there is an existing list item view (called convertView) that we can reuse,
+    // otherwise, if convertView is null, then inflate a new list item layout.
+    View listItemView = convertView;
+    if (listItemView == null) {
+        listItemView = LayoutInflater.from(getContext()).inflate(
+                R.layout.news_list_item, parent, false);
+    }
+
+    // Get the {@link News} object located at this position in the list
+    News currentNews = (News) getItem(position);
+
+    if (currentNews != null) {
+
+        // Find the ImageView in the list_item.xml layout with the ID
+        ImageView placeImage = (ImageView) listItemView.findViewById(R.id.img_newspic);
+        // Get the news image from the current News and set this image on the imageView
+        Picasso.get().load(currentNews.getThumbnail()).into(placeImage);
+        if (currentNews.getThumbnail() != null) {
+            placeImage.setVisibility(View.VISIBLE);
+        } else {
+            placeImage.setVisibility(View.GONE);
+        }
+    }
+
+    // Find the TextView in the list_item.xml layout with the ID version_name
+    TextView headerTextView = (TextView) listItemView.findViewById(R.id.tv_header);
+    // Get the news header from the current News object and
+    // set this text on the header TextView
+    headerTextView.setText(currentNews.getNewsHeader());
+
+    // Find the TextView in the list_item.xml layout with the ID version_number
+    TextView authorTextView = (TextView) listItemView.findViewById(R.id.tv_author);
+    // Get the news body from the current News object and
+    // set this text on the body TextView
+    authorTextView.setText("Author: " + currentNews.getAuthor());
+
+    // Find the TextView in the list_item.xml layout with the ID version_number
+    TextView sectionTextView = (TextView) listItemView.findViewById(R.id.tv_section);
+    // Get the Section from the current News object and
+    // set this text on the Section TextView
+    sectionTextView.setText(currentNews.getSection());
+    int color = getSectionName(sectionTextView.toString());
+    sectionTextView.setTextColor(color);
+
+    // Create a new Date object from the time in milliseconds of the news
+    // Find the TextView with view ID date
+    TextView date = (TextView) listItemView.findViewById(R.id.tv_date_time);
+    // Format the date string (i.e. "Mar 3, 1984, 4:30 PM")
+    SimpleDateFormat newDateFormat = new SimpleDateFormat("LLL dd, yyyy, h:mm a");
+    SimpleDateFormat oldDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+    String getDate = currentNews.getDate().toString().substring(0, 10);
+    // Display the date of the current news in that TextView
+    try {
+        Date newDate = oldDateFormat.parse(getDate);
+        date.setText(newDateFormat.format(newDate));
+    } catch (ParseException e) {
+        e.printStackTrace();
+    }
+
+    // Return the list item view that is now showing the appropriate data
+    return listItemView;
+}
+*/
