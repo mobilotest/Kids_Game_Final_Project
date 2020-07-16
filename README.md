@@ -28,13 +28,13 @@ of the displayed image.
 ### Kids Game's Screenshots:
 <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/one.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/two.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/three.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/four.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/five.png" width = 200>
 
-Resources:
-https://www.flaticon.com/free-icon/
-https://commons.wikimedia.org/
-https://github.com/
-https://stackoverflow.com/
-https://developer.android.com/
-https://jsonformatter.curiousconcept.com/
-https://www.w3schools.com/
-https://classroom.ucsc-extension.edu/
-https://www.udacity.com/
+### Resources:
+1. https://www.flaticon.com/free-icon/
+2. https://commons.wikimedia.org/
+3. https://github.com/
+4. https://stackoverflow.com/
+5. https://developer.android.com/
+6. https://jsonformatter.curiousconcept.com/
+7. https://www.w3schools.com/
+8. https://classroom.ucsc-extension.edu/
+9. https://www.udacity.com/
