@@ -1,6 +1,6 @@
 {
-  "screens": [
-    {
+  "screens": {
+    "1": {
       "category": "animals",
       "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/ant.png",
       "answer": "ANT",
@@ -13,7 +13,7 @@
       "button_7": "N",
       "button_8": "U"
     },
-    {
+    "2": {
       "category": "animals",
       "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/cow.png",
       "answer": "COW",
@@ -26,7 +26,7 @@
       "button_7": "SE",
       "button_8": "V"
     },
-    {
+    "3": {
       "category": "animals",
       "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/butterfly.png",
       "answer": "BUTTERFLY",
@@ -39,7 +39,7 @@
       "button_7": "N",
       "button_8": "F"
     },
-    {
+    "4": {
       "category": "animals",
       "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/cat.png",
       "answer": "CAT",
@@ -52,7 +52,7 @@
       "button_7": "N",
       "button_8": "F"
     },
-    {
+    "5": {
       "category": "transport",
       "image": "http://pngimg.com/uploads/tractor/tractor_PNG16116.png",
       "answer": "TRACTOR",
@@ -65,7 +65,7 @@
       "button_7": "N",
       "button_8": "TO"
     },
-    {
+    "6": {
       "category": "transport",
       "image": "http://pngimg.com/uploads/plane/plane_PNG5238.png",
       "answer": "PLANE",
@@ -78,5 +78,5 @@
       "button_7": "NE",
       "button_8": "QU"
     }
-  ]
+  }
 }
