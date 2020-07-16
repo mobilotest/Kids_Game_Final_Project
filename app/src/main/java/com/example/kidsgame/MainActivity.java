@@ -1,11 +1,13 @@
 package com.example.kidsgame;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -16,20 +18,27 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.kidsgame.models.ScreenModel;
-import com.nostra13.universalimageloader.core.DisplayImageOptions;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.FailReason;
-import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
-import com.squareup.picasso.Picasso;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
+import com.kosalgeek.android.json.JsonConverter;
+import com.kosalgeek.asynctask.AsyncResponse;
+import com.kosalgeek.asynctask.PostResponseAsyncTask;
+
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -39,45 +48,171 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.net.MalformedURLException;
+import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
+import java.net.URLConnection;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-
-import javax.net.ssl.HttpsURLConnection;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+
+    String url = "https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/assets/screens.json";
+    String jsonString = "{\n" +
+            "  \"screens\": {\n" +
+            "    \"1\": {\n" +
+            "      \"category\": \"animals\",\n" +
+            "      \"image\": \"https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/ant.png\",\n" +
+            "      \"answer\": \"ANT\",\n" +
+            "      \"button_1\": \"DA\",\n" +
+            "      \"button_2\": \"RE\",\n" +
+            "      \"button_3\": \"A\",\n" +
+            "      \"button_4\": \"NO\",\n" +
+            "      \"button_5\": \"T\",\n" +
+            "      \"button_6\": \"BR\",\n" +
+            "      \"button_7\": \"N\",\n" +
+            "      \"button_8\": \"U\"\n" +
+            "    },\n" +
+            "    \"2\": {\n" +
+            "      \"category\": \"animals\",\n" +
+            "      \"image\": \"https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/cow.png\",\n" +
+            "      \"answer\": \"COW\",\n" +
+            "      \"button_1\": \"DA\",\n" +
+            "      \"button_2\": \"C\",\n" +
+            "      \"button_3\": \"A\",\n" +
+            "      \"button_4\": \"NY\",\n" +
+            "      \"button_5\": \"T\",\n" +
+            "      \"button_6\": \"O\",\n" +
+            "      \"button_7\": \"SE\",\n" +
+            "      \"button_8\": \"V\"\n" +
+            "    },\n" +
+            "    \"3\": {\n" +
+            "      \"category\": \"animals\",\n" +
+            "      \"image\": \"https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/butterfly.png\",\n" +
+            "      \"answer\": \"BUTTERFLY\",\n" +
+            "      \"button_1\": \"ER\",\n" +
+            "      \"button_2\": \"CA\",\n" +
+            "      \"button_3\": \"BA\",\n" +
+            "      \"button_4\": \"ME\",\n" +
+            "      \"button_5\": \"TT\",\n" +
+            "      \"button_6\": \"LY\",\n" +
+            "      \"button_7\": \"N\",\n" +
+            "      \"button_8\": \"F\"\n" +
+            "    },\n" +
+            "    \"4\": {\n" +
+            "      \"category\": \"animals\",\n" +
+            "      \"image\": \"https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/cat.png\",\n" +
+            "      \"answer\": \"CAT\",\n" +
+            "      \"button_1\": \"ER\",\n" +
+            "      \"button_2\": \"A\",\n" +
+            "      \"button_3\": \"BA\",\n" +
+            "      \"button_4\": \"ME\",\n" +
+            "      \"button_5\": \"C\",\n" +
+            "      \"button_6\": \"T\",\n" +
+            "      \"button_7\": \"N\",\n" +
+            "      \"button_8\": \"F\"\n" +
+            "    },\n" +
+            "    \"5\": {\n" +
+            "      \"category\": \"transport\",\n" +
+            "      \"image\": \"http://pngimg.com/uploads/tractor/tractor_PNG16116.png\",\n" +
+            "      \"answer\": \"TRACTOR\",\n" +
+            "      \"button_1\": \"R\",\n" +
+            "      \"button_2\": \"RE\",\n" +
+            "      \"button_3\": \"A\",\n" +
+            "      \"button_4\": \"TRA\",\n" +
+            "      \"button_5\": \"C\",\n" +
+            "      \"button_6\": \"BR\",\n" +
+            "      \"button_7\": \"N\",\n" +
+            "      \"button_8\": \"TO\"\n" +
+            "    },\n" +
+            "    \"6\": {\n" +
+            "      \"category\": \"transport\",\n" +
+            "      \"image\": \"http://pngimg.com/uploads/plane/plane_PNG5238.png\",\n" +
+            "      \"answer\": \"PLANE\",\n" +
+            "      \"button_1\": \"X\",\n" +
+            "      \"button_2\": \"RE\",\n" +
+            "      \"button_3\": \"P\",\n" +
+            "      \"button_4\": \"LA\",\n" +
+            "      \"button_5\": \"C\",\n" +
+            "      \"button_6\": \"BR\",\n" +
+            "      \"button_7\": \"NE\",\n" +
+            "      \"button_8\": \"QU\"\n" +
+            "    }\n" +
+            "  }\n" +
+            "}";
+
+    String answer = "";
+
+    private String category;
+    private TextView result;
+    private ImageView image;
+    private Button btn_1;
+    private Button btn_2;
+    private Button btn_3;
+    private Button btn_4;
+    private Button btn_5;
+    private Button btn_6;
+    private Button btn_7;
+    private Button btn_8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Create default options which will be used for every
-        //  displayImage(...) call if no options will be passed to this method
-        DisplayImageOptions defaultOptions = new DisplayImageOptions.Builder()
-                .cacheInMemory(true)
-                .cacheOnDisk(true)
-                .build();
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext())
-                .defaultDisplayImageOptions(defaultOptions)
-                .build();
-        ImageLoader.getInstance().init(config); // Do it on Application start
+        result = (TextView) findViewById(R.id.result);
+        image = (ImageView) findViewById(R.id.image_main);
+        btn_1 = (Button) findViewById(R.id.button1);
+        btn_2 = (Button) findViewById(R.id.button2);
+        btn_3 = (Button) findViewById(R.id.button3);
+        btn_4 = (Button) findViewById(R.id.button4);
+        btn_5 = (Button) findViewById(R.id.button5);
+        btn_6 = (Button) findViewById(R.id.button6);
+        btn_7 = (Button) findViewById(R.id.button7);
+        btn_8 = (Button) findViewById(R.id.button8);
 
-        EditText result = (EditText) findViewById(R.id.result);
+        try {
+            JSONObject jObject = new JSONObject(jsonString).getJSONObject("screens");
+            Iterator<String> keys = jObject.keys();
+            while (keys.hasNext()) {
+                String key = keys.next();
+                JSONObject innerJObject = jObject.getJSONObject(key);
+                Iterator<String> innerKeys = innerJObject.keys();
 
-        result.setText("");
-        new JSONTask().execute("https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/assets/screens.json");
+                answer = innerJObject.getString("answer");
+                String image = innerJObject.getString("image");
+                String button1 = innerJObject.getString("button_1");
+                String button2 = innerJObject.getString("button_2");
+                String button3 = innerJObject.getString("button_3");
+                String button4 = innerJObject.getString("button_4");
+                String button5 = innerJObject.getString("button_5");
+                String button6 = innerJObject.getString("button_6");
+                String button7 = innerJObject.getString("button_7");
+                String button8 = innerJObject.getString("button_8");
+
+
+                btn_1.setText(button1);
+                btn_2.setText(button2);
+                btn_3.setText(button3);
+                btn_4.setText(button4);
+                btn_5.setText(button5);
+                btn_6.setText(button6);
+                btn_7.setText(button7);
+                btn_8.setText(button8);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
     }
+
 
     /**
      * This method will switch to the new question if answer is correct
      **/
-    public void next(View v) {
-
+    public void help(View v) {
+        EditText result = (EditText) findViewById(R.id.result);
+        result.setText(answer);
     }
 
     /**
@@ -94,7 +229,7 @@ public class MainActivity extends AppCompatActivity {
     public void done(View view) {
         EditText edit_text = (EditText) findViewById(R.id.result);
 
-        if (edit_text.getText().toString().equalsIgnoreCase("ANT")) { // HOW TO COMPARE?
+        if (edit_text.getText().toString().equalsIgnoreCase(String.valueOf(answer))) { // HOW TO COMPARE?
             toastMessage(R.string.great);
         } else {
             toastMessage(R.string.fail);
@@ -225,234 +360,5 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    /**
-     * This class will get a JSON from my web storage (my git project for now) and read it using different thread
-     **/
-    public class JSONTask extends AsyncTask<String, String, List<ScreenModel>> {
 
-        @Override
-        protected List<ScreenModel> doInBackground(String... params) {
-            HttpsURLConnection connection = null;
-            BufferedReader reader = null;
-
-            try {
-                URL url = new URL(params[0]);
-                connection = (HttpsURLConnection) url.openConnection();
-                connection.connect();
-                InputStream stream = connection.getInputStream();
-                reader = new BufferedReader(new InputStreamReader(stream));
-                StringBuffer buffer = new StringBuffer();
-                String line = "";
-                while ((line = reader.readLine()) != null) {
-                    buffer.append(line);
-                }
-
-                String finalJSON = buffer.toString();
-
-                JSONObject parentObject = new JSONObject(finalJSON);
-                JSONArray parentArray = parentObject.getJSONArray("screens");
-
-                List<ScreenModel> screenModelsList = new ArrayList<>();
-
-                for (int i = 0; i < parentArray.length(); i++) {
-                    JSONObject finalObject = parentArray.getJSONObject(i);
-                    ScreenModel screenModel = new ScreenModel();
-                    screenModel.setImage(finalObject.getString("image"));
-                    screenModel.setButton_1(finalObject.getString("button_1"));
-                    screenModel.setButton_2(finalObject.getString("button_2"));
-                    screenModel.setButton_3(finalObject.getString("button_3"));
-                    screenModel.setButton_4(finalObject.getString("button_4"));
-                    screenModel.setButton_5(finalObject.getString("button_5"));
-                    screenModel.setButton_6(finalObject.getString("button_6"));
-                    screenModel.setButton_7(finalObject.getString("button_7"));
-                    screenModel.setButton_8(finalObject.getString("button_8"));
-
-                    // added the final object to the list
-                    screenModelsList.add(screenModel);
-                }
-                return screenModelsList;
-
-            } catch (MalformedURLException e) {
-                e.printStackTrace();
-            } catch (IOException e) {
-                e.printStackTrace();
-            } catch (JSONException e) {
-                e.printStackTrace();
-            } finally {
-                if (connection != null) {
-                    connection.disconnect();
-                }
-                try {
-                    if (reader != null) {
-                        reader.close();
-                    }
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-            }
-            return null;
-        }
-
-        @Override
-        protected void onPostExecute(List<ScreenModel> result) {
-            super.onPostExecute(result);
-            ScreenAdapter adapter = new ScreenAdapter(getApplicationContext(), R.layout.activity_main, result);
-        }
-    }
-
-    public class ScreenAdapter extends ArrayAdapter {
-
-        private List<ScreenModel> screenModelList;
-        private int resource;
-        private LayoutInflater inflater;
-
-        public ScreenAdapter(@NonNull Context context, int resource, @NonNull List<ScreenModel> objects) {
-            super(context, resource, objects);
-            screenModelList = objects;
-            this.resource = resource;
-            inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
-        }
-
-        @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
-            ViewHolder holder = null;
-
-            if (convertView == null) {
-                convertView = inflater.inflate(resource, null);
-                holder.image_main = (ImageView) convertView.findViewById(R.id.image_main);
-                holder.result = (EditText) convertView.findViewById(R.id.result);
-                holder.button1 = (Button) convertView.findViewById(R.id.button1);
-                holder.button2 = (Button) convertView.findViewById(R.id.button2);
-                holder.button3 = (Button) convertView.findViewById(R.id.button3);
-                holder.button4 = (Button) convertView.findViewById(R.id.button4);
-                holder.button5 = (Button) convertView.findViewById(R.id.button5);
-                holder.button6 = (Button) convertView.findViewById(R.id.button6);
-                holder.button7 = (Button) convertView.findViewById(R.id.button7);
-                holder.button8 = (Button) convertView.findViewById(R.id.button8);
-                convertView.setTag(holder);
-            } else {
-                holder = (ScreenAdapter.ViewHolder) convertView.getTag();
-            }
-
-            final ProgressBar progressBar = (ProgressBar) convertView.findViewById(R.id.progressBar);
-
-            // Then later, when you want to display image
-            ImageLoader.getInstance().displayImage(screenModelList.get(position).getImage(), holder.image_main, new ImageLoadingListener() {
-                @Override
-                public void onLoadingStarted(String imageUri, View view) {
-                    progressBar.setVisibility(View.VISIBLE);
-                }
-
-                @Override
-                public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
-                    progressBar.setVisibility(View.GONE);
-                }
-
-                @Override
-                public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
-                    progressBar.setVisibility(View.GONE);
-                }
-
-                @Override
-                public void onLoadingCancelled(String imageUri, View view) {
-                    progressBar.setVisibility(View.GONE);
-                }
-            });
-
-            holder.button1.setText(screenModelList.get(3).getButton_1());
-            holder.button2.setText(screenModelList.get(4).getButton_2());
-            holder.button3.setText(screenModelList.get(5).getButton_3());
-            holder.button4.setText(screenModelList.get(6).getButton_4());
-            holder.button5.setText(screenModelList.get(7).getButton_5());
-            holder.button6.setText(screenModelList.get(8).getButton_6());
-            holder.button7.setText(screenModelList.get(9).getButton_7());
-            holder.button8.setText(screenModelList.get(10).getButton_8());
-
-            return convertView;
-        }
-
-        public class ViewHolder {
-
-            private ImageView image_main;
-            private EditText result;
-            private Button button1;
-            private Button button2;
-            private Button button3;
-            private Button button4;
-            private Button button5;
-            private Button button6;
-            private Button button7;
-            private Button button8;
-        }
-    }
 }
-
-// tutorial: https://github.com/hishamMuneer/JsonParsingDemo/blob/master/app/src/main/java/com/hisham/jsonparsingdemo/MainActivity.java
-
-
-/*
-@Override
-public View getView(int position, View convertView, ViewGroup parent) {
-    // Check if there is an existing list item view (called convertView) that we can reuse,
-    // otherwise, if convertView is null, then inflate a new list item layout.
-    View listItemView = convertView;
-    if (listItemView == null) {
-        listItemView = LayoutInflater.from(getContext()).inflate(
-                R.layout.news_list_item, parent, false);
-    }
-
-    // Get the {@link News} object located at this position in the list
-    News currentNews = (News) getItem(position);
-
-    if (currentNews != null) {
-
-        // Find the ImageView in the list_item.xml layout with the ID
-        ImageView placeImage = (ImageView) listItemView.findViewById(R.id.img_newspic);
-        // Get the news image from the current News and set this image on the imageView
-        Picasso.get().load(currentNews.getThumbnail()).into(placeImage);
-        if (currentNews.getThumbnail() != null) {
-            placeImage.setVisibility(View.VISIBLE);
-        } else {
-            placeImage.setVisibility(View.GONE);
-        }
-    }
-
-    // Find the TextView in the list_item.xml layout with the ID version_name
-    TextView headerTextView = (TextView) listItemView.findViewById(R.id.tv_header);
-    // Get the news header from the current News object and
-    // set this text on the header TextView
-    headerTextView.setText(currentNews.getNewsHeader());
-
-    // Find the TextView in the list_item.xml layout with the ID version_number
-    TextView authorTextView = (TextView) listItemView.findViewById(R.id.tv_author);
-    // Get the news body from the current News object and
-    // set this text on the body TextView
-    authorTextView.setText("Author: " + currentNews.getAuthor());
-
-    // Find the TextView in the list_item.xml layout with the ID version_number
-    TextView sectionTextView = (TextView) listItemView.findViewById(R.id.tv_section);
-    // Get the Section from the current News object and
-    // set this text on the Section TextView
-    sectionTextView.setText(currentNews.getSection());
-    int color = getSectionName(sectionTextView.toString());
-    sectionTextView.setTextColor(color);
-
-    // Create a new Date object from the time in milliseconds of the news
-    // Find the TextView with view ID date
-    TextView date = (TextView) listItemView.findViewById(R.id.tv_date_time);
-    // Format the date string (i.e. "Mar 3, 1984, 4:30 PM")
-    SimpleDateFormat newDateFormat = new SimpleDateFormat("LLL dd, yyyy, h:mm a");
-    SimpleDateFormat oldDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-    String getDate = currentNews.getDate().toString().substring(0, 10);
-    // Display the date of the current news in that TextView
-    try {
-        Date newDate = oldDateFormat.parse(getDate);
-        date.setText(newDateFormat.format(newDate));
-    } catch (ParseException e) {
-        e.printStackTrace();
-    }
-
-    // Return the list item view that is now showing the appropriate data
-    return listItemView;
-}
-*/
