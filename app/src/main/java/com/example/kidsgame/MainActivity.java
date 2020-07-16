@@ -1,9 +1,12 @@
 package com.example.kidsgame;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
@@ -14,6 +17,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -24,6 +28,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.view.menu.MenuBuilder;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -59,6 +64,8 @@ import java.util.Map;
 public class MainActivity extends AppCompatActivity {
 
     String url = "https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/assets/screens.json";
+    ProgressDialog dialog;
+
     String jsonString = "{\n" +
             "  \"screens\": {\n" +
             "    \"1\": {\n" +
@@ -333,13 +340,26 @@ public class MainActivity extends AppCompatActivity {
         toast.show();
     }
 
+    /**
+     * This method responsible for the Action Bar menu
+     **/
+    @SuppressLint("RestrictedApi")
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; This adds items to the action bar if it is present
         getMenuInflater().inflate(R.menu.menu_main, menu);
+        if(menu instanceof MenuBuilder){
+            MenuBuilder m = (MenuBuilder) menu;
+            //noinspection RestrictedApi
+            m.setOptionalIconsVisible(true);
+        }
+
         return true;
     }
 
+    /**
+     * This method opens Browser intent with Info about the project
+     **/
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will automatically handle clicks on the Home/Up button,
@@ -348,15 +368,10 @@ public class MainActivity extends AppCompatActivity {
 
         // no inspection SimplifiableIfStatement
         if (id == R.id.menu_about) {
-            // TODO: web link open: "https://github.com/mobilotest/Kids_Game_Final_Project#kids-game---final-project-for-ucsc-extension"
+            Uri uri = Uri.parse( "https://github.com/mobilotest/Kids_Game_Final_Project#kids-game---final-project-for-ucsc-extension" );
+            startActivity( new Intent( Intent.ACTION_VIEW, uri ) );
             return true;
         }
-
-        if (id == R.id.menu_help) {
-            // TODO: web link open: "https://github.com/mobilotest/Kids_Game_Final_Project#kids-game---final-project-for-ucsc-extension"
-            return true;
-        }
-
         return super.onOptionsItemSelected(item);
     }
 

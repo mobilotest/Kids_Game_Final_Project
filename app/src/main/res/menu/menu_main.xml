@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/flag_us"
+        android:icon="@drawable/ic_russia-flag-16"
+        android:onClick="onComposeAction"
+        app:showAsAction="ifRoom"
+        android:title="Eng">
+    </item>
+    <item
+        android:id="@+id/flag_su"
+        android:icon="@drawable/ic_usa-flag-16"
+        android:onClick="onComposeAction"
+        app:showAsAction="ifRoom"
+        android:title="Rus">
+    </item>
     <item android:id="@+id/menu_about"
         android:icon="@drawable/ic_help_black_18dp"
         android:title="@string/settings_about" />
-    <item android:id="@+id/menu_help"
-        android:icon="@drawable/ic_help_white_18dp"
-        android:title="@string/settings_help" />
 </menu>
