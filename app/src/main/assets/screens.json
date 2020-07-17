@@ -1,5 +1,6 @@
 {
-  "screens": {
+  "screens": [
+    {
       "category": "animals",
       "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/ant.png",
       "answer": "ANT",
@@ -77,4 +78,5 @@
       "button_7": "NE",
       "button_8": "QU"
     }
+]
 }
