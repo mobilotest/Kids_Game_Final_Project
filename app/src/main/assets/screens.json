@@ -53,6 +53,32 @@
       "button_8": "F"
     },
     {
+      "category": "animals",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/dog.png",
+      "answer": "DOG",
+      "button_1": "RU",
+      "button_2": "D",
+      "button_3": "BA",
+      "button_4": "O",
+      "button_5": "CO",
+      "button_6": "T",
+      "button_7": "J",
+      "button_8": "G"
+    },
+    {
+      "category": "animals",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/cat.png",
+      "answer": "FISH",
+      "button_1": "S",
+      "button_2": "DE",
+      "button_3": "P",
+      "button_4": "H",
+      "button_5": "OM",
+      "button_6": "I",
+      "button_7": "IN",
+      "button_8": "F"
+    },
+    {
       "category": "transport",
       "image": "http://pngimg.com/uploads/tractor/tractor_PNG16116.png",
       "answer": "TRACTOR",
