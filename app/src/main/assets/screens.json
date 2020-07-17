@@ -54,6 +54,32 @@
     },
     {
       "category": "animals",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/owl.png",
+      "answer": "OWL",
+      "button_1": "OL",
+      "button_2": "O",
+      "button_3": "TY",
+      "button_4": "W",
+      "button_5": "L",
+      "button_6": "RA",
+      "button_7": "SE",
+      "button_8": "E"
+    },
+    {
+      "category": "animals",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/grasshopper.png",
+      "answer": "GRASSHOPPER",
+      "button_1": "PP",
+      "button_2": "HO",
+      "button_3": "A",
+      "button_4": "SS",
+      "button_5": "RAB",
+      "button_6": "B",
+      "button_7": "ER",
+      "button_8": "GRA"
+    },
+    {
+      "category": "animals",
       "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/dog.png",
       "answer": "DOG",
       "button_1": "RU",
@@ -64,6 +90,19 @@
       "button_6": "T",
       "button_7": "J",
       "button_8": "G"
+    },
+    {
+      "category": "animals",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/peacock.png",
+      "answer": "PEACOCK",
+      "button_1": "CK",
+      "button_2": "PEA",
+      "button_3": "LO",
+      "button_4": "LE",
+      "button_5": "PRO",
+      "button_6": "J",
+      "button_7": "IE",
+      "button_8": "CO"
     },
     {
       "category": "animals",
@@ -106,6 +145,32 @@
     },
     {
       "category": "animals",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/horse.png",
+      "answer": "HORSE",
+      "button_1": "GRA",
+      "button_2": "LI",
+      "button_3": "VA",
+      "button_4": "HO",
+      "button_5": "KO",
+      "button_6": "O",
+      "button_7": "SE",
+      "button_8": "R"
+    },
+    {
+      "category": "animals",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/crocodile.png",
+      "answer": "CROCODILE",
+      "button_1": "KU",
+      "button_2": "SI",
+      "button_3": "DI",
+      "button_4": "CO",
+      "button_5": "LE",
+      "button_6": "B",
+      "button_7": "CRO",
+      "button_8": "E"
+    },
+    {
+      "category": "animals",
       "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/snake.png",
       "answer": "SNAKE",
       "button_1": "KE",
@@ -129,6 +194,19 @@
       "button_6": "BR",
       "button_7": "N",
       "button_8": "TO"
+    },
+    {
+      "category": "transport",
+      "image": "http://pngimg.com/uploads/tractor/tractor_PNG16116.png",
+      "answer": "BUS",
+      "button_1": "S",
+      "button_2": "KO",
+      "button_3": "C",
+      "button_4": "EL",
+      "button_5": "PU",
+      "button_6": "D",
+      "button_7": "U",
+      "button_8": "B"
     },
     {
       "category": "transport",
