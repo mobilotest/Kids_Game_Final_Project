@@ -2,21 +2,16 @@ package com.example.kidsgame;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;
-import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
-import java.io.StreamCorruptedException;
-import java.net.URL;
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 /**
- * Loads a list of news by using an AsyncTask to perform the
+ * Loads a list of screens by using an AsyncTask to perform the
  * network request to the given URL.
  */
 public class ScreenLoader extends AsyncTaskLoader<List<Screen>> {
@@ -35,7 +30,7 @@ public class ScreenLoader extends AsyncTaskLoader<List<Screen>> {
      * Constructs a new {@link ScreenLoader}.
      *
      * @param context of the activity
-     * @param url     to load data from
+     * @param url to load data from
      */
     public ScreenLoader(Context context, String url) {
         super(context);
@@ -56,7 +51,7 @@ public class ScreenLoader extends AsyncTaskLoader<List<Screen>> {
             return null;
         }
 
-        // Perform the network request, parse the response, and extract a list of news.
+        // Perform the network request, parse the response, and extract a screen with elements.
         String jsonString = QueryUtils.fetchScreensData(mUrl);
         try {
             return parseJSONfile(jsonString);
@@ -90,5 +85,4 @@ public class ScreenLoader extends AsyncTaskLoader<List<Screen>> {
         }
         return screens;
     }
-
 }

@@ -29,22 +29,18 @@ import com.squareup.picasso.Picasso;
 import java.util.List;
 import java.util.Random;
 
-import io.paperdb.Paper;
-
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Screen>> {
 
     String url = "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/assets/screens.json";
 
     /**
-     * Constant value for the news loader ID. We can choose any integer.
+     * Constant value for the screens loader ID. We can choose any integer.
      * This really only comes into play if you're using multiple loaders.
      */
     private static final int SCREENS_LOADER_ID = 1;
 
     Screen currentScreen;
-
     private List<Screen> screens;
-
     private TextView about;
     private String category;
     private TextView result;
@@ -70,7 +66,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         setContentView(R.layout.activity_main);
 
         progressBar = (ProgressBar) findViewById(R.id.loading_indicator);
-
         help = (Button) findViewById(R.id.help);
         clear = (Button) findViewById(R.id.clear);
         done = (Button) findViewById(R.id.done);
@@ -80,10 +75,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         if (networkInfo != null && networkInfo.isConnected()) {
             LoaderManager loaderManager = getLoaderManager();
-
             loaderManager.initLoader(SCREENS_LOADER_ID, null, this);
         } else {
-
             View loadingIndicator = findViewById(R.id.loading_indicator);
             loadingIndicator.setVisibility(View.GONE);
             result.setText(R.string.no_internet_connection);
@@ -144,7 +137,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      **/
     public void done(View view) throws InterruptedException {
         EditText edit_text = (EditText) findViewById(R.id.result);
-
         if (edit_text.getText().toString().equalsIgnoreCase(String.valueOf(currentScreen.getAnswer()))) { // HOW TO COMPARE?
             toastMessage(R.string.great);
             fillOutMyScreen();
@@ -263,8 +255,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             //noinspection RestrictedApi
             m.setOptionalIconsVisible(true);
         }
-
-
         return true;
     }
 
@@ -284,12 +274,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             return true;
         }
 
-        // Handle presses on the action bar items
+        // Handle presses on the action bar items ENG ans RUS
         if (item.getItemId() == R.id.flag_us) {
             // code here
         } else if (item.getItemId() == R.id.flag_su) {
+            // code here
+        }
 
-            Paper.book().write("language", "ru");
+        // Handle presses on the action bar items Transport and Animals
+        if (item.getItemId() == R.id.transport) {
+            // code here
+        } else if (item.getItemId() == R.id.animals) {
             // code here
         }
         return true;
@@ -304,10 +299,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public Loader<List<Screen>> onCreateLoader(int i, Bundle bundle) {
-
         Uri baseUri = Uri.parse(url);
         Uri.Builder uriBuilder = baseUri.buildUpon();
-
         uriBuilder.scheme("https").authority("content.guardianapis.com");
         uriBuilder.appendQueryParameter("q", "android");
         uriBuilder.appendQueryParameter("api-key", "test");
