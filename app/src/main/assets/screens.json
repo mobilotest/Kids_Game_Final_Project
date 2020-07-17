@@ -67,7 +67,7 @@
     },
     {
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/cat.png",
+      "image": "https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/res/drawable/fish.png",
       "answer": "FISH",
       "button_1": "S",
       "button_2": "DE",
@@ -77,6 +77,32 @@
       "button_6": "I",
       "button_7": "IN",
       "button_8": "F"
+    },
+    {
+      "category": "animals",
+      "image": "https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/res/drawable/zebra.png",
+      "answer": "ZEBRA",
+      "button_1": "KA",
+      "button_2": "G",
+      "button_3": "Z",
+      "button_4": "HU",
+      "button_5": "E",
+      "button_6": "B",
+      "button_7": "UL",
+      "button_8": "RA"
+    },
+    {
+      "category": "animals",
+      "image": "https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/res/drawable/rabbit.png",
+      "answer": "RABBIT",
+      "button_1": "KU",
+      "button_2": "SI",
+      "button_3": "GO",
+      "button_4": "F",
+      "button_5": "RAB",
+      "button_6": "B",
+      "button_7": "BIT",
+      "button_8": "QU"
     },
     {
       "category": "transport",
