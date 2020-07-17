@@ -67,7 +67,7 @@
     },
     {
       "category": "animals",
-      "image": "https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/res/drawable/fish.png",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/fish.png",
       "answer": "FISH",
       "button_1": "S",
       "button_2": "DE",
@@ -80,7 +80,7 @@
     },
     {
       "category": "animals",
-      "image": "https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/res/drawable/zebra.png",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/zebra.png",
       "answer": "ZEBRA",
       "button_1": "KA",
       "button_2": "G",
@@ -93,7 +93,7 @@
     },
     {
       "category": "animals",
-      "image": "https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/app/src/main/res/drawable/rabbit.png",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/rabbit.png",
       "answer": "RABBIT",
       "button_1": "KU",
       "button_2": "SI",
