@@ -4,6 +4,7 @@ import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.net.Uri;
@@ -37,6 +38,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.kidsgame.helper.LocaleHelper;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
@@ -60,6 +62,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.Map;
+
+import io.paperdb.Paper;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -151,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
 
     String answer = "";
 
+    private TextView about;
     private String category;
     private TextView result;
     private ImageView image;
@@ -163,11 +168,32 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_7;
     private Button btn_8;
 
+    private Button help;
+    private Button clear;
+    private Button done;
+
+    @Override
+    protected void attachBaseContext(Context newBase) {
+        super.attachBaseContext(LocaleHelper.onAttach(newBase, "en"));
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Init Paper first
+        Paper.init(this);
+
+        // Default language is English
+        String language = Paper.book().read("language");
+        if (language == null) {
+            Paper.book().write("language", "en");
+        }
+
+        updateView((String) Paper.book().read("language"));
+
+        about = (TextView) findViewById(R.id.menu_about);
         result = (TextView) findViewById(R.id.result);
         image = (ImageView) findViewById(R.id.image_main);
         btn_1 = (Button) findViewById(R.id.button1);
@@ -178,6 +204,10 @@ public class MainActivity extends AppCompatActivity {
         btn_6 = (Button) findViewById(R.id.button6);
         btn_7 = (Button) findViewById(R.id.button7);
         btn_8 = (Button) findViewById(R.id.button8);
+
+        help = (Button) findViewById(R.id.help);
+        clear = (Button) findViewById(R.id.clear);
+        done = (Button) findViewById(R.id.done);
 
         try {
             JSONObject jObject = new JSONObject(jsonString).getJSONObject("screens");
@@ -198,7 +228,6 @@ public class MainActivity extends AppCompatActivity {
                 String button7 = innerJObject.getString("button_7");
                 String button8 = innerJObject.getString("button_8");
 
-
                 btn_1.setText(button1);
                 btn_2.setText(button2);
                 btn_3.setText(button3);
@@ -213,6 +242,16 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    private void updateView(String lang) {
+        Context context = LocaleHelper.setLocale(this, lang);
+        Resources resources = context.getResources();
+//        help.setText(resources.getString(R.string.help));
+//        clear.setText(resources.getString(R.string.clear));
+//        done.setText(resources.getString(R.string.done));
+//        about.setText(resources.getString(R.string.settings_about));
+// Android Studio Tutorial - How to change app language without changing phone language edmt dev:
+//        https://www.youtube.com/watch?v=ywF-ySiBAsc
+    }
 
     /**
      * This method will switch to the new question if answer is correct
@@ -348,11 +387,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; This adds items to the action bar if it is present
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        if(menu instanceof MenuBuilder){
+        if (menu instanceof MenuBuilder) {
             MenuBuilder m = (MenuBuilder) menu;
             //noinspection RestrictedApi
             m.setOptionalIconsVisible(true);
         }
+
 
         return true;
     }
@@ -368,12 +408,28 @@ public class MainActivity extends AppCompatActivity {
 
         // no inspection SimplifiableIfStatement
         if (id == R.id.menu_about) {
-            Uri uri = Uri.parse( "https://github.com/mobilotest/Kids_Game_Final_Project#kids-game---final-project-for-ucsc-extension" );
-            startActivity( new Intent( Intent.ACTION_VIEW, uri ) );
+            Uri uri = Uri.parse("https://github.com/mobilotest/Kids_Game_Final_Project#kids-game---final-project-for-ucsc-extension");
+            startActivity(new Intent(Intent.ACTION_VIEW, uri));
             return true;
         }
-        return super.onOptionsItemSelected(item);
+
+        // Handle presses on the action bar items
+        if (item.getItemId() == R.id.flag_us) {
+            Paper.book().write("language", "en");
+            updateView((String) Paper.book().read("language"));
+        } else if (item.getItemId() == R.id.flag_su) {
+
+            Paper.book().write("language", "ru");
+            updateView((String) Paper.book().read("language"));
+        }
+        return true;
     }
 
 
+    /**
+     * This method switch Game between RUS and ENG modes
+     **/
+    public void onComposeAction(MenuItem mi) {
+        // handle click here
+    }
 }

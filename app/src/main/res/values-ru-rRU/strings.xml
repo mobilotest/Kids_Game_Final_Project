@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">KidsGame</string>
+    <string name="app_name">Игра</string>
     <string name="help">ПОМОЩЬ</string>
+    <string name="clear">СБРОС</string>
     <string name="done">ГОТОВО</string>
     <string name="one">КРО</string>
     <string name="two">КО</string>
@@ -10,7 +11,6 @@
     <string name="five">КО</string>
     <string name="six">ВА</string>
     <string name="fifty">РО</string>
-    <string name="next">ДАЛЕЕ</string>
     <string name="seven">С</string>
     <string name="eight">ВА</string>
     <string name="fiftyone">ОВ</string>
@@ -59,10 +59,9 @@
     <string name="rabbit">ЗАЯЦ</string>
     <string name="snake">ЗМЕЯ</string>
     <string name="zebra">ЗЕБРА</string>
-    <string name="clear">СБРОС</string>
     <string name="great">МОЛОДЕЦ!</string>
     <string name="dots">...</string>
     <string name="fail">ПОПРОБУЙ ЕЩЕ!</string>
-    <string name="settings_about">About</string>
-    <string name="settings_help">Help</string>
+    <string name="settings_about">Справка</string>
+    <string name="settings_help">Помощь</string>
 </resources>

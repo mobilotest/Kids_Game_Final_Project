@@ -3,18 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
         android:id="@+id/flag_us"
-        android:icon="@drawable/ic_russia-flag-16"
+        android:icon="@drawable/ic_russia_flag_16dp"
         android:onClick="onComposeAction"
         app:showAsAction="ifRoom"
-        android:title="Eng">
-    </item>
+        android:title="Eng" />
     <item
         android:id="@+id/flag_su"
-        android:icon="@drawable/ic_usa-flag-16"
+        android:icon="@drawable/ic_usamerica_flag_16dp"
         android:onClick="onComposeAction"
         app:showAsAction="ifRoom"
-        android:title="Rus">
-    </item>
+        android:title="Rus" />
     <item android:id="@+id/menu_about"
         android:icon="@drawable/ic_help_black_18dp"
         android:title="@string/settings_about" />
