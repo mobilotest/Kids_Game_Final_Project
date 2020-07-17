@@ -14,11 +14,11 @@
         app:showAsAction="ifRoom"
         android:title="@string/transport" />
     <item
-        android:id="@+id/flag_us"
+        android:id="@+id/flag_ru"
         android:icon="@drawable/ic_russia_flag_16dp"
         android:title="@string/rus" />
     <item
-        android:id="@+id/flag_su"
+        android:id="@+id/flag_us"
         android:icon="@drawable/ic_usamerica_flag_16dp"
         android:title="@string/eng" />
     <item android:id="@+id/menu_about"
