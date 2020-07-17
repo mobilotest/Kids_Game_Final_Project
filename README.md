@@ -38,3 +38,6 @@ of the displayed image.
 7. https://www.w3schools.com/
 8. https://classroom.ucsc-extension.edu/
 9. https://www.udacity.com/
+10. https://www.youtube.com/
+11. http://www.fromtexttospeech.com/
+12. https://www.google.com/
