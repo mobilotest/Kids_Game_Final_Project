@@ -105,6 +105,19 @@
       "button_8": "QU"
     },
     {
+      "category": "animals",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/snake.png",
+      "answer": "SNAKE",
+      "button_1": "KE",
+      "button_2": "FE",
+      "button_3": "RU",
+      "button_4": "SNA",
+      "button_5": "RAB",
+      "button_6": "OI",
+      "button_7": "LIT",
+      "button_8": "HR"
+    },
+    {
       "category": "transport",
       "image": "http://pngimg.com/uploads/tractor/tractor_PNG16116.png",
       "answer": "TRACTOR",
