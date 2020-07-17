@@ -65,4 +65,9 @@
     <string name="settings_about">Справка</string>
     <string name="settings_help">Помощь</string>
     <string name="no_internet_connection">Нет Итернета</string>
+
+    <string name="rus">Русский</string>
+    <string name="eng">Английский</string>
+    <string name="animals">Животные</string>
+    <string name="transport">Транспорт</string>
 </resources>

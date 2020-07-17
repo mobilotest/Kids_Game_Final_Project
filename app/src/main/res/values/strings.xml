@@ -87,4 +87,9 @@
     <string name="settings_help">Help</string>
     <string name="no_internet_connection">No Internet Connection</string>
 
+    <string name="rus">Russian</string>
+    <string name="eng">English</string>
+    <string name="animals">Animals</string>
+    <string name="transport">Transport</string>
+
 </resources>

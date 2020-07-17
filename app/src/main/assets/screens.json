@@ -171,6 +171,19 @@
     },
     {
       "category": "animals",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/bug.png",
+      "answer": "BUG",
+      "button_1": "KU",
+      "button_2": "G",
+      "button_3": "RU",
+      "button_4": "R",
+      "button_5": "U",
+      "button_6": "OI",
+      "button_7": "RA",
+      "button_8": "B"
+    },
+    {
+      "category": "animals",
       "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/snake.png",
       "answer": "SNAKE",
       "button_1": "KE",
@@ -183,8 +196,21 @@
       "button_8": "HR"
     },
     {
+      "category": "animals",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/spider.png",
+      "answer": "SPIDER",
+      "button_1": "P",
+      "button_2": "S",
+      "button_3": "T",
+      "button_4": "E",
+      "button_5": "R",
+      "button_6": "O",
+      "button_7": "D",
+      "button_8": "I"
+    },
+    {
       "category": "transport",
-      "image": "http://pngimg.com/uploads/tractor/tractor_PNG16116.png",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/tractor.png",
       "answer": "TRACTOR",
       "button_1": "R",
       "button_2": "RE",
@@ -197,20 +223,20 @@
     },
     {
       "category": "transport",
-      "image": "http://pngimg.com/uploads/tractor/tractor_PNG16116.png",
-      "answer": "BUS",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/car.png",
+      "answer": "CAR",
       "button_1": "S",
       "button_2": "KO",
       "button_3": "C",
       "button_4": "EL",
-      "button_5": "PU",
-      "button_6": "D",
+      "button_5": "A",
+      "button_6": "R",
       "button_7": "U",
       "button_8": "B"
     },
     {
       "category": "transport",
-      "image": "http://pngimg.com/uploads/plane/plane_PNG5238.png",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/plane.png",
       "answer": "PLANE",
       "button_1": "X",
       "button_2": "RE",
@@ -220,6 +246,84 @@
       "button_6": "BR",
       "button_7": "NE",
       "button_8": "QU"
+    },
+    {
+      "category": "transport",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/bike.png",
+      "answer": "BICYCLE",
+      "button_1": "TO",
+      "button_2": "SI",
+      "button_3": "MO",
+      "button_4": "CLE",
+      "button_5": "BI",
+      "button_6": "RU",
+      "button_7": "CR",
+      "button_8": "CY"
+    },
+    {
+      "category": "transport",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/bus.png",
+      "answer": "BUS",
+      "button_1": "B",
+      "button_2": "S",
+      "button_3": "MO",
+      "button_4": "HY",
+      "button_5": "LO",
+      "button_6": "U",
+      "button_7": "TO",
+      "button_8": "RE"
+    },
+    {
+      "category": "transport",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/ship.png",
+      "answer": "SHIP",
+      "button_1": "KO",
+      "button_2": "P",
+      "button_3": "MO",
+      "button_4": "SH",
+      "button_5": "DI",
+      "button_6": "I",
+      "button_7": "MO",
+      "button_8": "G"
+    },
+    {
+      "category": "transport",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/boat.png",
+      "answer": "BOAT",
+      "button_1": "O",
+      "button_2": "SI",
+      "button_3": "T",
+      "button_4": "E",
+      "button_5": "B",
+      "button_6": "TR",
+      "button_7": "A",
+      "button_8": "C"
+    },
+    {
+      "category": "transport",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/pram.png",
+      "answer": "PRAM",
+      "button_1": "OZ",
+      "button_2": "P",
+      "button_3": "O",
+      "button_4": "P",
+      "button_5": "B",
+      "button_6": "TR",
+      "button_7": "A",
+      "button_8": "M"
+    },
+    {
+      "category": "transport",
+      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/train.png",
+      "answer": "TRAIN",
+      "button_1": "T",
+      "button_2": "PL",
+      "button_3": "I",
+      "button_4": "R",
+      "button_5": "A",
+      "button_6": "TR",
+      "button_7": "XA",
+      "button_8": "N"
     }
 ]
 }
