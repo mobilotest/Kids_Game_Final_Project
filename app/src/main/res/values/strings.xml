@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">KidsGame</string>
 
     <string name="one">CRO</string>
@@ -51,6 +51,9 @@
     <string name="clear">CLEAR</string>
     <string name="help">HELP</string>
     <string name="done">DONE</string>
+    <string name="help_ru" translatable="false">ПОМОЩЬ</string>
+    <string name="clear_ru" translatable="false">СБРОС</string>
+    <string name="done_ru" translatable="false">ГОТОВО</string>
 
     <string-array name="animals">
         <item name="ant">ANT</item>

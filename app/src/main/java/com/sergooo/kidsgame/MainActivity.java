@@ -27,22 +27,22 @@ import androidx.appcompat.view.menu.MenuBuilder;
 
 import com.squareup.picasso.Picasso;
 
-import java.net.URI;
 import java.util.List;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Screen>> {
 
-    private int language = 0;
+    private static int screensLoaderId = 0;
 
     String url_en = "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/assets/screens_en.json";
     String url_ru = "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/assets/screens_ru.json";
+
+    private LoaderManager loaderManager = getLoaderManager();;
 
     /**
      * Constant value for the screens loader ID. We can choose any integer.
      * This really only comes into play if you're using multiple loaders.
      */
-    private static final int SCREENS_LOADER_ID = 1;
 
     Screen currentScreen;
     private List<Screen> screens;
@@ -78,9 +78,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         ConnectivityManager connMgr = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo networkInfo = connMgr.getActiveNetworkInfo();
 
-        if (networkInfo != null && networkInfo.isConnected()) {
-            LoaderManager loaderManager = getLoaderManager();
-            loaderManager.initLoader(SCREENS_LOADER_ID, null, this);
+        if (networkInfo != null && networkInfo.isConnected() && loaderManager != null) {
+            loaderManager.initLoader(screensLoaderId, null, this);
         } else {
             View loadingIndicator = findViewById(R.id.loading_indicator);
             loadingIndicator.setVisibility(View.GONE);
@@ -281,10 +280,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         // Handle presses on the action bar items ENG ans RUS
         if (item.getItemId() == R.id.flag_us) {
-            language = 0;
+            screensLoaderId = 0;
+            help.setText(R.string.help);
+            clear.setText(R.string.clear);
+            done.setText(R.string.done);
         } else if (item.getItemId() == R.id.flag_ru) {
-            language = 1;
+            screensLoaderId = 1;
+            help.setText(R.string.help_ru);
+            clear.setText(R.string.clear_ru);
+            done.setText(R.string.done_ru);
         }
+        loaderManager.initLoader(screensLoaderId, null, this);
 
         // Handle presses on the action bar items Transport and Animals
         if (item.getItemId() == R.id.transport) {
@@ -305,9 +311,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public Loader<List<Screen>> onCreateLoader(int i, Bundle bundle) {
         Uri baseUri = null;
-        if (language == 0) {
+        if (screensLoaderId == 0) {
             baseUri = Uri.parse(url_en);
-        } else if (language == 1) {
+        } else if (screensLoaderId == 1) {
             baseUri = Uri.parse(url_ru);
         }
         Uri.Builder uriBuilder = baseUri.buildUpon();
@@ -330,5 +336,4 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public void onLoaderReset(Loader<List<Screen>> loader) {
     }
-
 }
