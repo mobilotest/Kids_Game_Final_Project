@@ -1,7 +1,6 @@
 {
   "screens": [
     {
-      "language": "en",
       "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/ant.png?alt=media&token=7cd5f5a4-c513-49cd-9bc9-bd6bd571a5d7",
       "answer": "ANT",
@@ -15,7 +14,6 @@
       "button_8": "U"
     },
     {
-      "language": "en",
       "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/snail.png?alt=media&token=88fd472a-b131-4128-8891-0de355ae7158",
       "answer": "SNAIL",
@@ -29,7 +27,6 @@
       "button_8": "S"
     },
     {
-      "language": "en",
       "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/cow.png?alt=media&token=f25acbd9-8cb3-4934-8948-a5533665d996",
       "answer": "COW",
@@ -43,9 +40,8 @@
       "button_8": "W"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/butterfly.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/butterfly.png?alt=media&token=0215d6d8-7a48-4511-b62b-d10d965ca85f",
       "answer": "BUTTERFLY",
       "button_1": "ER",
       "button_2": "CA",
@@ -57,9 +53,8 @@
       "button_8": "F"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/cat.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/cat.png?alt=media&token=0b231790-7fdd-4189-a2dd-a5c3ef616c87",
       "answer": "CAT",
       "button_1": "ER",
       "button_2": "A",
@@ -71,9 +66,8 @@
       "button_8": "F"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/owl.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/owl.png?alt=media&token=747d3d1b-d0d3-40dc-911f-63dd711b2fa7",
       "answer": "OWL",
       "button_1": "OL",
       "button_2": "O",
@@ -85,9 +79,8 @@
       "button_8": "E"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/grasshopper.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/grasshopper.png?alt=media&token=8e33d3bf-db9c-41af-8f90-9dfa1fbfb249",
       "answer": "GRASSHOPPER",
       "button_1": "PP",
       "button_2": "HO",
@@ -99,9 +92,8 @@
       "button_8": "GRA"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/dog.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/dog.png?alt=media&token=7373a6c0-120a-4840-a445-2157538f4afa",
       "answer": "DOG",
       "button_1": "RU",
       "button_2": "D",
@@ -113,9 +105,8 @@
       "button_8": "G"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/peacock.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/peacock.png?alt=media&token=e73add4f-c3ca-4fe3-b00d-0d80ffb7b218",
       "answer": "PEACOCK",
       "button_1": "CK",
       "button_2": "PEA",
@@ -127,9 +118,8 @@
       "button_8": "CO"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/fish.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/fish.png?alt=media&token=3f5091be-e3e1-4937-96e5-142275e09984",
       "answer": "FISH",
       "button_1": "S",
       "button_2": "DE",
@@ -141,9 +131,8 @@
       "button_8": "F"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/zebra.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/zebra.png?alt=media&token=e303e51e-f22d-4bca-8906-e3277f6521bc",
       "answer": "ZEBRA",
       "button_1": "KA",
       "button_2": "G",
@@ -155,9 +144,8 @@
       "button_8": "RA"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/rabbit.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/rabbit.png?alt=media&token=dcc0ee0c-cdc8-45bb-84dd-ad43a9b8e928",
       "answer": "RABBIT",
       "button_1": "KU",
       "button_2": "SLI",
@@ -169,9 +157,8 @@
       "button_8": "QU"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/horse.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/horse.png?alt=media&token=65d56241-074e-4f75-9512-6eb178725f8a",
       "answer": "HORSE",
       "button_1": "GRA",
       "button_2": "LI",
@@ -183,9 +170,8 @@
       "button_8": "R"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/crocodile.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/crocodile.png?alt=media&token=ad1be338-6ce5-4a72-aaf7-b7607f14d251",
       "answer": "CROCODILE",
       "button_1": "KU",
       "button_2": "SI",
@@ -197,9 +183,8 @@
       "button_8": "E"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/bug.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/bug.png?alt=media&token=2069250b-7643-429b-a1f6-9b396a64c41f",
       "answer": "BUG",
       "button_1": "KU",
       "button_2": "G",
@@ -211,9 +196,8 @@
       "button_8": "B"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/snake.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/snake.png?alt=media&token=2b710c39-07f1-4a53-a33a-36443804bfff",
       "answer": "SNAKE",
       "button_1": "KE",
       "button_2": "FE",
@@ -225,9 +209,8 @@
       "button_8": "HR"
     },
     {
-      "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/spider.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/spider.png?alt=media&token=09c38e84-03c9-4a80-8f93-ce1505939c1a",
       "answer": "SPIDER",
       "button_1": "P",
       "button_2": "S",
@@ -239,9 +222,8 @@
       "button_8": "I"
     },
     {
-      "language": "en",
       "category": "transport",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/tractor.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/tractor.png?alt=media&token=f4552e37-ab22-4e0a-9342-a9b77a3dcd7d",
       "answer": "TRACTOR",
       "button_1": "R",
       "button_2": "RE",
@@ -253,9 +235,8 @@
       "button_8": "TO"
     },
     {
-      "language": "en",
       "category": "transport",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/car.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/car.png?alt=media&token=3d00008d-7b1b-4ae6-8ba8-cb6981712627",
       "answer": "CAR",
       "button_1": "S",
       "button_2": "KO",
@@ -267,9 +248,8 @@
       "button_8": "B"
     },
     {
-      "language": "en",
       "category": "transport",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/plane.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/plane.png?alt=media&token=2c553d7e-0302-4eef-af83-a1df5c566341",
       "answer": "PLANE",
       "button_1": "X",
       "button_2": "RE",
@@ -281,9 +261,8 @@
       "button_8": "QU"
     },
     {
-      "language": "en",
       "category": "transport",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/bike.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/bike.png?alt=media&token=dcdb1a90-9a89-4b7b-ac5f-a648b630661b",
       "answer": "BICYCLE",
       "button_1": "TO",
       "button_2": "SI",
@@ -295,9 +274,8 @@
       "button_8": "CY"
     },
     {
-      "language": "en",
       "category": "transport",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/bus.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/bus.png?alt=media&token=e640f128-a69c-4f9a-9f03-88d2e5f8dcaa",
       "answer": "BUS",
       "button_1": "B",
       "button_2": "S",
@@ -309,9 +287,8 @@
       "button_8": "RE"
     },
     {
-      "language": "en",
       "category": "transport",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/ship.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/ship.png?alt=media&token=d2312d46-d458-4f34-8e13-ef8a4068eb0b",
       "answer": "SHIP",
       "button_1": "KO",
       "button_2": "P",
@@ -323,9 +300,8 @@
       "button_8": "G"
     },
     {
-      "language": "en",
       "category": "transport",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/boat.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/boat.png?alt=media&token=a4f6a5f3-ac96-432b-ba68-da0130afbaf4",
       "answer": "BOAT",
       "button_1": "O",
       "button_2": "SI",
@@ -337,9 +313,8 @@
       "button_8": "C"
     },
     {
-      "language": "en",
       "category": "transport",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/pram.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/pram.png?alt=media&token=0c462f33-a264-47a2-972a-8c19f9a0fdb6",
       "answer": "PRAM",
       "button_1": "OZ",
       "button_2": "P",
@@ -351,9 +326,8 @@
       "button_8": "M"
     },
     {
-      "language": "en",
       "category": "transport",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/train.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/train.png?alt=media&token=3b0ed541-0606-4f9d-a218-94903b236aeb",
       "answer": "TRAIN",
       "button_1": "T",
       "button_2": "PL",
@@ -365,9 +339,8 @@
       "button_8": "N"
     },
     {
-      "language": "en",
       "category": "transport",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/scooter.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/scooter.png?alt=media&token=f1f65115-7654-4a50-a13b-0e2d334f9077",
       "answer": "SCOOTER",
       "button_1": "OT",
       "button_2": "PY",
