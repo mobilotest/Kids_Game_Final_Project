@@ -3,7 +3,7 @@
     {
       "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/ant.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/ant.png?alt=media&token=7cd5f5a4-c513-49cd-9bc9-bd6bd571a5d7",
       "answer": "ANT",
       "button_1": "DA",
       "button_2": "RE",
@@ -17,7 +17,7 @@
     {
       "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/snail.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/snail.png?alt=media&token=88fd472a-b131-4128-8891-0de355ae7158",
       "answer": "SNAIL",
       "button_1": "I",
       "button_2": "L",
@@ -31,7 +31,7 @@
     {
       "language": "en",
       "category": "animals",
-      "image": "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/res/drawable/cow.png",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/cow.png?alt=media&token=f25acbd9-8cb3-4934-8948-a5533665d996",
       "answer": "COW",
       "button_1": "DA",
       "button_2": "C",

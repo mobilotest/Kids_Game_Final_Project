@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private static int screensLoaderId = 0;
 
-    String url_en = "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/assets/screens_en.json";
+    String url_en = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en.json?alt=media&token=d01ca3ff-30f4-4d1c-8fbc-baaf3f5cdcc2";
     String url_ru = "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/assets/screens_ru.json";
 
     private LoaderManager loaderManager = getLoaderManager();;
