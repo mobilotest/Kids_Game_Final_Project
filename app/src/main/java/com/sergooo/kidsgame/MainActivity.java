@@ -275,6 +275,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         // Handle action bar item clicks here. The action bar will automatically handle clicks on the Home/Up button,
         // so long as you specify a parent actually in AndroidManifest.xml
         int id = item.getItemId();
+        MenuItem rus = findViewById(R.id.flag_ru);
+        MenuItem eng = findViewById(R.id.flag_us);
+        MenuItem about = findViewById(R.id.menu_about);
 
         // no inspection SimplifiableIfStatement
         if (id == R.id.menu_about) {
@@ -284,21 +287,20 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
 
         // Handle presses on the action bar items ENG ans RUS
-        if (item.getItemId() == R.id.flag_us) {
+        if (id == R.id.flag_us) {
             screensLoaderId = 0;
             help.setText(R.string.help);
             clear.setText(R.string.clear);
             done.setText(R.string.done);
-        } else if (item.getItemId() == R.id.flag_ru) {
+            rus.setTitle(R.string.eng);
+            eng.setTitle(R.string.rus);
+            about.setTitle(R.string.settings_about);
+        } else if (id == R.id.flag_ru) {
             screensLoaderId = 1;
             help.setText(R.string.help_ru);
             clear.setText(R.string.clear_ru);
             done.setText(R.string.done_ru);
-        }
-        loaderManager.initLoader(screensLoaderId, null, this);
-
-        // Handle presses on the action bar items Transport and Animals
-        if (item.getItemId() == R.id.transport) {
+        } else if (id == R.id.transport) {
             if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
                 screensLoaderId = 3;
                 help.setText(R.string.help);
@@ -310,7 +312,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 clear.setText(R.string.clear_ru);
                 done.setText(R.string.done_ru);
             }
-        } else if (item.getItemId() == R.id.animals) {
+        } else if (id == R.id.animals) {
             if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
                 screensLoaderId = 2;
                 help.setText(R.string.help);
@@ -321,16 +323,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 help.setText(R.string.help_ru);
                 clear.setText(R.string.clear_ru);
                 done.setText(R.string.done_ru);
+
             }
         }
+        loaderManager.initLoader(screensLoaderId, null, this);
         return true;
-    }
-
-    /**
-     * This method switch Game between RUS and ENG modes
-     **/
-    public void onComposeAction(MenuItem mi) {
-        // handle click here
     }
 
     @Override

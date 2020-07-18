@@ -1,48 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">KidsGame</string>
 
-    <string name="one">CRO</string>
-    <string name="two">CO</string>
-    <string name="three">DI</string>
-    <string name="four">LE</string>
-    <string name="five">C</string>
-    <string name="six">W</string>
-    <string name="seven">O</string>
-    <string name="eight">L</string>
-    <string name="nine">DO</string>
-    <string name="eleven">G</string>
-    <string name="twelve">C</string>
-    <string name="thirteen">T</string>
-    <string name="fourteen">HO</string>
-    <string name="fifteen">R</string>
-    <string name="sixteen">SE</string>
-    <string name="eighteen">HO</string>
-    <string name="nineteen">ER</string>
-    <string name="twenty">BU</string>
-    <string name="twentyone">TT</string>
-    <string name="twentytwo">ER</string>
-    <string name="twentythree">FLY</string>
-    <string name="twentyfour">SNA</string>
-    <string name="twentyfive">KE</string>
-    <string name="twentysix">ZE</string>
-    <string name="twentyseven">RA</string>
-    <string name="twentyeight">A</string>
-    <string name="twentynine">N</string>
-    <string name="thirtyone">T</string>
-    <string name="thirtytwo">RAB</string>
-    <string name="thirtythree">BIT</string>
-    <string name="thirtyfour">FI</string>
-    <string name="thirtyfive">SH</string>
-    <string name="fourty">PEA</string>
-    <string name="fourtyone">CO</string>
-    <string name="fourtytwo">CK</string>
-    <string name="fifty">O</string>
-    <string name="fiftyone">W</string>
-    <string name="fiftytwo">O</string>
-    <string name="fiftythree">A</string>
-    <string name="fortythree">PP</string>
-    <string name="fortyfour">B</string>
-
     <string name="dots">...</string>
 
     <string name="great">GREAT JOB!</string>
@@ -54,6 +12,10 @@
     <string name="help_ru" translatable="false">ПОМОЩЬ</string>
     <string name="clear_ru" translatable="false">СБРОС</string>
     <string name="done_ru" translatable="false">ГОТОВО</string>
+    <string name="rus" translatable="false">Русский</string>
+    <string name="eng" translatable="false">Английский</string>
+    <string name="animals" translatable="false">Животные</string>
+    <string name="transport" translatable="false">Транспорт</string>
 
     <string-array name="animals">
         <item name="ant">ANT</item>
@@ -89,10 +51,5 @@
     <string name="settings_about">About</string>
     <string name="settings_help">Help</string>
     <string name="no_internet_connection">No Internet Connection</string>
-
-    <string name="rus">Russian</string>
-    <string name="eng">English</string>
-    <string name="animals">Animals</string>
-    <string name="transport">Transport</string>
 
 </resources>
