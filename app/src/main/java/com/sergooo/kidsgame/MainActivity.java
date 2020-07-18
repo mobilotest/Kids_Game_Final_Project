@@ -32,12 +32,17 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Screen>> {
 
+    // Eng = 0; Rus = 1; Eng_anim = 2; Eng_tran = 3; Rus_anim = 4; Rus_tran = 5;
     private static int screensLoaderId = 0;
 
-    String url_en = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en.json?alt=media&token=d01ca3ff-30f4-4d1c-8fbc-baaf3f5cdcc2";
-    String url_ru = "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/assets/screens_ru.json";
+    String url_en = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en.json?alt=media&token=ce3598d7-e90c-42d5-ade1-e9eb888a40e0";
+    String url_ru = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru.json?alt=media&token=066628a0-0e3b-4cf9-b794-4457464ff880";
+    String url_en_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_anim.json?alt=media&token=e13f5bc6-a97a-43db-9592-bfb884402953";
+    String url_en_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_tran.json?alt=media&token=f82e2ab0-04b0-47dd-bac3-1ebc678a510c";
+    String url_ru_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_anim.json?alt=media&token=52ef6307-1fd5-4b48-b82a-c5955be8565a";
+    String url_ru_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_tran.json?alt=media&token=3fc9856f-f66e-484f-b177-0cdfcc0f9eae";
 
-    private LoaderManager loaderManager = getLoaderManager();;
+    private LoaderManager loaderManager = getLoaderManager();
 
     /**
      * Constant value for the screens loader ID. We can choose any integer.
@@ -294,9 +299,29 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         // Handle presses on the action bar items Transport and Animals
         if (item.getItemId() == R.id.transport) {
-            // code here
+            if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+                screensLoaderId = 3;
+                help.setText(R.string.help);
+                clear.setText(R.string.clear);
+                done.setText(R.string.done);
+            } else if (screensLoaderId == 1 || screensLoaderId == 4 || screensLoaderId == 5) {
+                screensLoaderId = 5;
+                help.setText(R.string.help_ru);
+                clear.setText(R.string.clear_ru);
+                done.setText(R.string.done_ru);
+            }
         } else if (item.getItemId() == R.id.animals) {
-            // code here
+            if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+                screensLoaderId = 2;
+                help.setText(R.string.help);
+                clear.setText(R.string.clear);
+                done.setText(R.string.done);
+            } else if (screensLoaderId == 1 || screensLoaderId == 4 || screensLoaderId == 5) {
+                screensLoaderId = 4;
+                help.setText(R.string.help_ru);
+                clear.setText(R.string.clear_ru);
+                done.setText(R.string.done_ru);
+            }
         }
         return true;
     }
@@ -315,7 +340,16 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             baseUri = Uri.parse(url_en);
         } else if (screensLoaderId == 1) {
             baseUri = Uri.parse(url_ru);
+        } else if (screensLoaderId == 2) {
+            baseUri = Uri.parse(url_en_anim);
+        } else if (screensLoaderId == 3) {
+            baseUri = Uri.parse(url_en_tran);
+        } else if (screensLoaderId == 4) {
+            baseUri = Uri.parse(url_ru_anim);
+        } else if (screensLoaderId == 5) {
+            baseUri = Uri.parse(url_ru_tran);
         }
+
         Uri.Builder uriBuilder = baseUri.buildUpon();
         uriBuilder.scheme("https").authority("content.guardianapis.com");
         uriBuilder.appendQueryParameter("q", "android");
