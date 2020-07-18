@@ -6,6 +6,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:configChanges="keyboardHidden|orientation"
+        android:screenOrientation="portrait"
+        android:orientation="vertical"
         android:allowBackup="true"
         android:icon="@mipmap/abc"
         android:logo="@mipmap/abc"
