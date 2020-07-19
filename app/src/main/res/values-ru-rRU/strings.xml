@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Игра</string>
+    <string name="app_name">Читай Пиши Учись</string>
     <string name="help">ПОМОЩЬ</string>
     <string name="clear">СБРОС</string>
     <string name="done">ГОТОВО</string>
