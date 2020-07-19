@@ -129,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      * This method will switch to the new question if answer is correct
      **/
     public void help(View v) {
-        EditText result = (EditText) findViewById(R.id.result);
+        TextView result = (TextView) findViewById(R.id.result);
         result.setText(currentScreen.getAnswer());
     }
 
@@ -137,7 +137,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      * This method should clean the EditText box with the answer
      **/
     public void clear(View view) {
-        EditText result = (EditText) findViewById(R.id.result);
+        TextView result = (TextView) findViewById(R.id.result);
         result.setText("");
     }
 
@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      * This method will check if answer is correct or not and throw a toast message accordingly
      **/
     public void done(View view) throws InterruptedException {
-        EditText edit_text = (EditText) findViewById(R.id.result);
+        TextView edit_text = (TextView) findViewById(R.id.result);
         if (edit_text.getText().toString().equalsIgnoreCase(String.valueOf(currentScreen.getAnswer()))) { // HOW TO COMPARE?
             toastMessage(R.string.great);
             fillOutMyScreen();
@@ -160,8 +160,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void one(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        EditText result = (EditText) findViewById(R.id.result);
-        Editable temp = result.getText();
+        TextView result = (TextView) findViewById(R.id.result);
+        String temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -171,8 +171,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void two(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        EditText result = (EditText) findViewById(R.id.result);
-        Editable temp = result.getText();
+        TextView result = (TextView) findViewById(R.id.result);
+        String temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -182,8 +182,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void three(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        EditText result = (EditText) findViewById(R.id.result);
-        Editable temp = result.getText();
+        TextView result = (TextView) findViewById(R.id.result);
+        String temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -193,8 +193,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void four(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        EditText result = (EditText) findViewById(R.id.result);
-        Editable temp = result.getText();
+        TextView result = (TextView) findViewById(R.id.result);
+        String temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -204,8 +204,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void five(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        EditText result = (EditText) findViewById(R.id.result);
-        Editable temp = result.getText();
+        TextView result = (TextView) findViewById(R.id.result);
+        String temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -215,8 +215,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void six(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        EditText result = (EditText) findViewById(R.id.result);
-        Editable temp = result.getText();
+        TextView result = (TextView) findViewById(R.id.result);
+        String temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -226,8 +226,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void seven(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        EditText result = (EditText) findViewById(R.id.result);
-        Editable temp = result.getText();
+        TextView result = (TextView) findViewById(R.id.result);
+        String temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -237,8 +237,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void eight(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        EditText result = (EditText) findViewById(R.id.result);
-        Editable temp = result.getText();
+        TextView result = (TextView) findViewById(R.id.result);
+        String temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
