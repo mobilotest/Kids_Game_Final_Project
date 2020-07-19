@@ -15,7 +15,7 @@
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="6dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="15dp"
         android:layout_weight="1"
         android:gravity="center"
         android:onClick="one"
@@ -174,16 +174,17 @@
 
     <ImageView
         android:id="@+id/image_main"
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="370dp"
+        android:layout_height="280dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="30dp"
         android:layout_marginEnd="16dp"
-        app:layout_constraintBottom_toTopOf="@+id/result"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/backgrounds/scenic" />
+        tools:srcCompat="@tools:sample/backgrounds/scenic"
+        app:layout_constraintBottom_toTopOf="@+id/result" />
 
     <ProgressBar
         android:id="@+id/loading_indicator"
@@ -199,11 +200,11 @@
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="373dp"
-        android:layout_height="74dp"
+        android:layout_width="372dp"
+        android:layout_height="52dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="16dp"
         android:layout_weight="1"
         android:gravity="center"
         android:hint="@string/dots"

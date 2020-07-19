@@ -10,13 +10,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
-import android.text.Editable;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -52,6 +50,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     Screen currentScreen;
     private List<Screen> screens;
     private TextView about;
+    private TextView russian;
+    private TextView english;
     private String category;
     private TextView result;
     private ImageView image;
@@ -69,6 +69,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private Button help;
     private Button clear;
     private Button done;
+
+    private String temp = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -129,15 +131,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      * This method will switch to the new question if answer is correct
      **/
     public void help(View v) {
-        TextView result = (TextView) findViewById(R.id.result);
         result.setText(currentScreen.getAnswer());
     }
 
     /**
-     * This method should clean the EditText box with the answer
+     * This method should clean the TextView box with the answer
      **/
     public void clear(View view) {
-        TextView result = (TextView) findViewById(R.id.result);
         result.setText("");
     }
 
@@ -145,8 +145,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      * This method will check if answer is correct or not and throw a toast message accordingly
      **/
     public void done(View view) throws InterruptedException {
-        TextView edit_text = (TextView) findViewById(R.id.result);
-        if (edit_text.getText().toString().equalsIgnoreCase(String.valueOf(currentScreen.getAnswer()))) { // HOW TO COMPARE?
+        if (result.getText().toString().equalsIgnoreCase(String.valueOf(currentScreen.getAnswer()))) { // HOW TO COMPARE?
             toastMessage(R.string.great);
             fillOutMyScreen();
         } else {
@@ -160,8 +159,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void one(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        TextView result = (TextView) findViewById(R.id.result);
-        String temp = (String) result.getText();
+        temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -171,8 +169,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void two(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        TextView result = (TextView) findViewById(R.id.result);
-        String temp = (String) result.getText();
+        temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -182,8 +179,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void three(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        TextView result = (TextView) findViewById(R.id.result);
-        String temp = (String) result.getText();
+        temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -193,8 +189,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void four(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        TextView result = (TextView) findViewById(R.id.result);
-        String temp = (String) result.getText();
+        temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -204,8 +199,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void five(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        TextView result = (TextView) findViewById(R.id.result);
-        String temp = (String) result.getText();
+        temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -215,8 +209,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void six(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        TextView result = (TextView) findViewById(R.id.result);
-        String temp = (String) result.getText();
+        temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -226,8 +219,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void seven(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        TextView result = (TextView) findViewById(R.id.result);
-        String temp = (String) result.getText();
+        temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -237,8 +229,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void eight(View v) {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
-        TextView result = (TextView) findViewById(R.id.result);
-        String temp = (String) result.getText();
+        temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
     }
 
@@ -275,9 +266,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         // Handle action bar item clicks here. The action bar will automatically handle clicks on the Home/Up button,
         // so long as you specify a parent actually in AndroidManifest.xml
         int id = item.getItemId();
-        MenuItem rus = findViewById(R.id.flag_ru);
-        MenuItem eng = findViewById(R.id.flag_us);
-        MenuItem about = findViewById(R.id.menu_about);
 
         // no inspection SimplifiableIfStatement
         if (id == R.id.menu_about) {
@@ -292,9 +280,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             help.setText(R.string.help);
             clear.setText(R.string.clear);
             done.setText(R.string.done);
-            rus.setTitle(R.string.eng);
-            eng.setTitle(R.string.rus);
-            about.setTitle(R.string.settings_about);
         } else if (id == R.id.flag_ru) {
             screensLoaderId = 1;
             help.setText(R.string.help_ru);
