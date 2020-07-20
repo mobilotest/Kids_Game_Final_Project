@@ -1,6 +1,18 @@
 {
   "screens": [
     {
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/rocket.png?alt=media&token=d0ef58a3-f347-41a7-98ea-af93a239a027",
+      "answer": "ROCKET",
+      "button_1": "O",
+      "button_2": "R",
+      "button_3": "A",
+      "button_4": "T",
+      "button_5": "K",
+      "button_6": "E",
+      "button_7": "C",
+      "button_8": "S"
+    },
+    {
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/tractor.png?alt=media&token=f4552e37-ab22-4e0a-9342-a9b77a3dcd7d",
       "answer": "TRACTOR",
       "button_1": "R",

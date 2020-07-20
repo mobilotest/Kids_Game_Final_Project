@@ -365,7 +365,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/snake.png?alt=media&token=2b710c39-07f1-4a53-a33a-36443804bfff",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/snake.png?alt=media&token=0de1084c-eec9-4142-aebe-34d79c8ee715",
       "answer": "SNAKE",
       "button_1": "KE",
       "button_2": "FE",
@@ -516,6 +516,18 @@
       "button_4": "OO",
       "button_5": "AX",
       "button_6": "R",
+      "button_7": "C",
+      "button_8": "S"
+    },
+    {
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/rocket.png?alt=media&token=d0ef58a3-f347-41a7-98ea-af93a239a027",
+      "answer": "ROCKET",
+      "button_1": "O",
+      "button_2": "R",
+      "button_3": "A",
+      "button_4": "T",
+      "button_5": "K",
+      "button_6": "E",
       "button_7": "C",
       "button_8": "S"
     }

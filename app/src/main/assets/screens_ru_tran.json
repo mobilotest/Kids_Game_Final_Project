@@ -119,6 +119,18 @@
       "button_6": "Я",
       "button_7": "С",
       "button_8": "Р"
+    },
+    {
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/rocket.png?alt=media&token=d0ef58a3-f347-41a7-98ea-af93a239a027",
+      "answer": "РАКЕТА",
+      "button_1": "С",
+      "button_2": "А",
+      "button_3": "Т",
+      "button_4": "О",
+      "button_5": "Р",
+      "button_6": "Е",
+      "button_7": "Н",
+      "button_8": "К"
     }
   ]
 }
