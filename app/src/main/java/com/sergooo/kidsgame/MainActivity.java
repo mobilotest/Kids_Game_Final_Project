@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
@@ -69,6 +70,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private String temp = "";
 
+    /**
+     * Handles playback of all the sound files
+     */
+    private MediaPlayer mMediaPlayer;
+    private MediaPlayer.OnCompletionListener mOnCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mp) {
+            releaseMediaPlayer();
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -118,10 +130,17 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         btn_7.setText(currentScreen.getButton_7());
         btn_8.setText(currentScreen.getButton_8());
 
-        // Get the news image from the json and set this image on the imageView
+        // Get the Screen's image from the json and set this image on the imageView
         Picasso.get().load(currentScreen.getImage()).into(image);
         image.setVisibility(View.VISIBLE);
         result.setText("");
+
+        // Start playback
+        // Create and setup the {@link MediaPlayer} for the audio resource associated with the current button
+        mMediaPlayer = MediaPlayer.create(MainActivity.this, currentScreen.getmAudio());
+        // Start the audio file
+        mMediaPlayer.start();
+        mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
     }
 
     /**
@@ -348,5 +367,23 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoaderReset(Loader<List<Screen>> loader) {
+    }
+
+    /**
+     * Clean up the media player by releasing its resources.
+     */
+    private void releaseMediaPlayer() {
+        // If the media player is not null, then it may be currently playing a sound.
+        if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
+            // Regardless of the current state of the media player, release its resources
+            // because we no longer need it.
+            mMediaPlayer.stop();
+            mMediaPlayer.reset();
+            mMediaPlayer.release();
+            // Set the media player back to null. For our code, we've decided that
+            // setting the media player to null is an easy way to tell that the media player
+            // is not configured to play an audio file at the moment.
+            mMediaPlayer = null;
+        }
     }
 }
