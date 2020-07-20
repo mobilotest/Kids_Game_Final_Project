@@ -71,15 +71,23 @@ public class ScreenLoader extends AsyncTaskLoader<List<Screen>> {
             String answer = innerJObject.getString("answer");
             String imageURL = innerJObject.getString("image");
             String button1 = innerJObject.getString("button_1");
+            String button1audio = innerJObject.getString("button_1_audio");
             String button2 = innerJObject.getString("button_2");
+            String button2audio = innerJObject.getString("button_2_audio");
             String button3 = innerJObject.getString("button_3");
+            String button3audio = innerJObject.getString("button_3_audio");
             String button4 = innerJObject.getString("button_4");
+            String button4audio = innerJObject.getString("button_4_audio");
             String button5 = innerJObject.getString("button_5");
+            String button5audio = innerJObject.getString("button_5_audio");
             String button6 = innerJObject.getString("button_6");
+            String button6audio = innerJObject.getString("button_6_audio");
             String button7 = innerJObject.getString("button_7");
+            String button7audio = innerJObject.getString("button_7_audio");
             String button8 = innerJObject.getString("button_8");
+            String button8audio = innerJObject.getString("button_8_audio");
 
-            Screen screen = new Screen(imageURL, answer, button1, button2, button3, button4, button5, button6, button7, button8);
+            Screen screen = new Screen(imageURL, answer, button1, button1audio, button2, button2audio, button3, button3audio, button4, button4audio, button5, button5audio, button6, button6audio, button7, button7audio, button8, button8audio);
             screens.add(screen);
             System.out.println(screens);
         }

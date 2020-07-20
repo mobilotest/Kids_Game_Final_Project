@@ -26,6 +26,7 @@ import androidx.appcompat.view.menu.MenuBuilder;
 
 import com.squareup.picasso.Picasso;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 
@@ -40,6 +41,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     String url_en_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_tran.json?alt=media&token=d51d8e40-b0e1-4970-9ec0-5e479cd4038b";
     String url_ru_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_anim.json?alt=media&token=6a64dfca-4db2-42a9-9e24-bba178bf0a38";
     String url_ru_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_tran.json?alt=media&token=207950f7-7b26-452a-bc3f-26568671889c";
+
+    String url_en_audio = "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/assets/screens_en_audio.json";
+
 
     private LoaderManager loaderManager = getLoaderManager();
 
@@ -134,13 +138,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Picasso.get().load(currentScreen.getImage()).into(image);
         image.setVisibility(View.VISIBLE);
         result.setText("");
-
-        // Start playback
-        // Create and setup the {@link MediaPlayer} for the audio resource associated with the current button
-        mMediaPlayer = MediaPlayer.create(MainActivity.this, currentScreen.getmAudio());
-        // Start the audio file
-        mMediaPlayer.start();
-        mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
     }
 
     /**
@@ -335,7 +332,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public Loader<List<Screen>> onCreateLoader(int i, Bundle bundle) {
         Uri baseUri = null;
         if (screensLoaderId == 0) {
-            baseUri = Uri.parse(url_en);
+            baseUri = Uri.parse(url_en_audio);
+//            baseUri = Uri.parse(url_en);
         } else if (screensLoaderId == 1) {
             baseUri = Uri.parse(url_ru);
         } else if (screensLoaderId == 2) {
@@ -367,6 +365,30 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoaderReset(Loader<List<Screen>> loader) {
+    }
+
+    public void playFile(View v){
+        // Start playback
+        // Create and setup the {@link MediaPlayer} for the audio resource associated with the current button
+        mMediaPlayer = new MediaPlayer();
+
+        try {
+            mMediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/audio%2Fa.mp3?alt=media&token=57249483-6ee3-42b2-88e2-17b2ab36a839");
+            mMediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+                @Override
+                public void onPrepared(MediaPlayer mp) {
+                    mp.start();
+                }
+            });
+
+            mMediaPlayer.prepareAsync();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        // Start the audio file
+        mMediaPlayer.start();
+        mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
     }
 
     /**
