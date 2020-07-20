@@ -50,9 +50,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     Screen currentScreen;
     private List<Screen> screens;
     private TextView about;
-    private TextView russian;
-    private TextView english;
-    private String category;
     private TextView result;
     private ImageView image;
     private Button btn_1;
@@ -274,7 +271,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             return true;
         }
 
-        // Handle presses on the action bar items ENG ans RUS
+        // Handle presses on the action bar items ENG ans RUS and Animals and Transport
         if (id == R.id.flag_us) {
             screensLoaderId = 0;
             help.setText(R.string.help);
