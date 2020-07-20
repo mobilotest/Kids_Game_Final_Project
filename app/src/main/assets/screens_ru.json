@@ -15,7 +15,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/snail.png?alt=media&token=88fd472a-b131-4128-8891-0de355ae7158",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/snali.png?alt=media&token=cbc34bf9-db4e-44ba-a4c9-4b8b7abb99bd",
       "answer": "УЛИТКА",
       "button_1": "ЛИ",
       "button_2": "Е",
@@ -28,7 +28,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/cow.png?alt=media&token=f25acbd9-8cb3-4934-8948-a5533665d996",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/cow.png?alt=media&token=ed6a0f55-23f7-4d40-91cd-f3cf84b1952c",
       "answer": "КОРОВА",
       "button_1": "ВА",
       "button_2": "ЗУ",
@@ -41,7 +41,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/butterfly.png?alt=media&token=0215d6d8-7a48-4511-b62b-d10d965ca85f",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/butterfly.png?alt=media&token=c466bc93-6d96-4a34-a564-4e9ea1c8e4b1",
       "answer": "БАБОЧКА",
       "button_1": "БА",
       "button_2": "Ч",
@@ -54,7 +54,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/cat.png?alt=media&token=0b231790-7fdd-4189-a2dd-a5c3ef616c87",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/cat.png?alt=media&token=ace0ddcf-e289-4886-b603-012450e7b0d1",
       "answer": "КОШКА",
       "button_1": "ШР",
       "button_2": "ЩУ",
@@ -119,7 +119,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/fish.png?alt=media&token=3f5091be-e3e1-4937-96e5-142275e09984",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/fish.png?alt=media&token=b2ca50f7-396a-45e1-92e2-5bc22e496c67",
       "answer": "РЫБА",
       "button_1": "Й",
       "button_2": "Б",
@@ -132,7 +132,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/zebra.png?alt=media&token=e303e51e-f22d-4bca-8906-e3277f6521bc",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/zebra.png?alt=media&token=43efb41b-ef8a-47c0-a458-15115e17baf8",
       "answer": "ЗЕБРА",
       "button_1": "ТУ",
       "button_2": "Г",
@@ -145,7 +145,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/rabbit.png?alt=media&token=dcc0ee0c-cdc8-45bb-84dd-ad43a9b8e928",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/rabbit.png?alt=media&token=8742e206-7f98-464c-aa52-4cc5535156b6",
       "answer": "ЗАЯЦ",
       "button_1": "З",
       "button_2": "ЕН",
@@ -171,7 +171,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/crocodile.png?alt=media&token=ad1be338-6ce5-4a72-aaf7-b7607f14d251",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/crocodile.png?alt=media&token=a85cea7e-1b50-4278-8e2b-d96c15a78572",
       "answer": "КРОКОДИЛ",
       "button_1": "КО",
       "button_2": "МП",
