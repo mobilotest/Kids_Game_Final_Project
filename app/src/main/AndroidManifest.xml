@@ -7,8 +7,6 @@
 
     <application
         android:configChanges="keyboardHidden|orientation"
-        android:screenOrientation="portrait"
-        android:orientation="vertical"
         android:allowBackup="true"
         android:icon="@mipmap/abc"
         android:logo="@mipmap/abc"
@@ -16,7 +14,9 @@
         android:roundIcon="@mipmap/abc"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.sergooo.kidsgame.MainActivity">
+        <activity
+            android:name="com.sergooo.kidsgame.MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -237,7 +237,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
         TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
         toastMessage.setTextColor(Color.RED);
-        toastMessage.setTextSize(45);
+        toastMessage.setTextSize(40);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }
