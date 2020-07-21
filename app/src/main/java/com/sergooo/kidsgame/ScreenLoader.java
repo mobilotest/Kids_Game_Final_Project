@@ -56,6 +56,7 @@ public class ScreenLoader extends AsyncTaskLoader<List<Screen>> {
         try {
             return parseJSONfile(jsonString);
         } catch (JSONException e) {
+            e.printStackTrace();
             throw new RuntimeException(e);
         }
     }
