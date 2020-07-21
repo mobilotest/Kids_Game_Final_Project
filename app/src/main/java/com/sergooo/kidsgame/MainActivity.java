@@ -194,6 +194,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String buttonText = b.getText().toString();
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
+        playFile();
     }
 
     /**
@@ -367,13 +368,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void onLoaderReset(Loader<List<Screen>> loader) {
     }
 
-    public void playFile(View v){
+    public void playFile(){
         // Start playback
         // Create and setup the {@link MediaPlayer} for the audio resource associated with the current button
         mMediaPlayer = new MediaPlayer();
 
         try {
-            mMediaPlayer.setDataSource("https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/audio%2Fa.mp3?alt=media&token=57249483-6ee3-42b2-88e2-17b2ab36a839");
+            mMediaPlayer.setDataSource(String.valueOf(R.raw.a));
             mMediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
                 @Override
                 public void onPrepared(MediaPlayer mp) {
