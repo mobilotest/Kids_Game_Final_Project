@@ -51,9 +51,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     String url_ru_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_anim.json?alt=media&token=6a64dfca-4db2-42a9-9e24-bba178bf0a38";
     String url_ru_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_tran.json?alt=media&token=207950f7-7b26-452a-bc3f-26568671889c";
 
-    String url_en_audio = "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/assets/screens_en_audio.json";
-
-
     private LoaderManager loaderManager = getLoaderManager();
 
     /**
@@ -111,10 +108,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                     }
                 }
             };
-    /**
-     * Handles playback of all buttons sound files
-     */
-    private MediaPlayer btn_1_audio, btn_2_audio, btn_3_audio, btn_4_audio, btn_5_audio, btn_6_audio, btn_7_audio, btn_8_audio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -171,15 +164,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Picasso.get().load(currentScreen.getImage()).into(image);
         image.setVisibility(View.VISIBLE);
         result.setText("");
-
-
-//        btn_2_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_2_audio()));
-        btn_3_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_3_audio()));
-        btn_4_audio = MediaPlayer.create(this, R.raw.c);
-        btn_5_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_5_audio()));
-        btn_6_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_6_audio()));
-        btn_7_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_7_audio()));
-        btn_8_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_8_audio()));
     }
 
     /**
@@ -212,43 +196,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      * This method put part of the word to the edit field from button 1
      **/
     public void one(View v) throws IOException {
-        Button b = (Button) v;
-        String buttonText = b.getText().toString();
+//        Button b = (Button) v;
+//        String buttonText = b.getText().toString();
         temp = (String) result.getText();
-        result.setText(temp + "" + buttonText);
+        result.setText(temp + "" + currentScreen.getButton_1());
 
-        releaseMediaPlayer();
-
-        // Request audio focus for playback
-        int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
-                // Use the music stream.
-                AudioManager.STREAM_MUSIC,
-                // Request permanent focus.
-                AudioManager.AUDIOFOCUS_GAIN);
-
-        if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
-
-
-            //String filename = "android.resource://" + this.getPackageName() + "/raw/test0";
-            btn_1_audio = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(currentScreen.getButton_1_audio(),"raw",getPackageName()));
-            btn_1_audio.start();
-
-            // Create and setup the {@link MediaPlayer} for the audio resource associated
-            // with the current button
-//            btn_1_audio = MediaPlayer.create(this, R.raw.c);
-
-            int id = getResources().getIdentifier(currentScreen.getButton_1_audio(), "raw", getPackageName());
-            btn_1_audio = MediaPlayer.create(this, id);
-
-
-            btn_1_audio.start();
-
-
-            btn_1_audio.setOnCompletionListener(mOnCompletionListener);
-        }
+        playSyllable(currentScreen.getButton_1());
     }
-
-
 
     /**
      * This method put part of the word to the edit field from button 2
@@ -259,12 +213,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
 
-        btn_2_audio.start();
-        btn_2_audio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-            }
-        });
+        playSyllable(currentScreen.getButton_2());
     }
 
     /**
@@ -276,12 +225,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
 
-        btn_3_audio.start();
-        btn_3_audio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-            }
-        });
+        playSyllable(currentScreen.getButton_3());
     }
 
     /**
@@ -292,16 +236,20 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String buttonText = b.getText().toString();
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
+
+        playSyllable(currentScreen.getButton_4());
     }
 
     /**
      * This method put part of the word to the edit field from button 5
      **/
     public void five(View v) {
-        Button b = (Button) v;
-        String buttonText = b.getText().toString();
+//        Button b = (Button) v;
+//        String buttonText = b.getText().toString();
         temp = (String) result.getText();
-        result.setText(temp + "" + buttonText);
+        result.setText(temp + "" + currentScreen.getButton_5());
+
+        playSyllable(currentScreen.getButton_5());
     }
 
     /**
@@ -312,6 +260,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String buttonText = b.getText().toString();
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
+
+        playSyllable(currentScreen.getButton_6());
     }
 
     /**
@@ -322,6 +272,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String buttonText = b.getText().toString();
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
+
+        playSyllable(currentScreen.getButton_7());
     }
 
     /**
@@ -332,6 +284,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String buttonText = b.getText().toString();
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
+
+        playSyllable(currentScreen.getButton_8());
     }
 
     public void toastMessage(int resource) {
@@ -420,8 +374,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public Loader<List<Screen>> onCreateLoader(int i, Bundle bundle) {
         Uri baseUri = null;
         if (screensLoaderId == 0) {
-            baseUri = Uri.parse(url_en_audio);
-//            baseUri = Uri.parse(url_en);
+            baseUri = Uri.parse(url_en);
         } else if (screensLoaderId == 1) {
             baseUri = Uri.parse(url_ru);
         } else if (screensLoaderId == 2) {
@@ -457,6 +410,36 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoaderReset(Loader<List<Screen>> loader) {
+    }
+
+    /**
+     * This method just read one syllable based on tapped button.
+     */
+    public void playSyllable(String syllable) {
+
+        releaseMediaPlayer();
+
+        // Request audio focus for playback
+        int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
+                // Use the music stream.
+                AudioManager.STREAM_MUSIC,
+                // Request permanent focus.
+                AudioManager.AUDIOFOCUS_GAIN);
+
+        if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+
+            //String filename = "android.resource://" + this.getPackageName() + "/raw/test0";
+            mMediaPlayer = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(syllable, "raw", getPackageName()));
+            mMediaPlayer.start();
+
+            // Create and setup the {@link MediaPlayer} for the audio resource associated
+            // with the current button
+            int id = getResources().getIdentifier(syllable, "raw", getPackageName());
+            mMediaPlayer = MediaPlayer.create(getApplicationContext(), id);
+
+            mMediaPlayer.start();
+            mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
+        }
     }
 
     /**
