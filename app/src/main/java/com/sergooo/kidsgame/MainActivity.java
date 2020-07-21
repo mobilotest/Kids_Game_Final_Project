@@ -75,15 +75,16 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private String temp = "";
 
     /**
-     * Handles playback of all the sound files
+     * Handles playback of all buttons sound files
      */
-    private MediaPlayer mMediaPlayer;
-    private MediaPlayer.OnCompletionListener mOnCompletionListener = new MediaPlayer.OnCompletionListener() {
-        @Override
-        public void onCompletion(MediaPlayer mp) {
-            releaseMediaPlayer();
-        }
-    };
+    private MediaPlayer btn_1_audio;
+    private MediaPlayer btn_2_audio;
+    private MediaPlayer btn_3_audio;
+    private MediaPlayer btn_4_audio;
+    private MediaPlayer btn_5_audio;
+    private MediaPlayer btn_6_audio;
+    private MediaPlayer btn_7_audio;
+    private MediaPlayer btn_8_audio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,6 +139,15 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Picasso.get().load(currentScreen.getImage()).into(image);
         image.setVisibility(View.VISIBLE);
         result.setText("");
+
+        btn_1_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_1_audio()));
+        btn_2_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_2_audio()));
+        btn_3_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_3_audio()));
+        btn_4_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_4_audio()));
+        btn_5_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_5_audio()));
+        btn_6_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_6_audio()));
+        btn_7_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_7_audio()));
+        btn_8_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_8_audio()));
     }
 
     /**
@@ -175,11 +185,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
 
-        mMediaPlayer = new MediaPlayer();
-        mMediaPlayer = MediaPlayer.create(getApplicationContext(), Uri.parse(currentScreen.getButton_1_audio()));
-        // Start the audio file
-        mMediaPlayer.start();
-        mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
+        btn_1_audio.start();
+        btn_1_audio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+            }
+        });
+
     }
 
     /**
@@ -200,7 +212,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String buttonText = b.getText().toString();
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
-        playFile();
     }
 
     /**
@@ -372,47 +383,5 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     @Override
     public void onLoaderReset(Loader<List<Screen>> loader) {
-    }
-
-    public void playFile(){
-        // Start playback
-        // Create and setup the {@link MediaPlayer} for the audio resource associated with the current button
-        mMediaPlayer = new MediaPlayer();
-
-        try {
-            mMediaPlayer.setDataSource(String.valueOf(R.raw.a));
-            mMediaPlayer.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
-                @Override
-                public void onPrepared(MediaPlayer mp) {
-                    mp.start();
-                }
-            });
-
-            mMediaPlayer.prepareAsync();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        // Start the audio file
-        mMediaPlayer.start();
-        mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
-    }
-
-    /**
-     * Clean up the media player by releasing its resources.
-     */
-    private void releaseMediaPlayer() {
-        // If the media player is not null, then it may be currently playing a sound.
-        if (mMediaPlayer != null && mMediaPlayer.isPlaying()) {
-            // Regardless of the current state of the media player, release its resources
-            // because we no longer need it.
-            mMediaPlayer.stop();
-            mMediaPlayer.reset();
-            mMediaPlayer.release();
-            // Set the media player back to null. For our code, we've decided that
-            // setting the media player to null is an easy way to tell that the media player
-            // is not configured to play an audio file at the moment.
-            mMediaPlayer = null;
-        }
     }
 }
