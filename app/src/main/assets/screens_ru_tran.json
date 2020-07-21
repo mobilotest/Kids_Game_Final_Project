@@ -37,7 +37,7 @@
       "button_8": "СА"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/bike.png?alt=media&token=23daaa1b-ad56-48f7-bd2c-299ffddc9a6c",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fbike.png?alt=media&token=c0117738-4ce8-42b0-bc7a-44498bf26d04",
       "answer": "ВЕЛОСИПЕД",
       "button_1": "ВЕ",
       "button_2": "СИ",
@@ -121,7 +121,7 @@
       "button_8": "Р"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/rocket.png?alt=media&token=d0ef58a3-f347-41a7-98ea-af93a239a027",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Frocket.png?alt=media&token=6c3261b7-d2ba-491c-b263-85659131dd96",
       "answer": "РАКЕТА",
       "button_1": "С",
       "button_2": "А",

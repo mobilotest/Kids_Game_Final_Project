@@ -1,7 +1,19 @@
 {
   "screens": [
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/whale.png?alt=media&token=8803cbcb-a301-415f-927c-ebd273711c07",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fkangaroo.png?alt=media&token=99321c3c-32dc-41a6-951e-b8cd287b6a05",
+      "answer": "KANGAROO",
+      "button_1": "HO",
+      "button_2": "ROO",
+      "button_3": "KAT",
+      "button_4": "TOO",
+      "button_5": "KAN",
+      "button_6": "KE",
+      "button_7": "COO",
+      "button_8": "GA"
+    },
+    {
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fwhale.png?alt=media&token=cf389c3f-cf83-4dac-a2cc-081b436d5022",
       "answer": "WHALE",
       "button_1": "K",
       "button_2": "H",
@@ -13,7 +25,7 @@
       "button_8": "E"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/turtle.png?alt=media&token=a335b5e5-e131-402d-8340-ae65882637c0",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fturtle.png?alt=media&token=85234fcc-d5f2-4783-9bf6-5b9e2a0dcd43",
       "answer": "TURTLE",
       "button_1": "O",
       "button_2": "H",
@@ -25,7 +37,7 @@
       "button_8": "E"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/tiger.png?alt=media&token=ddf862fd-9bd4-4662-becb-154e644bc58b",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Ftiger.png?alt=media&token=59c92fc3-4920-4824-a8b8-c77527d5abd8",
       "answer": "TIGER",
       "button_1": "U",
       "button_2": "R",
@@ -37,7 +49,7 @@
       "button_8": "A"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/pinguin.png?alt=media&token=5e760da6-6740-4b69-91b5-ebb81849110b",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fpinguin.png?alt=media&token=7c3db3a2-4f3d-4948-814c-f53e2aa5c95b",
       "answer": "PENGUIN",
       "button_1": "PEN",
       "button_2": "NE",
@@ -49,7 +61,7 @@
       "button_8": "UGU"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/pig.png?alt=media&token=f4dfea29-720e-406a-aa26-a723f2ee3345",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fpig.png?alt=media&token=f46547d4-0887-465b-bf01-a3cccfc802e7",
       "answer": "PIG",
       "button_1": "P",
       "button_2": "Q",
@@ -61,7 +73,7 @@
       "button_8": "L"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/panda.png?alt=media&token=3c8652aa-a800-473c-b31c-a9100f015bad",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fpanda.png?alt=media&token=a7edab65-4cea-4b40-9acf-7dc0ad1acf5a",
       "answer": "PANDA",
       "button_1": "A",
       "button_2": "M",
@@ -73,7 +85,7 @@
       "button_8": "D"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/monkey.png?alt=media&token=a501fac0-c6f8-4a86-b0f9-177e537a29c4",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fmonkey.png?alt=media&token=2b16871e-b0c6-4cbb-ab9a-65d18bb7d348",
       "answer": "MONKEY",
       "button_1": "OGA",
       "button_2": "UMA",
@@ -85,7 +97,7 @@
       "button_8": "BA"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/lizard.png?alt=media&token=f29553f5-69f4-4d4a-9279-83b308477755",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Flizard.png?alt=media&token=dd2fd73d-164e-4146-8f2e-243d8bc23320",
       "answer": "LIZARD",
       "button_1": "I",
       "button_2": "Z",
@@ -97,7 +109,7 @@
       "button_8": "A"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/lion.png?alt=media&token=3a40f6f3-6e02-4d0c-a7b1-005d69182d38",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Flion.png?alt=media&token=0dc64e58-a98b-4ff1-a0cd-2a2b1c90a1d4",
       "answer": "LION",
       "button_1": "G",
       "button_2": "O",
@@ -109,7 +121,7 @@
       "button_8": "I"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/girafe.png?alt=media&token=0210426c-e69e-49e0-aa90-c1fa3a9b2f51",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fgirafe.png?alt=media&token=4fc0309d-9f65-4158-978b-162e27755d30",
       "answer": "GIRAFFE",
       "button_1": "G",
       "button_2": "F",
@@ -121,7 +133,7 @@
       "button_8": "E"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/deer.png?alt=media&token=0f90f554-2f49-4767-a0f8-f5f6c3958e44",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fdeer.png?alt=media&token=9577ac1f-7b6c-484a-995d-e6f16eb55877",
       "answer": "DEER",
       "button_1": "G",
       "button_2": "T",
@@ -133,7 +145,7 @@
       "button_8": "E"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/crab.png?alt=media&token=fb05a8e5-32ca-4d45-8583-e28348ced72c",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fcrab.png?alt=media&token=48c09654-fd2b-437b-9199-f8a3f98972c8",
       "answer": "CRAB",
       "button_1": "C",
       "button_2": "T",
@@ -145,7 +157,7 @@
       "button_8": "R"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/cock.png?alt=media&token=71462030-acfe-4723-94cd-cf44702d2c2b",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fcock.png?alt=media&token=26b52287-531f-4826-a477-ddc5bc63aeb7",
       "answer": "COCK",
       "button_1": "S",
       "button_2": "E",
@@ -157,7 +169,7 @@
       "button_8": "K"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/camel.png?alt=media&token=cf1e2285-7f3e-43fd-8ed6-da96e36b3cd4",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fcamel.png?alt=media&token=d9156153-6539-41ed-ad4a-e449cf7cef38",
       "answer": "CAMEL",
       "button_1": "RA",
       "button_2": "MEH",
@@ -183,7 +195,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/snali.png?alt=media&token=cbc34bf9-db4e-44ba-a4c9-4b8b7abb99bd",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fsnali.png?alt=media&token=2df76c52-8f83-45b9-9cfb-704f3e0360bd",
       "answer": "SNAIL",
       "button_1": "I",
       "button_2": "L",
@@ -196,7 +208,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/cow.png?alt=media&token=ed6a0f55-23f7-4d40-91cd-f3cf84b1952c",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fcow.png?alt=media&token=2329d0bd-c015-4fc8-8210-62a7fcdf406b",
       "answer": "COW",
       "button_1": "DA",
       "button_2": "C",
@@ -209,7 +221,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/butterfly.png?alt=media&token=c466bc93-6d96-4a34-a564-4e9ea1c8e4b1",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fbutterfly.png?alt=media&token=b494f990-274b-4736-bd36-303585b46d58",
       "answer": "BUTTERFLY",
       "button_1": "ERB",
       "button_2": "CA",
@@ -222,12 +234,12 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/cat.png?alt=media&token=ace0ddcf-e289-4886-b603-012450e7b0d1",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fcat.png?alt=media&token=73931c85-ba49-485d-9d8a-7aa99dc2520e",
       "answer": "CAT",
       "button_1": "ER",
       "button_2": "A",
-      "button_3": "BA",
-      "button_4": "ME",
+      "button_3": "AV",
+      "button_4": "MU",
       "button_5": "C",
       "button_6": "T",
       "button_7": "EN",
@@ -243,7 +255,7 @@
       "button_4": "W",
       "button_5": "L",
       "button_6": "RA",
-      "button_7": "SE",
+      "button_7": "ES",
       "button_8": "E"
     },
     {
@@ -254,9 +266,9 @@
       "button_2": "HOP",
       "button_3": "APP",
       "button_4": "SS",
-      "button_5": "RAB",
+      "button_5": "RAG",
       "button_6": "BUM",
-      "button_7": "ER",
+      "button_7": "EZ",
       "button_8": "GRA"
     },
     {
@@ -265,7 +277,7 @@
       "answer": "DOG",
       "button_1": "RU",
       "button_2": "D",
-      "button_3": "BA",
+      "button_3": "AU",
       "button_4": "O",
       "button_5": "CO",
       "button_6": "T",
@@ -287,7 +299,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/fish.png?alt=media&token=b2ca50f7-396a-45e1-92e2-5bc22e496c67",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Ffish.png?alt=media&token=c5d6868d-cf73-453a-869d-bc1d7f8acdae",
       "answer": "FISH",
       "button_1": "S",
       "button_2": "DE",
@@ -295,15 +307,15 @@
       "button_4": "H",
       "button_5": "OM",
       "button_6": "I",
-      "button_7": "IN",
+      "button_7": "IS",
       "button_8": "F"
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/zebra.png?alt=media&token=43efb41b-ef8a-47c0-a458-15115e17baf8",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fzebra.png?alt=media&token=dcc49adb-4b17-40c7-900c-785c6c36a672",
       "answer": "ZEBRA",
       "button_1": "KA",
-      "button_2": "G",
+      "button_2": "GE",
       "button_3": "ZEB",
       "button_4": "HU",
       "button_5": "ERT",
@@ -313,7 +325,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/rabbit.png?alt=media&token=8742e206-7f98-464c-aa52-4cc5535156b6",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Frabbit.png?alt=media&token=6d6775c4-9c01-441e-9bd6-5b9ebe9b0f13",
       "answer": "RABBIT",
       "button_1": "KUN",
       "button_2": "SLI",
@@ -339,7 +351,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/crocodile.png?alt=media&token=a85cea7e-1b50-4278-8e2b-d96c15a78572",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fcrocodile.png?alt=media&token=a821260b-10dc-40d8-9278-0f1c3588f1d6",
       "answer": "CROCODILE",
       "button_1": "SKU",
       "button_2": "SI",
@@ -356,16 +368,16 @@
       "answer": "BUG",
       "button_1": "KU",
       "button_2": "G",
-      "button_3": "RU",
+      "button_3": "TO",
       "button_4": "R",
       "button_5": "U",
       "button_6": "O",
-      "button_7": "RA",
+      "button_7": "FA",
       "button_8": "B"
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/snake.png?alt=media&token=0de1084c-eec9-4142-aebe-34d79c8ee715",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fsnake.png?alt=media&token=9e92d8e3-3ea5-42c5-b557-abbcf0e83d70",
       "answer": "SNAKE",
       "button_1": "K",
       "button_2": "E",
@@ -394,7 +406,7 @@
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/tractor.png?alt=media&token=f4552e37-ab22-4e0a-9342-a9b77a3dcd7d",
       "answer": "TRACTOR",
       "button_1": "R",
-      "button_2": "RE",
+      "button_2": "RYE",
       "button_3": "A",
       "button_4": "TRA",
       "button_5": "C",
@@ -407,7 +419,7 @@
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/car.png?alt=media&token=3d00008d-7b1b-4ae6-8ba8-cb6981712627",
       "answer": "CAR",
       "button_1": "S",
-      "button_2": "KO",
+      "button_2": "KA",
       "button_3": "C",
       "button_4": "EL",
       "button_5": "A",
@@ -430,7 +442,7 @@
     },
     {
       "category": "transport",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/bike.png?alt=media&token=23daaa1b-ad56-48f7-bd2c-299ffddc9a6c",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fbike.png?alt=media&token=c0117738-4ce8-42b0-bc7a-44498bf26d04",
       "answer": "BICYCLE",
       "button_1": "TO",
       "button_2": "SI",
@@ -520,7 +532,7 @@
       "button_8": "SRI"
     },
     {
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/rocket.png?alt=media&token=d0ef58a3-f347-41a7-98ea-af93a239a027",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Frocket.png?alt=media&token=6c3261b7-d2ba-491c-b263-85659131dd96",
       "answer": "ROCKET",
       "button_1": "O",
       "button_2": "R",
@@ -530,6 +542,7 @@
       "button_6": "E",
       "button_7": "C",
       "button_8": "S"
-    }
+    },
+
   ]
 }

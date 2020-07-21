@@ -15,4 +15,6 @@
     <string name="eng">Английский</string>
     <string name="animals">Животные</string>
     <string name="transport">Транспорт</string>
+    <string name="settings_mute">Без звука</string>
+    <string name="settings_unmute">Звук</string>
 </resources>
