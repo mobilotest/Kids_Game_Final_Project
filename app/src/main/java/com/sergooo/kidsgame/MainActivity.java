@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     // Eng = 0; Rus = 1; Eng_anim = 2; Eng_tran = 3; Rus_anim = 4; Rus_tran = 5;
     private static int screensLoaderId = 0;
 
-    String url_en = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en.json?alt=media&token=22168d8c-d2f6-4caf-89a0-9415f1372382";
+    String url_en = "https://raw.githubusercontent.com/mobilotest/Kids_Game_Final_Project/master/app/src/main/assets/screens_en.json";
     String url_ru = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru.json?alt=media&token=681cefc4-58a2-4d16-aaaf-357782949d2b";
     String url_en_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_anim.json?alt=media&token=02bd3ce9-6864-4821-acc3-bfdacbee3db5";
     String url_en_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_tran.json?alt=media&token=d51d8e40-b0e1-4970-9ec0-5e479cd4038b";
