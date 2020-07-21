@@ -75,7 +75,9 @@ public class Screen {
     public String getButton_1_audio() {
         return button_1_audio;
     }
-    public String getButton_2_audio() { return button_2_audio; }
+    public String getButton_2_audio() {
+        return button_2_audio;
+    }
     public String getButton_3_audio() {
         return button_3_audio;
     }
