@@ -195,60 +195,45 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     /**
      * This method put part of the word to the edit field from button 1
      **/
-    public void one(View v) throws IOException {
-//        Button b = (Button) v;
-//        String buttonText = b.getText().toString();
+    public void one(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_1());
-
-        playSyllable(currentScreen.getButton_1());
+        playSyllable(currentScreen.getButton_1().toLowerCase());
     }
 
     /**
      * This method put part of the word to the edit field from button 2
      **/
     public void two(View v) {
-        Button b = (Button) v;
-        String buttonText = b.getText().toString();
         temp = (String) result.getText();
-        result.setText(temp + "" + buttonText);
-
-        playSyllable(currentScreen.getButton_2());
+        result.setText(temp + "" + currentScreen.getButton_2());
+        playSyllable(currentScreen.getButton_2().toLowerCase());
     }
 
     /**
      * This method put part of the word to the edit field from button 3
      **/
     public void three(View v) {
-        Button b = (Button) v;
-        String buttonText = b.getText().toString();
         temp = (String) result.getText();
-        result.setText(temp + "" + buttonText);
-
-        playSyllable(currentScreen.getButton_3());
+        result.setText(temp + "" + currentScreen.getButton_3());
+        playSyllable(currentScreen.getButton_3().toLowerCase());
     }
 
     /**
      * This method put part of the word to the edit field from button 4
      **/
     public void four(View v) {
-        Button b = (Button) v;
-        String buttonText = b.getText().toString();
         temp = (String) result.getText();
-        result.setText(temp + "" + buttonText);
-
-        playSyllable(currentScreen.getButton_4());
+        result.setText(temp + "" + currentScreen.getButton_4());
+        playSyllable(currentScreen.getButton_4().toLowerCase());
     }
 
     /**
      * This method put part of the word to the edit field from button 5
      **/
     public void five(View v) {
-//        Button b = (Button) v;
-//        String buttonText = b.getText().toString();
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_5());
-
         playSyllable(currentScreen.getButton_5().toLowerCase());
     }
 
@@ -256,36 +241,27 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      * This method put part of the word to the edit field from button 6
      **/
     public void six(View v) {
-        Button b = (Button) v;
-        String buttonText = b.getText().toString();
         temp = (String) result.getText();
-        result.setText(temp + "" + buttonText);
-
-        playSyllable(currentScreen.getButton_6());
+        result.setText(temp + "" + currentScreen.getButton_6());
+        playSyllable(currentScreen.getButton_6().toLowerCase());
     }
 
     /**
      * This method put part of the word to the edit field from button 7
      **/
     public void seven(View v) {
-        Button b = (Button) v;
-        String buttonText = b.getText().toString();
         temp = (String) result.getText();
-        result.setText(temp + "" + buttonText);
-
-        playSyllable(currentScreen.getButton_7());
+        result.setText(temp + "" + currentScreen.getButton_7());
+        playSyllable(currentScreen.getButton_7().toLowerCase());
     }
 
     /**
      * This method put part of the word to the edit field from button 8
      **/
     public void eight(View v) {
-        Button b = (Button) v;
-        String buttonText = b.getText().toString();
         temp = (String) result.getText();
-        result.setText(temp + "" + buttonText);
-
-        playSyllable(currentScreen.getButton_8());
+        result.setText(temp + "" + currentScreen.getButton_8());
+        playSyllable(currentScreen.getButton_8().toLowerCase());
     }
 
     public void toastMessage(int resource) {
