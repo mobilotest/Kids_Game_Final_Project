@@ -15,6 +15,7 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -210,7 +211,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     /**
      * This method put part of the word to the edit field from button 1
      **/
-    public void one(View v) {
+    public void one(View v) throws IOException {
         Button b = (Button) v;
         String buttonText = b.getText().toString();
         temp = (String) result.getText();
@@ -227,16 +228,27 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
 
+
+            //String filename = "android.resource://" + this.getPackageName() + "/raw/test0";
+            btn_1_audio = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(currentScreen.getButton_1_audio(),"raw",getPackageName()));
+            btn_1_audio.start();
+
             // Create and setup the {@link MediaPlayer} for the audio resource associated
             // with the current button
+//            btn_1_audio = MediaPlayer.create(this, R.raw.c);
 
-            btn_1_audio = MediaPlayer.create(this, currentScreen.getButton_3_audio())
+            int id = getResources().getIdentifier(currentScreen.getButton_1_audio(), "raw", getPackageName());
+            btn_1_audio = MediaPlayer.create(this, id);
+
+
             btn_1_audio.start();
 
 
             btn_1_audio.setOnCompletionListener(mOnCompletionListener);
         }
     }
+
+
 
     /**
      * This method put part of the word to the edit field from button 2
