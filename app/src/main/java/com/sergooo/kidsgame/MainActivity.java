@@ -291,21 +291,19 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         // so long as you specify a parent actually in AndroidManifest.xml
         int id = item.getItemId();
 
+        // set app's sound mute/unmute to max
+        AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        int volume =  audioManager.getStreamMaxVolume(audioManager.STREAM_MUSIC);
+        if (id == R.id.menu_mute) {
+            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, 0);
+        } else if (id == R.id.menu_unmute) {
+            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, volume, 0);
+        }
+
         // no inspection SimplifiableIfStatement
         if (id == R.id.menu_about) {
             Uri uri = Uri.parse("https://github.com/mobilotest/Kids_Game_Final_Project#kids-game---final-project-for-ucsc-extension");
             startActivity(new Intent(Intent.ACTION_VIEW, uri));
-            return true;
-        }
-
-        // sound mute/unmute
-        if (id == R.id.menu_mute) {
-            AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-            audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, 0);
-            return true;
-        } else if (id == R.id.menu_unmute) {
-            AudioManager amanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-            amanager.setStreamMute(AudioManager.STREAM_NOTIFICATION, false);
             return true;
         }
 
