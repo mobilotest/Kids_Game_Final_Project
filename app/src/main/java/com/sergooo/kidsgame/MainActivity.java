@@ -5,12 +5,16 @@ import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
+import android.content.res.Resources;
 import android.graphics.Color;
+import android.media.AudioAttributes;
+import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,9 +30,13 @@ import androidx.appcompat.view.menu.MenuBuilder;
 
 import com.squareup.picasso.Picasso;
 
+import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 import java.util.Random;
+
+import static org.apache.commons.io.FilenameUtils.getPath;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Screen>> {
 
@@ -75,21 +83,44 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private String temp = "";
 
     /**
+     * Handles playback of all the sound files
+     */
+    private MediaPlayer mMediaPlayer;
+    private AudioManager mAudioManager;
+    private MediaPlayer.OnCompletionListener mOnCompletionListener = new MediaPlayer.OnCompletionListener() {
+        @Override
+        public void onCompletion(MediaPlayer mp) {
+            releaseMediaPlayer();
+        }
+    };
+
+    private Handler handler = new Handler();
+    AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener =
+            new AudioManager.OnAudioFocusChangeListener() {
+                public void onAudioFocusChange(int focusChange) {
+                    if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT || focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                        mMediaPlayer.pause();
+                        mMediaPlayer.seekTo(0);
+                    } else if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                        mMediaPlayer.start();
+                    } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                        // Your app has been granted audio focus again
+                        // Raise volume to normal, restart playback if necessary
+                        releaseMediaPlayer();
+                    }
+                }
+            };
+    /**
      * Handles playback of all buttons sound files
      */
-    private MediaPlayer btn_1_audio;
-    private MediaPlayer btn_2_audio;
-    private MediaPlayer btn_3_audio;
-    private MediaPlayer btn_4_audio;
-    private MediaPlayer btn_5_audio;
-    private MediaPlayer btn_6_audio;
-    private MediaPlayer btn_7_audio;
-    private MediaPlayer btn_8_audio;
+    private MediaPlayer btn_1_audio, btn_2_audio, btn_3_audio, btn_4_audio, btn_5_audio, btn_6_audio, btn_7_audio, btn_8_audio;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
         progressBar = (ProgressBar) findViewById(R.id.loading_indicator);
         help = (Button) findViewById(R.id.help);
@@ -108,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
     }
 
-    private void fillOutMyScreen() {
+    private void fillOutMyScreen() throws IOException {
         about = (TextView) findViewById(R.id.menu_about);
         result = (TextView) findViewById(R.id.result);
         image = (ImageView) findViewById(R.id.image_main);
@@ -140,10 +171,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         image.setVisibility(View.VISIBLE);
         result.setText("");
 
-        btn_1_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_1_audio()));
-        btn_2_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_2_audio()));
+
+//        btn_2_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_2_audio()));
         btn_3_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_3_audio()));
-        btn_4_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_4_audio()));
+        btn_4_audio = MediaPlayer.create(this, R.raw.c);
         btn_5_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_5_audio()));
         btn_6_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_6_audio()));
         btn_7_audio = MediaPlayer.create(this, Uri.parse(currentScreen.getButton_7_audio()));
@@ -167,7 +198,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     /**
      * This method will check if answer is correct or not and throw a toast message accordingly
      **/
-    public void done(View view) throws InterruptedException {
+    public void done(View view) throws InterruptedException, IOException {
         if (result.getText().toString().equalsIgnoreCase(String.valueOf(currentScreen.getAnswer()))) { // HOW TO COMPARE?
             toastMessage(R.string.great);
             fillOutMyScreen();
@@ -185,13 +216,26 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
 
-        btn_1_audio.start();
-        btn_1_audio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mp) {
-            }
-        });
+        releaseMediaPlayer();
 
+        // Request audio focus for playback
+        int result = mAudioManager.requestAudioFocus(mOnAudioFocusChangeListener,
+                // Use the music stream.
+                AudioManager.STREAM_MUSIC,
+                // Request permanent focus.
+                AudioManager.AUDIOFOCUS_GAIN);
+
+        if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
+
+            // Create and setup the {@link MediaPlayer} for the audio resource associated
+            // with the current button
+
+            btn_1_audio = MediaPlayer.create(this, currentScreen.getButton_3_audio())
+            btn_1_audio.start();
+
+
+            btn_1_audio.setOnCompletionListener(mOnCompletionListener);
+        }
     }
 
     /**
@@ -202,6 +246,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String buttonText = b.getText().toString();
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
+
+        btn_2_audio.start();
+        btn_2_audio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+            }
+        });
     }
 
     /**
@@ -212,6 +263,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String buttonText = b.getText().toString();
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
+
+        btn_3_audio.start();
+        btn_3_audio.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mp) {
+            }
+        });
     }
 
     /**
@@ -378,10 +436,34 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         View loadingIndicator = findViewById(R.id.loading_indicator);
         loadingIndicator.setVisibility(View.GONE);
         this.screens = screens;
-        fillOutMyScreen();
+        try {
+            fillOutMyScreen();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
     public void onLoaderReset(Loader<List<Screen>> loader) {
+    }
+
+    /**
+     * Clean up the media player by releasing its resources.
+     */
+    private void releaseMediaPlayer() {
+        // If the media player is not null, then it may be currently playing a sound.
+        if (mMediaPlayer != null) {
+            // Regardless of the current state of the media player, release its resources
+            // because we no longer need it.
+            mMediaPlayer.release();
+
+            // Set the media player back to null. For our code, we've decided that
+            // setting the media player to null is an easy way to tell that the media player
+            // is not configured to play an audio file at the moment.
+            mMediaPlayer = null;
+
+            // Abandon audio focus when playback complete
+            mAudioManager.abandonAudioFocus(mOnAudioFocusChangeListener);
+        }
     }
 }
