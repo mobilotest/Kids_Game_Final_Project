@@ -42,3 +42,5 @@ of the displayed image.
 11. http://www.fromtexttospeech.com/
 12. https://www.google.com/
 13. https://www.freepngs.com/
+14. https://www.flaticon.com/
+15. https://ttsmp3.com/
