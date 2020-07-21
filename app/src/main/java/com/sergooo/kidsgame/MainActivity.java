@@ -249,7 +249,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_5());
 
-        playSyllable(currentScreen.getButton_5());
+        playSyllable(currentScreen.getButton_5().toLowerCase());
     }
 
     /**
