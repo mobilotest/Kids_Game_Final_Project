@@ -5,9 +5,7 @@ import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.Loader;
-import android.content.res.Resources;
 import android.graphics.Color;
-import android.media.AudioAttributes;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
@@ -15,7 +13,6 @@ import android.net.NetworkInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -31,13 +28,9 @@ import androidx.appcompat.view.menu.MenuBuilder;
 
 import com.squareup.picasso.Picasso;
 
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.util.List;
 import java.util.Random;
-
-import static org.apache.commons.io.FilenameUtils.getPath;
 
 public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<Screen>> {
 
@@ -46,10 +39,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     String url_en = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en.json?alt=media&token=1d214f19-2b67-412e-9dbc-4010b8ed5d17";
     String url_ru = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru.json?alt=media&token=ca9eb5f1-00da-4f2b-a25f-b3202c104d0c";
-    String url_en_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_anim.json?alt=media&token=cee544af-2bcd-4b65-8cf1-f972e9975c43";
-    String url_en_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_tran.json?alt=media&token=981efe9d-8dac-4c45-a638-2f0bb8995a2d";
-    String url_ru_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_anim.json?alt=media&token=066713c2-8d21-4983-8aed-a8f44e4317e4";
-    String url_ru_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_tran.json?alt=media&token=fe211ec0-1317-469f-8ce5-f327b1f7f46c";
+    String url_en_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_anim.json?alt=media&token=71ab2761-3f14-4793-bff7-52d439e09922";
+    String url_en_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_tran.json?alt=media&token=841bc26a-4ec3-474e-8ae0-9d002ed7afca";
+    String url_ru_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_anim.json?alt=media&token=9ac45d4e-cbfa-4290-b9f6-8f2689206dd6";
+    String url_ru_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_tran.json?alt=media&token=afaa262b-9159-4893-90d2-42857830f12d";
 
     private LoaderManager loaderManager = getLoaderManager();
 
@@ -310,7 +303,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
             audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, 0);
             return true;
-        }else if(id == R.id.menu_unmute){
+        } else if (id == R.id.menu_unmute) {
             AudioManager amanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
             amanager.setStreamMute(AudioManager.STREAM_NOTIFICATION, false);
             return true;

@@ -76,25 +76,25 @@
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fpanda.png?alt=media&token=a7edab65-4cea-4b40-9acf-7dc0ad1acf5a",
       "answer": "ПАНДА",
       "button_1": "ША",
-      "button_2": "ЛА",
-      "button_3": "БА",
-      "button_4": "ПА",
+      "button_2": "ЛАН",
+      "button_3": "БАН",
+      "button_4": "ПАН",
       "button_5": "РА",
-      "button_6": "Н",
-      "button_7": "Г",
+      "button_6": "НО",
+      "button_7": "ГРА",
       "button_8": "ДА"
     },
     {
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fmonkey.png?alt=media&token=2b16871e-b0c6-4cbb-ab9a-65d18bb7d348",
       "answer": "ОБЕЗЬЯНА",
-      "button_1": "ЗЬ",
-      "button_2": "ЩУП",
+      "button_1": "ЗЬЯ",
+      "button_2": "У",
       "button_3": "ДИ",
       "button_4": "КО",
-      "button_5": "ЯНА",
-      "button_6": "ДР",
+      "button_5": "НА",
+      "button_6": "БЕ",
       "button_7": "НА",
-      "button_8": "ОБЕ"
+      "button_8": "О"
     },
     {
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Flizard.png?alt=media&token=dd2fd73d-164e-4146-8f2e-243d8bc23320",
@@ -181,30 +181,33 @@
       "button_8": "Е"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/ant.png?alt=media&token=7cd5f5a4-c513-49cd-9bc9-bd6bd571a5d7",
       "answer": "МУРАВЕЙ",
-      "button_1": "ЛУ",
+      "button_1": "ЛУЧ",
       "button_2": "ВУ",
-      "button_3": "ВЕ",
+      "button_3": "ВЕЙ",
       "button_4": "Й",
-      "button_5": "ПА",
+      "button_5": "ПАР",
       "button_6": "РА",
       "button_7": "ШЕ",
       "button_8": "МУ"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fsnali.png?alt=media&token=2df76c52-8f83-45b9-9cfb-704f3e0360bd",
       "answer": "УЛИТКА",
-      "button_1": "ЛИ",
+      "button_1": "ЛИТ",
       "button_2": "Е",
-      "button_3": "ТУ",
+      "button_3": "ТУР",
       "button_4": "РГ",
       "button_5": "ИЯ",
       "button_6": "КА",
       "button_7": "У",
-      "button_8": "Т"
+      "button_8": "БАТ"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fcow.png?alt=media&token=2329d0bd-c015-4fc8-8210-62a7fcdf406b",
       "answer": "КОРОВА",
       "button_1": "ВА",
@@ -217,54 +220,59 @@
       "button_8": "БР"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fbutterfly.png?alt=media&token=b494f990-274b-4736-bd36-303585b46d58",
       "answer": "БАБОЧКА",
       "button_1": "БА",
       "button_2": "Ч",
       "button_3": "КА",
-      "button_4": "БО",
+      "button_4": "БОЧ",
       "button_5": "СА",
-      "button_6": "МО",
+      "button_6": "МОЧ",
       "button_7": "ВА",
-      "button_8": "РЫ"
+      "button_8": "Р"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fcat.png?alt=media&token=73931c85-ba49-485d-9d8a-7aa99dc2520e",
       "answer": "КОШКА",
-      "button_1": "ШР",
+      "button_1": "ШАР",
       "button_2": "ЩУ",
       "button_3": "ЩA",
-      "button_4": "РО",
-      "button_5": "КО",
+      "button_4": "РОМ",
+      "button_5": "КОШ",
       "button_6": "КА",
       "button_7": "Ш",
       "button_8": "ЗЮ"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/owl.png?alt=media&token=747d3d1b-d0d3-40dc-911f-63dd711b2fa7",
       "answer": "СОВА",
       "button_1": "ФЛ",
       "button_2": "КИ",
       "button_3": "ЗЯ",
-      "button_4": "С",
-      "button_5": "О",
-      "button_6": "А",
-      "button_7": "Ц",
-      "button_8": "В"
+      "button_4": "СА",
+      "button_5": "СО",
+      "button_6": "БА",
+      "button_7": "ЦО",
+      "button_8": "ВА"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/grasshopper.png?alt=media&token=8e33d3bf-db9c-41af-8f90-9dfa1fbfb249",
       "answer": "КУЗНЕЧИК",
-      "button_1": "Ч",
-      "button_2": "У",
+      "button_1": "ЧИК",
+      "button_2": "КУЗ",
       "button_3": "К",
       "button_4": "ИК",
-      "button_5": "З",
+      "button_5": "ЗИК",
       "button_6": "Н",
       "button_7": "ЯР",
-      "button_8": "Е"
+      "button_8": "НЕ"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/dog.png?alt=media&token=7373a6c0-120a-4840-a445-2157538f4afa",
       "answer": "СОБАКА",
       "button_1": "А",
@@ -277,6 +285,7 @@
       "button_8": "И"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/peacock.png?alt=media&token=e73add4f-c3ca-4fe3-b00d-0d80ffb7b218",
       "answer": "ПАВЛИН",
       "button_1": "С",
@@ -289,6 +298,7 @@
       "button_8": "Л"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Ffish.png?alt=media&token=c5d6868d-cf73-453a-869d-bc1d7f8acdae",
       "answer": "РЫБА",
       "button_1": "Й",
@@ -301,11 +311,12 @@
       "button_8": "А"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fzebra.png?alt=media&token=dcc49adb-4b17-40c7-900c-785c6c36a672",
       "answer": "ЗЕБРА",
-      "button_1": "ТУ",
+      "button_1": "У",
       "button_2": "Г",
-      "button_3": "РА",
+      "button_3": "А",
       "button_4": "К",
       "button_5": "З",
       "button_6": "Е",
@@ -313,42 +324,46 @@
       "button_8": "Б"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Frabbit.png?alt=media&token=6d6775c4-9c01-441e-9bd6-5b9ebe9b0f13",
       "answer": "ЗАЯЦ",
       "button_1": "З",
-      "button_2": "ЕН",
+      "button_2": "Н",
       "button_3": "Ц",
-      "button_4": "Я",
+      "button_4": "К",
       "button_5": "А",
       "button_6": "Я",
       "button_7": "Ы",
       "button_8": "Ъ"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/horse.png?alt=media&token=65d56241-074e-4f75-9512-6eb178725f8a",
       "answer": "ЛОШАДЬ",
-      "button_1": "КО",
-      "button_2": "НИ",
-      "button_3": "НА",
-      "button_4": "НО",
-      "button_5": "ДЬ",
-      "button_6": "ЛО",
-      "button_7": "КО",
-      "button_8": "ША"
+      "button_1": "О",
+      "button_2": "Л",
+      "button_3": "А",
+      "button_4": "О",
+      "button_5": "Ь",
+      "button_6": "Д",
+      "button_7": "К",
+      "button_8": "Ш"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fcrocodile.png?alt=media&token=a821260b-10dc-40d8-9278-0f1c3588f1d6",
       "answer": "КРОКОДИЛ",
       "button_1": "КО",
-      "button_2": "МП",
-      "button_3": "УТ",
-      "button_4": "ЕР",
+      "button_2": "МОП",
+      "button_3": "КУТ",
+      "button_4": "КЕР",
       "button_5": "ОК",
-      "button_6": "КР",
-      "button_7": "ИЛ",
+      "button_6": "КРО",
+      "button_7": "ДИЛ",
       "button_8": "ОД"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/bug.png?alt=media&token=2069250b-7643-429b-a1f6-9b396a64c41f",
       "answer": "ЖУК",
       "button_1": "М",
@@ -361,6 +376,7 @@
       "button_8": "Ë"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fsnake.png?alt=media&token=9e92d8e3-3ea5-42c5-b557-abbcf0e83d70",
       "answer": "ЗМЕЯ",
       "button_1": "С",
@@ -373,6 +389,7 @@
       "button_8": "Я"
     },
     {
+      "category": "animals",
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/spider.png?alt=media&token=09c38e84-03c9-4a80-8f93-ce1505939c1a",
       "answer": "ПАУК",
       "button_1": "П",
