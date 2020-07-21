@@ -174,6 +174,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         String buttonText = b.getText().toString();
         temp = (String) result.getText();
         result.setText(temp + "" + buttonText);
+
+        mMediaPlayer = new MediaPlayer();
+        mMediaPlayer = MediaPlayer.create(getApplicationContext(), Uri.parse(currentScreen.getButton_1_audio()));
+        // Start the audio file
+        mMediaPlayer.start();
+        mMediaPlayer.setOnCompletionListener(mOnCompletionListener);
     }
 
     /**

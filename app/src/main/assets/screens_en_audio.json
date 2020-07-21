@@ -26,21 +26,21 @@
       "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/tractor.png?alt=media&token=f4552e37-ab22-4e0a-9342-a9b77a3dcd7d",
       "answer": "TRACTOR",
       "button_1": "R",
-      "button_1_audio": "",
+      "button_1_audio": "R.raw.c",
       "button_2": "RES",
-      "button_2_audio": "",
+      "button_2_audio": "R.raw.c",
       "button_3": "A",
-      "button_3_audio": "",
+      "button_3_audio": "R.raw.c",
       "button_4": "TRA",
-      "button_4_audio": "",
+      "button_4_audio": "R.raw.c",
       "button_5": "C",
-      "button_5_audio": "",
+      "button_5_audio": "R.raw.c",
       "button_6": "BRI",
-      "button_6_audio": "",
+      "button_6_audio": "R.raw.c",
       "button_7": "N",
-      "button_7_audio": "",
+      "button_7_audio": "R.raw.c",
       "button_8": "TOR",
-      "button_8_audio": ""
+      "button_8_audio": "R.raw.c"
     }
   ]
 }
