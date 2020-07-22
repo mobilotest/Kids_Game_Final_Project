@@ -179,9 +179,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void done(View view) throws InterruptedException, IOException {
         if (result.getText().toString().equalsIgnoreCase(String.valueOf(currentScreen.getAnswer()))) { // HOW TO COMPARE?
             toastMessage(R.string.great);
+            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
+            mMediaPlayer.start();
             fillOutMyScreen();
         } else {
             toastMessage(R.string.fail);
+            mMediaPlayer = MediaPlayer.create(this, R.raw.fail);
+            mMediaPlayer.start();
         }
     }
 
@@ -191,7 +195,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void one(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_1());
-        playSyllable(currentScreen.getButton_1().toLowerCase());
+        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+            playSyllable(currentScreen.getButton_1().toLowerCase());
+        }else{
+            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
+            mMediaPlayer.start();
+        }
     }
 
     /**
@@ -200,7 +209,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void two(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_2());
-        playSyllable(currentScreen.getButton_2().toLowerCase());
+        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+            playSyllable(currentScreen.getButton_2().toLowerCase());
+        }else{
+            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
+            mMediaPlayer.start();
+        }
     }
 
     /**
@@ -209,7 +223,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void three(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_3());
-        playSyllable(currentScreen.getButton_3().toLowerCase());
+        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+            playSyllable(currentScreen.getButton_3().toLowerCase());
+        }else{
+            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
+            mMediaPlayer.start();
+        }
     }
 
     /**
@@ -218,7 +237,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void four(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_4());
-        playSyllable(currentScreen.getButton_4().toLowerCase());
+        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+            playSyllable(currentScreen.getButton_4().toLowerCase());
+        }else{
+            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
+            mMediaPlayer.start();
+        }
     }
 
     /**
@@ -227,7 +251,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void five(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_5());
-        playSyllable(currentScreen.getButton_5().toLowerCase());
+        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3){
+            playSyllable(currentScreen.getButton_5().toLowerCase());
+        }else{
+            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
+            mMediaPlayer.start();
+        }
     }
 
     /**
@@ -236,7 +265,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void six(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_6());
-        playSyllable(currentScreen.getButton_6().toLowerCase());
+        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+            playSyllable(currentScreen.getButton_6().toLowerCase());
+        }else{
+            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
+            mMediaPlayer.start();
+        }
     }
 
     /**
@@ -245,7 +279,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void seven(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_7());
-        playSyllable(currentScreen.getButton_7().toLowerCase());
+        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+            playSyllable(currentScreen.getButton_7().toLowerCase());
+        }else{
+            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
+            mMediaPlayer.start();
+        }
     }
 
     /**
@@ -254,7 +293,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void eight(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_8());
-        playSyllable(currentScreen.getButton_8().toLowerCase());
+        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+            playSyllable(currentScreen.getButton_8().toLowerCase());
+        }else{
+            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
+            mMediaPlayer.start();
+        }
     }
 
     public void toastMessage(int resource) {
