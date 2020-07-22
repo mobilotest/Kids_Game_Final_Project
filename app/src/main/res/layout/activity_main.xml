@@ -213,13 +213,15 @@
         android:layout_centerVertical="true"
         app:layout_constraintBottom_toBottomOf="@+id/result"
         app:layout_constraintEnd_toEndOf="@+id/image_main"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="@+id/image_main"
-        app:layout_constraintTop_toTopOf="@+id/image_main" />
+        app:layout_constraintTop_toTopOf="@+id/image_main"
+        app:layout_constraintVertical_bias="0.448" />
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="372dp"
-        android:layout_height="52dp"
+        android:layout_width="375dp"
+        android:layout_height="55dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"

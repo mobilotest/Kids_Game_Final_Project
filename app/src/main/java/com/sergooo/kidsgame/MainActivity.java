@@ -195,9 +195,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void one(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_1());
-        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
             playSyllable(currentScreen.getButton_1().toLowerCase());
-        }else{
+        } else {
             mMediaPlayer = MediaPlayer.create(this, R.raw.good);
             mMediaPlayer.start();
         }
@@ -209,9 +209,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void two(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_2());
-        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
             playSyllable(currentScreen.getButton_2().toLowerCase());
-        }else{
+        } else {
             mMediaPlayer = MediaPlayer.create(this, R.raw.good);
             mMediaPlayer.start();
         }
@@ -223,9 +223,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void three(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_3());
-        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
             playSyllable(currentScreen.getButton_3().toLowerCase());
-        }else{
+        } else {
             mMediaPlayer = MediaPlayer.create(this, R.raw.good);
             mMediaPlayer.start();
         }
@@ -237,9 +237,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void four(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_4());
-        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
             playSyllable(currentScreen.getButton_4().toLowerCase());
-        }else{
+        } else {
             mMediaPlayer = MediaPlayer.create(this, R.raw.good);
             mMediaPlayer.start();
         }
@@ -251,9 +251,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void five(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_5());
-        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3){
+        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
             playSyllable(currentScreen.getButton_5().toLowerCase());
-        }else{
+        } else {
             mMediaPlayer = MediaPlayer.create(this, R.raw.good);
             mMediaPlayer.start();
         }
@@ -265,9 +265,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void six(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_6());
-        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
             playSyllable(currentScreen.getButton_6().toLowerCase());
-        }else{
+        } else {
             mMediaPlayer = MediaPlayer.create(this, R.raw.good);
             mMediaPlayer.start();
         }
@@ -279,9 +279,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void seven(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_7());
-        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
             playSyllable(currentScreen.getButton_7().toLowerCase());
-        }else{
+        } else {
             mMediaPlayer = MediaPlayer.create(this, R.raw.good);
             mMediaPlayer.start();
         }
@@ -293,9 +293,9 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     public void eight(View v) {
         temp = (String) result.getText();
         result.setText(temp + "" + currentScreen.getButton_8());
-        if(screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
+        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
             playSyllable(currentScreen.getButton_8().toLowerCase());
-        }else{
+        } else {
             mMediaPlayer = MediaPlayer.create(this, R.raw.good);
             mMediaPlayer.start();
         }
@@ -337,7 +337,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         // set app's sound mute/unmute to max
         AudioManager audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
-        int volume =  audioManager.getStreamMaxVolume(audioManager.STREAM_MUSIC);
+        int volume = audioManager.getStreamMaxVolume(audioManager.STREAM_MUSIC);
         if (id == R.id.menu_mute) {
             audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 0, 0);
         } else if (id == R.id.menu_unmute) {
@@ -449,12 +449,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         if (result == AudioManager.AUDIOFOCUS_REQUEST_GRANTED) {
 
-            //String filename = "android.resource://" + this.getPackageName() + "/raw/test0";
-            mMediaPlayer = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(syllable, "raw", getPackageName()));
-            mMediaPlayer.start();
-
-            // Create and setup the {@link MediaPlayer} for the audio resource associated
-            // with the current button
+            // Create and setup the {@link MediaPlayer} for the audio resource associated with the current button
+            // mMediaPlayer = MediaPlayer.create(getApplicationContext(), getResources().getIdentifier(syllable, "raw", getPackageName()));
             int id = getResources().getIdentifier(syllable, "raw", getPackageName());
             mMediaPlayer = MediaPlayer.create(getApplicationContext(), id);
 

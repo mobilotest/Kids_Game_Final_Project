@@ -4,13 +4,13 @@
     <item
         android:id="@+id/animals"
         android:icon="@drawable/ic_pets"
-        app:showAsAction="ifRoom"
-        android:title="@string/animals" />
+        android:title="@string/animals"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/transport"
         android:icon="@drawable/ic_directions_car"
-        app:showAsAction="ifRoom"
-        android:title="@string/transport" />
+        android:title="@string/transport"
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/flag_ru"
         android:icon="@drawable/ic_russia_flag_16dp"
@@ -19,13 +19,16 @@
         android:id="@+id/flag_us"
         android:icon="@drawable/ic_usamerica_flag_16dp"
         android:title="@string/eng" />
-    <item android:id="@+id/menu_mute"
+    <item
+        android:id="@+id/menu_mute"
         android:icon="@drawable/ic_volume_off_black_18dp"
         android:title="@string/settings_mute" />
-    <item android:id="@+id/menu_unmute"
+    <item
+        android:id="@+id/menu_unmute"
         android:icon="@drawable/ic_volume_up_black_18dp"
         android:title="@string/settings_unmute" />
-    <item android:id="@+id/menu_about"
+    <item
+        android:id="@+id/menu_about"
         android:icon="@drawable/ic_help_black_18dp"
         android:title="@string/settings_about" />
 </menu>
