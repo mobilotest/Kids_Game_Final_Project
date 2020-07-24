@@ -85,7 +85,6 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
     };
 
-    private Handler handler = new Handler();
     AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener =
             new AudioManager.OnAudioFocusChangeListener() {
                 public void onAudioFocusChange(int focusChange) {
@@ -106,6 +105,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        result = (TextView) findViewById(R.id.result);
 
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
@@ -144,14 +144,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         currentScreen = screens.get(screenIndex);
 
-        btn_1.setText(currentScreen.getButton_1());
-        btn_2.setText(currentScreen.getButton_2());
-        btn_3.setText(currentScreen.getButton_3());
-        btn_4.setText(currentScreen.getButton_4());
-        btn_5.setText(currentScreen.getButton_5());
-        btn_6.setText(currentScreen.getButton_6());
-        btn_7.setText(currentScreen.getButton_7());
-        btn_8.setText(currentScreen.getButton_8());
+        btn_1.setText(currentScreen.getButton(0));
+        btn_2.setText(currentScreen.getButton(1));
+        btn_3.setText(currentScreen.getButton(2));
+        btn_4.setText(currentScreen.getButton(3));
+        btn_5.setText(currentScreen.getButton(4));
+        btn_6.setText(currentScreen.getButton(5));
+        btn_7.setText(currentScreen.getButton(6));
+        btn_8.setText(currentScreen.getButton(7));
 
         // Get the Screen's image from the json and set this image on the imageView
         Picasso.get().load(currentScreen.getImage()).into(image);
@@ -178,12 +178,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      **/
     public void done(View view) throws InterruptedException, IOException {
         if (result.getText().toString().equalsIgnoreCase(String.valueOf(currentScreen.getAnswer()))) { // HOW TO COMPARE?
-            toastMessage(R.string.great);
+            toastMessage(R.string.great, true);
             mMediaPlayer = MediaPlayer.create(this, R.raw.good);
             mMediaPlayer.start();
             fillOutMyScreen();
         } else {
-            toastMessage(R.string.fail);
+            toastMessage(R.string.fail, false);
             mMediaPlayer = MediaPlayer.create(this, R.raw.fail);
             mMediaPlayer.start();
         }
@@ -192,120 +192,24 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     /**
      * This method put part of the word to the edit field from button 1
      **/
-    public void one(View v) {
+    public void syllablesClick(View v) {
         temp = (String) result.getText();
-        result.setText(temp + "" + currentScreen.getButton_1());
+        String txtButton = currentScreen.getButton(Integer.valueOf((String)v.getTag()));
+        result.setText(temp + "" + txtButton);
         if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
-            playSyllable(currentScreen.getButton_1().toLowerCase());
+            playSyllable(txtButton.toLowerCase());
         } else {
             mMediaPlayer = MediaPlayer.create(this, R.raw.good);
             mMediaPlayer.start();
         }
     }
 
-    /**
-     * This method put part of the word to the edit field from button 2
-     **/
-    public void two(View v) {
-        temp = (String) result.getText();
-        result.setText(temp + "" + currentScreen.getButton_2());
-        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
-            playSyllable(currentScreen.getButton_2().toLowerCase());
-        } else {
-            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
-            mMediaPlayer.start();
-        }
-    }
-
-    /**
-     * This method put part of the word to the edit field from button 3
-     **/
-    public void three(View v) {
-        temp = (String) result.getText();
-        result.setText(temp + "" + currentScreen.getButton_3());
-        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
-            playSyllable(currentScreen.getButton_3().toLowerCase());
-        } else {
-            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
-            mMediaPlayer.start();
-        }
-    }
-
-    /**
-     * This method put part of the word to the edit field from button 4
-     **/
-    public void four(View v) {
-        temp = (String) result.getText();
-        result.setText(temp + "" + currentScreen.getButton_4());
-        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
-            playSyllable(currentScreen.getButton_4().toLowerCase());
-        } else {
-            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
-            mMediaPlayer.start();
-        }
-    }
-
-    /**
-     * This method put part of the word to the edit field from button 5
-     **/
-    public void five(View v) {
-        temp = (String) result.getText();
-        result.setText(temp + "" + currentScreen.getButton_5());
-        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
-            playSyllable(currentScreen.getButton_5().toLowerCase());
-        } else {
-            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
-            mMediaPlayer.start();
-        }
-    }
-
-    /**
-     * This method put part of the word to the edit field from button 6
-     **/
-    public void six(View v) {
-        temp = (String) result.getText();
-        result.setText(temp + "" + currentScreen.getButton_6());
-        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
-            playSyllable(currentScreen.getButton_6().toLowerCase());
-        } else {
-            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
-            mMediaPlayer.start();
-        }
-    }
-
-    /**
-     * This method put part of the word to the edit field from button 7
-     **/
-    public void seven(View v) {
-        temp = (String) result.getText();
-        result.setText(temp + "" + currentScreen.getButton_7());
-        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
-            playSyllable(currentScreen.getButton_7().toLowerCase());
-        } else {
-            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
-            mMediaPlayer.start();
-        }
-    }
-
-    /**
-     * This method put part of the word to the edit field from button 8
-     **/
-    public void eight(View v) {
-        temp = (String) result.getText();
-        result.setText(temp + "" + currentScreen.getButton_8());
-        if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
-            playSyllable(currentScreen.getButton_8().toLowerCase());
-        } else {
-            mMediaPlayer = MediaPlayer.create(this, R.raw.good);
-            mMediaPlayer.start();
-        }
-    }
-
-    public void toastMessage(int resource) {
+    public void toastMessage(int resource, boolean isCorrect) {
         Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
         TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
-        toastMessage.setTextColor(Color.RED);
-        toastMessage.setTextSize(40);
+        int color = isCorrect ? Color.rgb(76,175,80) : Color.RED;
+        toastMessage.setTextColor(color);
+        toastMessage.setTextSize(36);
         toast.setGravity(Gravity.CENTER, 0, 0);
         toast.show();
     }

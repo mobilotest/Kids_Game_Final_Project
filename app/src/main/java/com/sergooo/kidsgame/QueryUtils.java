@@ -107,7 +107,6 @@ public final class QueryUtils {
     public static String fetchScreensData(String requestUrl) {
         // Create URL object
         URL url = createUrl(requestUrl);
-
         // Perform HTTP request to the URL and receive a JSON response back
         String jsonResponse = null;
         try {
@@ -115,7 +114,6 @@ public final class QueryUtils {
         } catch (IOException e) {
             Log.e(LOG_TAG, "Problem making the HTTP request", e);
         }
-
         // Extract relevant fields from the JSON response and create a list of {@link Screens}s
         return jsonResponse;
     }

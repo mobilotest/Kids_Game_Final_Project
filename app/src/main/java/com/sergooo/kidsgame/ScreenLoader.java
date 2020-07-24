@@ -2,6 +2,7 @@ package com.sergooo.kidsgame;
 
 import android.content.AsyncTaskLoader;
 import android.content.Context;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -57,6 +58,7 @@ public class ScreenLoader extends AsyncTaskLoader<List<Screen>> {
             return parseJSONfile(jsonString);
         } catch (JSONException e) {
             e.printStackTrace();
+            Log.e(LOG_TAG, "Problem to get parse JSON ", e);
             throw new RuntimeException(e);
         }
     }

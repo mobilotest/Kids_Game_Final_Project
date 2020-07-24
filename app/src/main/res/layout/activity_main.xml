@@ -11,13 +11,14 @@
 
     <Button
         android:id="@+id/button1"
+        android:tag="0"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="15dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:onClick="one"
+        android:onClick="syllablesClick"
         android:textColor="@color/one"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -29,12 +30,13 @@
 
     <Button
         android:id="@+id/button4"
+        android:tag="3"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:layout_marginEnd="16dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:onClick="four"
+        android:onClick="syllablesClick"
         android:textColor="@color/four"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -45,11 +47,12 @@
 
     <Button
         android:id="@+id/button3"
+        android:tag="2"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:onClick="three"
+        android:onClick="syllablesClick"
         android:textColor="@color/three"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -60,11 +63,12 @@
 
     <Button
         android:id="@+id/button2"
+        android:tag="1"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:onClick="two"
+        android:onClick="syllablesClick"
         android:textColor="@color/two"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -75,13 +79,14 @@
 
     <Button
         android:id="@+id/button5"
+        android:tag="4"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:layout_marginStart="16dp"
         android:layout_marginBottom="28dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:onClick="five"
+        android:onClick="syllablesClick"
         android:textColor="@color/five"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -93,11 +98,12 @@
 
     <Button
         android:id="@+id/button6"
+        android:tag="5"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:onClick="six"
+        android:onClick="syllablesClick"
         android:textColor="@color/six"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -108,11 +114,12 @@
 
     <Button
         android:id="@+id/button7"
+        android:tag="6"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:onClick="seven"
+        android:onClick="syllablesClick"
         android:textColor="@color/seven"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -123,12 +130,13 @@
 
     <Button
         android:id="@+id/button8"
+        android:tag="7"
         android:layout_width="100dp"
         android:layout_height="70dp"
         android:layout_marginEnd="16dp"
         android:layout_weight="1"
         android:gravity="center"
-        android:onClick="eight"
+        android:onClick="syllablesClick"
         android:textColor="@color/eight"
         android:textSize="30sp"
         android:textStyle="bold"
@@ -192,7 +200,7 @@
     <ImageView
         android:id="@+id/image_main"
         android:layout_width="370dp"
-        android:layout_height="260dp"
+        android:layout_height="250dp"
         android:layout_gravity="center_vertical"
         android:layout_marginStart="16dp"
         android:layout_marginTop="24dp"
@@ -221,10 +229,10 @@
     <TextView
         android:id="@+id/result"
         android:layout_width="375dp"
-        android:layout_height="55dp"
+        android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="4dp"
         android:layout_weight="1"
         android:gravity="center"
         android:hint="@string/dots"
@@ -233,6 +241,7 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/button2"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.constraintlayout.widget.Barrier
