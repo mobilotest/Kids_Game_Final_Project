@@ -18,7 +18,7 @@ of the displayed image.
 7. Allow users to see the hint (help) in case if stuck with the answer.
 8. App UI contains a manual in the Settings-> Help, which will locate on the online web-page.
 
-<img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/zero.jpg" width = 200>
+<img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/zero.jpg" width = 600>
 
 ### Implementation Details:
 Languages: JAVA, XML, JSON
