@@ -18,7 +18,7 @@ of the displayed image.
 7. Allow users to see the hint (help) in case if stuck with the answer.
 8. App UI contains a manual in the Settings-> Help, which will locate on the online web-page.
 
-<img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/zero.png" width = 200>
+<img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/zero.jpg" width = 200>
 
 ### Implementation Details:
 Languages: JAVA, XML, JSON
@@ -59,7 +59,7 @@ of the displayed image.
 7. Add monitizing commercial banner on the bottom of the screens (TBD)
 
 ### Kids Game's Screenshots:
-<img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/one.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/two.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/three.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/four.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/five.png" width = 200>
+<img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/one.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/two.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/three.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/four.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/five.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/six.png" width = 200>
 
 ### Resources:
 1. https://www.flaticon.com/free-icon/
