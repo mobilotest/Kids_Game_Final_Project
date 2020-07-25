@@ -58,7 +58,8 @@ of the displayed image.
 6. In future will implement Dimentions for all text fields (https://developer.android.com/guide/topics/resources/more-resources.html#Dimension)
 7. Integrating Espeak or meSpeak into the project to support the reading of syllables in Russian. Espeak is a speech
 synthesizer and it supports many languages including Russian: http://espeak.sourceforge.net (TBD)
-8. Add monitizing commercial banner on the bottom of the screens (TBD)
+8. Reduce the size of your images by using the WebP format. WebP images are typically 25-34% smaller than comparable JPGs: https://developer.android.com/topic/performance/network-xfer#webp (TBD)
+9. Add monitizing commercial banner on the bottom of the screens (TBD)
 
 ### Kids Game's Screenshots:
 <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/one.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/two.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/three.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/four.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/five.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/six.png" width = 200>
