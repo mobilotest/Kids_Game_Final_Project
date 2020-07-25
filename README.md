@@ -6,7 +6,7 @@ Course No : CMPR.X413.(818),
 Course Title: Java Programming Comprehensive Course Date: 2020 Spring.
 
 ### Abstract picture:
-My project will is a Game. The game will help 3 - 4 years old kids (actually my son) to learn how to read and pronouns words in Russian and English by syllables. It will:
+My project is a Game. The game will help 3 - 4 years old kids (actually my son) to learn how to read and pronouns words in Russian and English by syllables. It will:
 1. The application will be available on the Play Store for download and install on Android smartphones.
 2. Pull image and syllables data from a JSON file AND/OR from the web storage.
 3. Users can select the preferred language: Russian OR English.
@@ -56,7 +56,9 @@ of the displayed image.
 4. Create a UI
 5. Learn and somehow connect a JSON file with all related data
 6. In future will implement Dimentions for all text fields (https://developer.android.com/guide/topics/resources/more-resources.html#Dimension)
-7. Add monitizing commercial banner on the bottom of the screens (TBD)
+7. Integrating Espeak or meSpeak into the project to support the reading of syllables in Russian. Espeak is a speech
+synthesizer and it supports many languages including Russian: http://espeak.sourceforge.net (TBD)
+8. Add monitizing commercial banner on the bottom of the screens (TBD)
 
 ### Kids Game's Screenshots:
 <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/one.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/two.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/three.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/four.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/five.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/six.png" width = 200>
