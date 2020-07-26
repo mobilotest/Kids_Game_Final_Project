@@ -69,12 +69,13 @@ All JSONs and Images uploaded to Google's Firebase server
 5.  Learn and somehow connect a JSON file with all related data
 6.  Create a JSON file(s)
 7.  Upload Images/JSONs to server
-8.  Create a code
+8.  Create a code with multithredding for images and audio
 9.  Upload documentation
-10.  Implement Dimensions for all text fields (https://developer.android.com/guide/topics/resources/more-resources.html#Dimension) (TBD)
-11.  Integrating Espeak or meSpeak into the project to support the reading of syllables in Russian. Espeak is a speech synthesizer and it supports many languages including Russian: http://espeak.sourceforge.net (TBD)
-12.  Reduce the size of your images by using the WebP format. WebP images are typically 25-34% smaller than comparable JPGs: https://developer.android.com/topic/performance/network-xfer#webp (TBD)
-13.  Add monetizing commercial banner on the bottom of the screens (TBD)
+10. Upload app to the Play Store
+11.  Implement Dimensions for all text fields (https://developer.android.com/guide/topics/resources/more-resources.html#Dimension) (TBD)
+12.  Integrating Espeak or meSpeak into the project to support the reading of syllables in Russian. Espeak is a speech synthesizer and it supports many languages including Russian: http://espeak.sourceforge.net (TBD)
+13.  Reduce the size of your images by using the WebP format. WebP images are typically 25-34% smaller than comparable JPGs: https://developer.android.com/topic/performance/network-xfer#webp (TBD)
+14.  Add monetizing commercial banner on the bottom of the screens (TBD)
 
 ### UML diagram:
 <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/uml.png" width = 600>
