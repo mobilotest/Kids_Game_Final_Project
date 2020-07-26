@@ -61,11 +61,13 @@ synthesizer and it supports many languages including Russian: http://espeak.sour
 8. Reduce the size of your images by using the WebP format. WebP images are typically 25-34% smaller than comparable JPGs: https://developer.android.com/topic/performance/network-xfer#webp (TBD)
 9. Add monitizing commercial banner on the bottom of the screens (TBD)
 
+<img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/uml.png" width = 600>
+
 ### Kids Game's Screenshots:
 <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/one.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/two.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/three.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/four.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/five.png" width = 200> -> <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/six.png" width = 200>
 
 ### Resources:
-1. https://www.flaticon.com/free-icon/
+1. https://console.firebase.google.com/
 2. https://commons.wikimedia.org/
 3. https://github.com/
 4. https://stackoverflow.com/
@@ -78,5 +80,6 @@ synthesizer and it supports many languages including Russian: http://espeak.sour
 11. http://www.fromtexttospeech.com/
 12. https://www.google.com/
 13. https://www.freepngs.com/
-14. https://www.flaticon.com/
+14. https://www.flaticon.com/free-icon/
 15. https://ttsmp3.com/
+16. https://online.visual-paradigm.com/
