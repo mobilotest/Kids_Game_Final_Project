@@ -18,6 +18,7 @@ My project is a Game. The game will help 3 - 4 years old kids (actually my son) 
 7.  Allow users to see the hint (help) in case if stuck with the answer.
 8.  User can turn sound OFF and ON
 9.  App UI contains a manual in the Settings-> Help, which will locate on the online web-page.
+10. User will be notified if there is no internet connection
 
 <img src="https://github.com/mobilotest/Kids_Game_Final_Project/blob/master/images/zero.jpg" width = 600>
 
