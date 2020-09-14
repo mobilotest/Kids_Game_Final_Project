@@ -273,7 +273,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/dog.png?alt=media&token=7373a6c0-120a-4840-a445-2157538f4afa",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fdog.png?alt=media&token=7566c190-ad8e-44eb-ba0a-77d1d37a5dcd",
       "answer": "DOG",
       "button_1": "RU",
       "button_2": "D",
@@ -338,7 +338,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/horse.png?alt=media&token=65d56241-074e-4f75-9512-6eb178725f8a",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fhorse.png?alt=media&token=7463729e-53a9-4f22-aab2-bebbd515af0f",
       "answer": "HORSE",
       "button_1": "GRA",
       "button_2": "LI",
@@ -364,7 +364,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/bug.png?alt=media&token=2069250b-7643-429b-a1f6-9b396a64c41f",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fbug.png?alt=media&token=f68794c1-ebff-4592-8b02-73177f3f7704",
       "answer": "BUG",
       "button_1": "KU",
       "button_2": "G",
@@ -390,7 +390,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/spider.png?alt=media&token=09c38e84-03c9-4a80-8f93-ce1505939c1a",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fspider.png?alt=media&token=6829a7c7-6140-4f43-8916-e4ebc8f8d082",
       "answer": "SPIDER",
       "button_1": "P",
       "button_2": "S",
@@ -403,7 +403,7 @@
     },
     {
       "category": "transport",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/tractor.png?alt=media&token=f4552e37-ab22-4e0a-9342-a9b77a3dcd7d",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Ftractor.png?alt=media&token=f104d781-3459-4a96-8395-b7fe726b5600",
       "answer": "TRACTOR",
       "button_1": "R",
       "button_2": "RYE",
@@ -416,7 +416,7 @@
     },
     {
       "category": "transport",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/car.png?alt=media&token=3d00008d-7b1b-4ae6-8ba8-cb6981712627",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fcar.png?alt=media&token=79ecb3da-7dcd-41a5-9db5-6e942a2023ac",
       "answer": "CAR",
       "button_1": "S",
       "button_2": "KA",
@@ -429,7 +429,7 @@
     },
     {
       "category": "transport",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/plane.png?alt=media&token=2c553d7e-0302-4eef-af83-a1df5c566341",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fplane.png?alt=media&token=894c7538-4ef6-48f3-ba33-adb7f57ac347",
       "answer": "PLANE",
       "button_1": "XYZ",
       "button_2": "RE",
@@ -455,7 +455,7 @@
     },
     {
       "category": "transport",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/bus.png?alt=media&token=e640f128-a69c-4f9a-9f03-88d2e5f8dcaa",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fbus.png?alt=media&token=2371ba92-11ce-480b-b1e3-49941f15ba44",
       "answer": "BUS",
       "button_1": "B",
       "button_2": "S",
@@ -481,7 +481,7 @@
     },
     {
       "category": "transport",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/boat.png?alt=media&token=a4f6a5f3-ac96-432b-ba68-da0130afbaf4",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fboat.jpg?alt=media&token=77212b94-0fa9-48bf-9746-da17d2d26633",
       "answer": "BOAT",
       "button_1": "BO",
       "button_2": "SI",
@@ -494,7 +494,7 @@
     },
     {
       "category": "transport",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/pram.png?alt=media&token=0c462f33-a264-47a2-972a-8c19f9a0fdb6",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fpram.png?alt=media&token=403d40eb-3218-49f1-8433-5e7e4a4cb932",
       "answer": "PRAM",
       "button_1": "OZ",
       "button_2": "P",
@@ -507,7 +507,7 @@
     },
     {
       "category": "transport",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/train.png?alt=media&token=3b0ed541-0606-4f9d-a218-94903b236aeb",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Ftrain.png?alt=media&token=ca0b7770-7478-4f69-95be-45d36864b477",
       "answer": "TRAIN",
       "button_1": "T",
       "button_2": "P",
@@ -520,7 +520,7 @@
     },
     {
       "category": "transport",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/scooter.png?alt=media&token=f1f65115-7654-4a50-a13b-0e2d334f9077",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fscooter.png?alt=media&token=487670b2-ddee-4209-8b40-83f60fea3579",
       "answer": "SCOOTER",
       "button_1": "OTO",
       "button_2": "PY",
