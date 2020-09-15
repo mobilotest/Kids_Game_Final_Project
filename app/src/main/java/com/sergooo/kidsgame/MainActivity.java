@@ -36,12 +36,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     // Eng = 0; Rus = 1; Eng_anim = 2; Eng_tran = 3; Rus_anim = 4; Rus_tran = 5;
     private static int screensLoaderId = 0;
 
-    String url_en = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en.json?alt=media&token=1d214f19-2b67-412e-9dbc-4010b8ed5d17";
-    String url_ru = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru.json?alt=media&token=ca9eb5f1-00da-4f2b-a25f-b3202c104d0c";
-    String url_en_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_anim.json?alt=media&token=71ab2761-3f14-4793-bff7-52d439e09922";
-    String url_en_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_tran.json?alt=media&token=841bc26a-4ec3-474e-8ae0-9d002ed7afca";
-    String url_ru_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_anim.json?alt=media&token=9ac45d4e-cbfa-4290-b9f6-8f2689206dd6";
-    String url_ru_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_tran.json?alt=media&token=afaa262b-9159-4893-90d2-42857830f12d";
+    String url_en = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en.json?alt=media&token=0ae405af-a0e6-44f1-8bc0-ea9c992b2f9c";
+    String url_ru = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru.json?alt=media&token=ba0e644f-5755-4a55-a669-c4ccacca492e";
+    String url_en_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_anim.json?alt=media&token=e8a93630-c51b-4d37-9fb3-7e73c48fadc5";
+    String url_en_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_en_tran.json?alt=media&token=fac4edbe-7e7b-4361-9f08-c5bbc7984aae";
+    String url_ru_anim = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_anim.json?alt=media&token=619b8098-648b-4208-b628-719e2a54e0fa";
+    String url_ru_tran = "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/screens_ru_tran.json?alt=media&token=bcec4181-0d84-48ba-9a5f-05bc86c7f4e2";
 
     private LoaderManager loaderManager = getLoaderManager();
 
