@@ -254,6 +254,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
             return true;
         }
 
+        // no inspection SimplifiableIfStatement2
+        if (id == R.id.menu_eula) {
+            Uri uri = Uri.parse("https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/eula%2Feula.html?alt=media&token=e0a6ee5f-1fcc-4b0d-bf93-66577b5b72d6");
+            startActivity(new Intent(Intent.ACTION_VIEW, uri));
+            return true;
+        }
+
         // Handle presses on the action bar items ENG ans RUS and Animals and Transport
         if (id == R.id.flag_us) {
             screensLoaderId = 0;

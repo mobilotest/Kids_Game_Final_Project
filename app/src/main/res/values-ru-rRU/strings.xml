@@ -17,4 +17,5 @@
     <string name="transport">Транспорт</string>
     <string name="settings_mute">Без звука</string>
     <string name="settings_unmute">Звук</string>
+    <string name="settings_eula">Законодательство</string>
 </resources>

@@ -13,11 +13,11 @@
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/flag_ru"
-        android:icon="@drawable/ic_russia_flag_16dp"
+        android:icon="@drawable/ic_russia_flag_256"
         android:title="@string/rus" />
     <item
         android:id="@+id/flag_us"
-        android:icon="@drawable/ic_usamerica_flag_16dp"
+        android:icon="@drawable/ic_usa_flag_256"
         android:title="@string/eng" />
     <item
         android:id="@+id/menu_mute"
@@ -27,6 +27,10 @@
         android:id="@+id/menu_unmute"
         android:icon="@drawable/ic_volume_up_black_18dp"
         android:title="@string/settings_unmute" />
+    <item
+        android:id="@+id/menu_eula"
+        android:icon="@drawable/ic_error"
+        android:title="@string/settings_eula" />
     <item
         android:id="@+id/menu_about"
         android:icon="@drawable/ic_help_black_18dp"
