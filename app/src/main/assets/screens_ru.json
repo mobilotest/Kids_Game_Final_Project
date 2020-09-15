@@ -182,7 +182,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/ant.png?alt=media&token=7cd5f5a4-c513-49cd-9bc9-bd6bd571a5d7",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fant.png?alt=media&token=9304a905-743f-4c74-99b7-62519ffffe2c",
       "answer": "МУРАВЕЙ",
       "button_1": "ЛУЧ",
       "button_2": "ВУ",
@@ -247,7 +247,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/owl.png?alt=media&token=747d3d1b-d0d3-40dc-911f-63dd711b2fa7",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fowl.png?alt=media&token=8285e001-0bbf-4475-a2ef-d29e81406353",
       "answer": "СОВА",
       "button_1": "ФЛ",
       "button_2": "КИ",
@@ -260,7 +260,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/grasshopper.png?alt=media&token=8e33d3bf-db9c-41af-8f90-9dfa1fbfb249",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fgrasshopper.png?alt=media&token=b7704078-eb8f-4a90-80da-1df574ada0bc",
       "answer": "КУЗНЕЧИК",
       "button_1": "ЧИК",
       "button_2": "КУЗ",
@@ -286,7 +286,7 @@
     },
     {
       "category": "animals",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/peacock.png?alt=media&token=e73add4f-c3ca-4fe3-b00d-0d80ffb7b218",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fpeacock.png?alt=media&token=4c392137-40de-4e15-988b-728962ba41c8",
       "answer": "ПАВЛИН",
       "button_1": "С",
       "button_2": "П",
@@ -468,7 +468,7 @@
     },
     {
       "category": "transport",
-      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/ship.png?alt=media&token=d2312d46-d458-4f34-8e13-ef8a4068eb0b",
+      "image": "https://firebasestorage.googleapis.com/v0/b/kidsgame-282600.appspot.com/o/images%2Fship.png?alt=media&token=66bf04b3-2621-45e2-80fd-91794078a8c1",
       "answer": "КОРАБЛЬ",
       "button_1": "ЕЛЬ",
       "button_2": "ЛЕ",
