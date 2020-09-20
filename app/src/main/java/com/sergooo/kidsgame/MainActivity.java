@@ -203,9 +203,11 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
     }
 
+    //TODO: Custom toast views are deprecated. Apps can create a standard text toast with the makeText(android.content.Context, java.lang.CharSequence, int)
     public void toastMessage(int resource, boolean isCorrect) {
         Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
-        TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+        View toastView = toast.getView();
+        TextView toastMessage = (TextView) toastView.findViewById(android.R.id.message);
         int color = isCorrect ? Color.rgb(76,175,80) : Color.RED;
         toastMessage.setTextColor(color);
         toastMessage.setTextSize(36);
