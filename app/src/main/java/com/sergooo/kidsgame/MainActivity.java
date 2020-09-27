@@ -11,6 +11,7 @@ import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.Menu;
@@ -193,7 +194,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      **/
     public void syllablesClick(View v) {
         temp = (String) result.getText();
-        String txtButton = currentScreen.getButton(Integer.valueOf((String)v.getTag()));
+        String txtButton = currentScreen.getButton(Integer.valueOf((String) v.getTag()));
         result.setText(temp + "" + txtButton);
         if (screensLoaderId == 0 || screensLoaderId == 2 || screensLoaderId == 3) {
             playSyllable(txtButton.toLowerCase());
@@ -203,24 +204,28 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         }
     }
 
-    //TODO: Custom toast views are deprecated. Apps can create a standard text toast with the makeText(android.content.Context, java.lang.CharSequence, int)
-    // Custom toast views are deprecated. Apps can create a standard text toast with the makeText(android.content.Context, java.lang.CharSequence, int)
-    //if Android 11:
-    //Toast toast = Toast.makeText(getApplicationContext(),
-    //        "This is a message displayed in a Toast",
-    //        Toast.LENGTH_SHORT);
-    //
-    //toast.show();
-    //else:
-    public void toastMessage(int resource, boolean isCorrect) {
-        Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
-        View toastView = toast.getView();
-        TextView toastMessage = (TextView) toastView.findViewById(android.R.id.message);
-        int color = isCorrect ? Color.rgb(76,175,80) : Color.RED;
-        toastMessage.setTextColor(color);
-        toastMessage.setTextSize(36);
-        toast.setGravity(Gravity.CENTER, 0, 0);
-        toast.show();
+    /**
+     * This method responsible for the Toast message
+     * Custom toast views are deprecated in the Android 11(R).
+     * If Android version is less than11(R), then shows the customize toast, otherwise,
+     * Apps will create a standard text toast with the makeText(android.content.Context, java.lang.CharSequence, int)
+     *
+     * @param resource getting tex of the answer showing in the toast
+     * @param isCorrect verifying the answer correct or not
+     **/
+     public void toastMessage(int resource, boolean isCorrect) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
+            Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
+            toast.show();
+        } else {
+            Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
+            TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
+            int color = isCorrect ? Color.rgb(76, 175, 80) : Color.RED;
+            toastMessage.setTextColor(color);
+            toastMessage.setTextSize(36);
+            toast.setGravity(Gravity.CENTER, 0, 0);
+            toast.show();
+        }
     }
 
     /**
