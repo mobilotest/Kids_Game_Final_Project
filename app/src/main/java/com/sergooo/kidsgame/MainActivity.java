@@ -205,7 +205,13 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     //TODO: Custom toast views are deprecated. Apps can create a standard text toast with the makeText(android.content.Context, java.lang.CharSequence, int)
     // Custom toast views are deprecated. Apps can create a standard text toast with the makeText(android.content.Context, java.lang.CharSequence, int)
-
+    //if Android 11:
+    //Toast toast = Toast.makeText(getApplicationContext(),
+    //        "This is a message displayed in a Toast",
+    //        Toast.LENGTH_SHORT);
+    //
+    //toast.show();
+    //else:
     public void toastMessage(int resource, boolean isCorrect) {
         Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
         View toastView = toast.getView();
