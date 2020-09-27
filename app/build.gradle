@@ -29,6 +29,7 @@ dependencies {
     implementation files('libs/KGJsonConverter.jar')
     implementation files('libs/gson-2.8.6.jar')
     implementation files('libs/GenAsync.jar')
+    implementation 'com.google.android.material:material:1.2.1'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'

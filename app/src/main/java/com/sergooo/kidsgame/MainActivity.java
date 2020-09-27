@@ -26,6 +26,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.view.menu.MenuBuilder;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.squareup.picasso.Picasso;
 
 import java.io.IOException;
@@ -215,8 +216,12 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      **/
      public void toastMessage(int resource, boolean isCorrect) {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-            Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
-            toast.show();
+
+            Snackbar snackbar = Snackbar.make(findViewById(R.id.main_layout_id), getText(resource), Snackbar.LENGTH_SHORT);
+            snackbar.show();
+
+//            Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
+//            toast.show();
         } else {
             Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
             TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
