@@ -18,6 +18,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
@@ -214,18 +215,28 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
      * @param resource getting tex of the answer showing in the toast
      * @param isCorrect verifying the answer correct or not
      **/
+     @SuppressLint("ResourceType")
      public void toastMessage(int resource, boolean isCorrect) {
+         int color = isCorrect ? Color.rgb(76, 175, 80) : Color.RED;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.R) {
-
             Snackbar snackbar = Snackbar.make(findViewById(R.id.main_layout_id), getText(resource), Snackbar.LENGTH_SHORT);
+            // styling of text
+            View snackbarView = snackbar.getView();
+            TextView textView = (TextView) snackbarView.findViewById(com.google.android.material.R.id.snackbar_text);
+            textView.setTextColor(color);
+            textView.setAllCaps(true);
+            textView.setTextSize(36);
+            textView.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+            // styling for background of snackbar:
+            View sbView = snackbarView;
+            sbView.setBackgroundColor(Color.argb(10, 0,0,0));
+            FrameLayout.LayoutParams params =(FrameLayout.LayoutParams)sbView.getLayoutParams();
+            params.gravity = Gravity.CENTER;
+            sbView.setLayoutParams(params);
             snackbar.show();
-
-//            Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
-//            toast.show();
         } else {
             Toast toast = Toast.makeText(getApplicationContext(), getText(resource), Toast.LENGTH_SHORT);
             TextView toastMessage = (TextView) toast.getView().findViewById(android.R.id.message);
-            int color = isCorrect ? Color.rgb(76, 175, 80) : Color.RED;
             toastMessage.setTextColor(color);
             toastMessage.setTextSize(36);
             toast.setGravity(Gravity.CENTER, 0, 0);
