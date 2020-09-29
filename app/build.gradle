@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 30
-    buildToolsVersion "30.0.0"
+    buildToolsVersion "30.0.2"
 
     defaultConfig {
         applicationId "com.sergooo.kidsgame"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 11
+        versionCode 12
         versionName "5.3.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
